@@ -1102,7 +1102,11 @@ main.index .first-page .swiper.pc .cls-4 {
   stroke-width: 3px;
   stroke-dasharray: 3 9;
   opacity: 0.4;
-  transform-origin: 0px 0px 0px;
+  transform-origin: 42px 42px;
+  animation-name: spinInfinite;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 main.index .first-page .swiper.pc #arrow-trg {
   transition: 0.5s;
@@ -1132,6 +1136,14 @@ main.index .first-page .swiper.pc .button:not(.disabled):hover #arrow-trg {
 }
 main.index .first-page .swiper.pc .button:not(.disabled):hover #line {
   transform: translate(35px, 42px) scaleX(0.33);
+}
+@keyframes spinInfinite {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 main.index .second-page {
   width: 100%;

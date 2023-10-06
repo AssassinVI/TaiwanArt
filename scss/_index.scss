@@ -124,7 +124,11 @@ main.index {
         stroke-width: 3px;
         stroke-dasharray: 3 9;
         opacity: 0.4;
-        transform-origin: 0px 0px 0px;
+        transform-origin: 42px 42px;
+        animation-name: spinInfinite;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
       }
       #arrow-trg {
         transition: 0.5s;
@@ -157,7 +161,14 @@ main.index {
       }
     }
   }
-
+  @keyframes spinInfinite {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
   .second-page {
     width: 100%;
     overflow: hidden;
