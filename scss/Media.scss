@@ -1,0 +1,317 @@
+@import "_config";
+
+//banner背景複寫
+.waveObjectArea__item {
+  .waveObject {
+    background-image: url(../img/png/common/banner-about--phase--1.png);
+  }
+  > .waveObject--0 {
+    background-image: url(/img/png/common/banner-about--phase--1.png);
+  }
+  > .waveObject--1 {
+    background-image: url(../img/png/common/banner-about--phase--2.png);
+  }
+  > .waveObject--2 {
+    background-image: url(../img/png/common/banner-about--phase--3.png);
+  }
+  > .waveObject--3 {
+    background-image: url(../img/png/common/banner-about--phase--4.png);
+  }
+  > .waveObject--4 {
+    background-image: url(../img/png/common/banner-about--phase--5.png);
+  }
+}
+
+body {
+  background-image: url("../img/jpg/media/mainBG.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.nav-3 {
+  position: relative;
+  z-index: 50;
+}
+
+.allianceImageNav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10vh auto;
+  gap: 1vw;
+  position: relative;
+
+  @include mobile {
+    gap: 3vw;
+    margin: 3vh auto;
+  }
+
+  li {
+    border: 1px solid #ccc;
+    border-bottom: unset;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    position: relative;
+
+    a {
+      display: block;
+      padding: 0.8em 3em 0.5em;
+      width: 100%;
+      height: 100%;
+
+      @include mobile {
+        padding: 0.4em 1.5em 0.25em;
+      }
+    }
+
+    &.active::after {
+      content: " ";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: #eee;
+    }
+
+    a.active {
+      color: $mainColor;
+      cursor: default;
+    }
+
+    a:hover {
+      color: $mainColor;
+    }
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 6%;
+    right: 6%;
+    height: 1px;
+    background-color: #dddddd;
+    z-index: -1;
+  }
+}
+
+.MediaCards {
+  display: grid;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 5vw;
+  padding-top: 0;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2vw;
+
+  @include mobile {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+$forthHoverTransition: 0.7s;
+
+.MediaCard {
+  width: 100%;
+  position: relative;
+  flex-grow: 1;
+  transition: 0.5s ease-in-out;
+  padding: 1.5vw;
+  box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.1);
+
+    .imgDiv img {
+      transform: scale(1.2);
+    }
+
+    .more span {
+      letter-spacing: 0.5em;
+    }
+
+    .decoLine {
+      .rect1 {
+        height: 20px;
+      }
+
+      .rect2 {
+        height: 15px;
+      }
+
+      .rect3 {
+        height: 10px;
+      }
+    }
+  }
+
+  .imgDiv {
+    overflow: hidden;
+    img {
+      transition: 0.5s ease-in-out;
+    }
+  }
+
+  .DateDiv {
+    position: absolute;
+    width: 4vw;
+    height: auto;
+    padding: 1vw 0.5vw;
+    top: 0;
+    left: 0;
+    font-size: 1.2vw;
+    font-weight: bold;
+    background-color: $mainColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 20;
+
+    span {
+      display: block;
+      margin: 0.1rem;
+      line-height: 1;
+      letter-spacing: 0;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    span.date {
+      font-size: 1.2vw;
+      margin-bottom: 0.5vh;
+
+      @include mobile {
+        font-size: 7vw;
+        letter-spacing: 0.05em;
+      }
+    }
+
+    span.DayOfWeek {
+      font-size: 1vw;
+
+      @include mobile {
+        font-size: 3.5vw;
+        letter-spacing: 0.2em;
+      }
+    }
+  }
+
+  .totalInfoDiv {
+    margin-top: 3.2vh;
+  }
+
+  .decoLine {
+    padding-left: 2px;
+    height: 2.5vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 2.5vh;
+
+    .rect {
+      height: 4px;
+      width: 10px;
+      background-color: $mainColor;
+      transition: 0.5s ease-in-out;
+    }
+  }
+
+  .infoDiv {
+    width: 100%;
+    color: $innerTextMainColor;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .DateAndSource {
+      display: flex;
+      p {
+        font-size: 0.8vw;
+
+        @include mobile {
+          font-size: 4vw;
+        }
+      }
+    }
+
+    .line {
+      display: block;
+      margin: auto 0.5em;
+      height: 0.8em;
+      width: 1px;
+      background-color: $innerTextMainColor;
+      opacity: 0.6;
+    }
+
+    .more {
+      transition: $forthHoverTransition;
+      align-self: flex-end;
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      width: fit-content;
+      margin: 0 0 0 auto;
+
+      span {
+        font-family: "Montserrat", sans-serif;
+        color: $mainColor;
+        margin-right: 0.4vw;
+        transition: $forthHoverTransition;
+        font-weight: 600;
+        @include mobile {
+          margin-right: 2vw;
+        }
+      }
+
+      svg {
+        display: block;
+        width: pxConvertor(10);
+        height: auto;
+        fill: $mainColor;
+        transition: $forthHoverTransition;
+
+        @include mobile {
+          width: pxConvertor2(20);
+        }
+      }
+    }
+  }
+}
+
+.MediaCard {
+  @include mobile {
+    width: 100%;
+    padding: 0px;
+
+    .DateDiv {
+      width: 20vw;
+      height: 20vw;
+    }
+
+    .cardTitle {
+      font-size: 1.2rem;
+    }
+
+    .decoLine {
+      display: none;
+    }
+
+    .totalInfoDiv {
+      margin-top: 2vh;
+      margin-bottom: 2vh;
+    }
+
+    .infoDiv .more {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,396 @@
+@import "_config";
+
+//banner背景複寫
+.waveObjectArea__item {
+  .waveObject {
+    background-image: url(../img/png/common/banner-about--phase--1.png);
+  }
+  > .waveObject--0 {
+    background-image: url(/img/png/common/banner-about--phase--1.png);
+  }
+  > .waveObject--1 {
+    background-image: url(../img/png/common/banner-about--phase--2.png);
+  }
+  > .waveObject--2 {
+    background-image: url(../img/png/common/banner-about--phase--3.png);
+  }
+  > .waveObject--3 {
+    background-image: url(../img/png/common/banner-about--phase--4.png);
+  }
+  > .waveObject--4 {
+    background-image: url(../img/png/common/banner-about--phase--5.png);
+  }
+}
+
+body {
+  background-image: url("../img/jpg/history/BG.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+$primary-color: #000;
+$secondary-color: #888;
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  background: #eee;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.second-page {
+  position: relative;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 0px 50px 0px;
+}
+
+article {
+  position: relative;
+  margin: 0 auto;
+}
+
+.timeline {
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 57.5vw;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.5s ease-out;
+    width: 100vw;
+  }
+}
+
+.timeline__nav {
+  position: sticky;
+  z-index: 99;
+  top: 0;
+  left: 21vw;
+  width: 7.5vw;
+  transition: top 1s ease-out;
+  height: auto;
+
+  @include mobile {
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: #eee;
+    width: 90vw;
+    left: 5vw;
+    overflow: hidden;
+  }
+}
+
+.sticky {
+  position: sticky;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.test {
+  width: 20vw;
+  height: 20vw;
+  border: 2px solid red;
+  background-color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10vh;
+  left: 0px;
+}
+
+.timeline__nav::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0.5vw;
+  width: 0.5px;
+  height: 100%;
+  background-color: $mainColor;
+  opacity: 0.3;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.timeline__nav ul {
+  list-style: none;
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  min-height: 50vh;
+
+  @include mobile {
+    transition: left 1s ease-out;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 0;
+    background-color: #eee;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+}
+
+.timeline__nav ul li {
+  list-style-type: none;
+}
+
+.timeline__nav ul li span {
+  padding: 0.25em 2em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8vw;
+  display: inline-block;
+  color: $mainColor;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  border-radius: 0.5em;
+  margin-top: 1em;
+  letter-spacing: 0.1em;
+
+  @include mobile {
+    font-size: 3vw;
+    padding: 0.25em 1em;
+  }
+}
+
+.timeline__nav ul li.active span {
+  color: #ffffff;
+  background-color: $mainColor;
+}
+.timeline__nav ul li span:hover {
+  color: #ffffff;
+  background-color: $mainColor;
+}
+
+.milestone {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.timeline__section {
+  width: 34vw;
+
+  @include mobile {
+    position: sticky;
+    overflow: hidden;
+    width: 90vw;
+    margin: auto;
+  }
+
+  .cards {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 5%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #dddddd;
+    }
+  }
+
+  .infoDiv {
+    flex-grow: 1;
+    width: 85%;
+  }
+
+  .month {
+    margin-top: 1em;
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-wrap: normal;
+    background-color: $mainColor;
+    color: #ffffff;
+    white-space: nowrap;
+
+    p {
+      color: #ffffff;
+    }
+
+    span {
+      font-family: "Montserrat", sans-serif;
+
+      font-weight: 600;
+      letter-spacing: 0.1em;
+    }
+
+    @include mobile {
+      width: 15vw;
+      height: 15vw;
+      font-size: 1.5vw;
+      margin-top: 1rem;
+    }
+  }
+
+  .card {
+    position: relative;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    background: none;
+    border: none;
+
+    @include mobile {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #dddddd;
+  }
+
+  .card:nth-last-of-type(1)::after {
+    display: none;
+  }
+
+  .date {
+    font-family: "Montserrat", sans-serif;
+    color: $mainColor;
+    font-size: 0.8vw;
+    font-weight: 600;
+
+    @include mobile {
+      font-size: 4vw;
+    }
+  }
+}
+
+.yearCard {
+  position: relative;
+}
+
+.yearDiv {
+  top: 15vh;
+  position: sticky;
+  width: 16vw;
+  left: 30vw;
+  height: 17vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  @include mobile {
+    width: 100vw;
+    display: block;
+    background-color: #eee;
+    z-index: 20;
+  }
+
+  .div-1,
+  .div-2,
+  .div-3,
+  .div-4 {
+    position: absolute;
+    flex-grow: 1;
+    box-sizing: content-box;
+    width: 5vw;
+    height: 5vw;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+
+    img {
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+      height: auto;
+      transition: 0.5s ease-in-out;
+    }
+
+    @include mobile {
+      width: 20vw;
+      height: 20vw;
+    }
+  }
+
+  .div-1 {
+    left: 1vw;
+  }
+
+  .div-2 {
+    left: 5vw;
+  }
+
+  .div-3 {
+    top: 6vw;
+    left: 3vw;
+  }
+
+  .div-4 {
+    top: 6vw;
+    left: 7vw;
+  }
+
+  @include mobile {
+    .div-1 {
+      left: 22vw;
+    }
+
+    .div-2 {
+      left: 35vw;
+    }
+
+    .div-3 {
+      top: 3vh;
+      left: 47vw;
+    }
+
+    .div-4 {
+      top: 3vh;
+      left: 60vw;
+    }
+  }
+}
+
+.pianoDiv {
+  position: fixed;
+  left: -5vw;
+  bottom: -10vh;
+
+  .imgDiv {
+    position: relative;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}

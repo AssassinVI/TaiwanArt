@@ -1,0 +1,826 @@
+#main-visual {
+  position: relative;
+}
+
+.t-mainArea--top {
+  overflow: hidden;
+}
+.mainVisual {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+
+.mainVisual__ttl {
+  font-size: 5.8333333333vw;
+  font-weight: bold;
+  pointer-events: none;
+  opacity: 0;
+  transition-property: opacity;
+  transition-timing-function: ease;
+  transition-duration: 0.05s;
+}
+.mainVisual--fadeIn .mainVisual__ttl {
+  opacity: 1;
+}
+.waveObjectArea {
+  width: 79.1666666667vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: -1;
+  animation-name: areaMoving;
+  animation-timing-function: ease-in-out;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+.waveObjectArea__item {
+  width: 5.2083333333vw;
+  border-radius: 2.6041666667vw;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition-property: transform, height;
+  transition-timing-function: cubic-bezier(0.49, 0.19, 0, 0.99);
+  transition-duration: 4s;
+  background-color: #fff;
+}
+.waveObjectArea__item > .waveObject {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(/img/jpg/common/bg_mv-gradation--phase1.jpg) 0 -35.4166666667vw/5.2083333333vw
+    104.1666666667vw no-repeat;
+  background-clip: content-box;
+  -webkit-background-clip: content-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition-property: background-position, opacity;
+  transition-timing-function: cubic-bezier(0.49, 0.19, 0, 0.99);
+  transition-duration: 4s;
+}
+.waveObjectArea__item > .waveObject--0 {
+  background-image: url(/img/jpg/common/bg_mv-gradation--phase1.jpg);
+}
+.waveObjectArea__item > .waveObject--1 {
+  background-image: url(/img/jpg/common/bg_mv-gradation--phase2.jpg);
+}
+.waveObjectArea__item > .waveObject--2 {
+  background-image: url(/img/jpg/common/bg_mv-gradation--phase3.jpg);
+}
+.waveObjectArea__item > .waveObject--3 {
+  background-image: url(/img/jpg/common/bg_mv-gradation--phase4.jpg);
+}
+.waveObjectArea__item > .waveObject--4 {
+  background-image: url(/img/jpg/common/bg_mv-gradation--phase5.jpg);
+}
+.waveObjectArea__item:nth-child(1) {
+  height: 25.0520833333vw;
+}
+.waveObjectArea__item:nth-child(2) {
+  height: 24.6354166667vw;
+}
+.waveObjectArea__item:nth-child(3) {
+  height: 25.0520833333vw;
+}
+.waveObjectArea__item:nth-child(4) {
+  height: 18.4895833333vw;
+}
+.waveObjectArea__item:nth-child(5) {
+  height: 25.0520833333vw;
+}
+.waveObjectArea__item:nth-child(6) {
+  height: 34.4270833333vw;
+}
+.waveObjectArea__item:nth-child(7) {
+  height: 25.0520833333vw;
+}
+.waveObjectArea__item:nth-child(8) {
+  height: 18.4895833333vw;
+}
+.waveObjectArea__item:nth-child(9) {
+  height: 25.0520833333vw;
+}
+.waveObjectArea__item:nth-child(10) {
+  height: 24.6354166667vw;
+}
+.waveObjectArea__item:nth-child(11) {
+  height: 25.0520833333vw;
+}
+.waveObjectArea__item--set:nth-child(1),
+.waveObjectArea__item--set:nth-child(2),
+.waveObjectArea__item--set:nth-child(3),
+.waveObjectArea__item--set:nth-child(4),
+.waveObjectArea__item--set:nth-child(5),
+.waveObjectArea__item--set:nth-child(6),
+.waveObjectArea__item--set:nth-child(7),
+.waveObjectArea__item--set:nth-child(8),
+.waveObjectArea__item--set:nth-child(9),
+.waveObjectArea__item--set:nth-child(10),
+.waveObjectArea__item--set:nth-child(11) {
+  height: 5.2083333333vw;
+  transform: scale(0);
+  background-position: 0 0;
+}
+.waveObjectArea__item--ball:nth-child(1),
+.waveObjectArea__item--ball:nth-child(2),
+.waveObjectArea__item--ball:nth-child(3),
+.waveObjectArea__item--ball:nth-child(4),
+.waveObjectArea__item--ball:nth-child(5),
+.waveObjectArea__item--ball:nth-child(6),
+.waveObjectArea__item--ball:nth-child(7),
+.waveObjectArea__item--ball:nth-child(8),
+.waveObjectArea__item--ball:nth-child(9),
+.waveObjectArea__item--ball:nth-child(10),
+.waveObjectArea__item--ball:nth-child(11),
+.waveObjectArea__item--ballStart:nth-child(1),
+.waveObjectArea__item--ballStart:nth-child(2),
+.waveObjectArea__item--ballStart:nth-child(3),
+.waveObjectArea__item--ballStart:nth-child(4),
+.waveObjectArea__item--ballStart:nth-child(5),
+.waveObjectArea__item--ballStart:nth-child(6),
+.waveObjectArea__item--ballStart:nth-child(7),
+.waveObjectArea__item--ballStart:nth-child(8),
+.waveObjectArea__item--ballStart:nth-child(9),
+.waveObjectArea__item--ballStart:nth-child(10),
+.waveObjectArea__item--ballStart:nth-child(11) {
+  height: 5.2083333333vw;
+  transform: scale(1);
+  background-position: 0 center;
+  transition-duration: 1.5s;
+}
+.waveObjectArea__item--ballStart > .waveObject {
+  transition-property: background-position;
+}
+.waveObjectArea__item--start {
+  transition-duration: 1.5s;
+}
+.waveObjectArea__item--start:nth-child(1) {
+  transform: translateY(-9.1145833333vw);
+}
+.waveObjectArea__item--start:nth-child(1) .waveObject {
+  background-position: 0 -25.78125vw;
+}
+.waveObjectArea__item--start:nth-child(2) {
+  transform: translateY(-1.9270833333vw);
+}
+.waveObjectArea__item--start:nth-child(2) .waveObject {
+  background-position: 0 -32.96875vw;
+}
+.waveObjectArea__item--start:nth-child(3) {
+  transform: translateY(-9.1145833333vw);
+}
+.waveObjectArea__item--start:nth-child(3) .waveObject {
+  background-position: 0 -25.78125vw;
+}
+.waveObjectArea__item--start:nth-child(4) {
+  transform: translateY(-17.1875vw);
+}
+.waveObjectArea__item--start:nth-child(4) .waveObject {
+  background-position: 0 -17.7083333333vw;
+}
+.waveObjectArea__item--start:nth-child(5) {
+  transform: translateY(-9.1145833333vw);
+}
+.waveObjectArea__item--start:nth-child(5) .waveObject {
+  background-position: 0 -25.78125vw;
+}
+.waveObjectArea__item--start:nth-child(6) {
+  transform: translateY(-0.5208333333vw);
+}
+.waveObjectArea__item--start:nth-child(6) .waveObject {
+  background-position: 0 -34.375vw;
+}
+.waveObjectArea__item--start:nth-child(7) {
+  transform: translateY(7.3958333333vw);
+}
+.waveObjectArea__item--start:nth-child(7) .waveObject {
+  background-position: 0 -42.2916666667vw;
+}
+.waveObjectArea__item--start:nth-child(8) {
+  transform: translateY(17.1875vw);
+}
+.waveObjectArea__item--start:nth-child(8) .waveObject {
+  background-position: 0 -52.0833333333vw;
+}
+.waveObjectArea__item--start:nth-child(9) {
+  transform: translateY(7.2916666667vw);
+}
+.waveObjectArea__item--start:nth-child(9) .waveObject {
+  background-position: 0 -42.1875vw;
+}
+.waveObjectArea__item--start:nth-child(10) {
+  transform: translateY(-3.4375vw);
+}
+.waveObjectArea__item--start:nth-child(10) .waveObject {
+  background-position: 0 -31.4583333333vw;
+}
+.waveObjectArea__item--start:nth-child(11) {
+  transform: translateY(7.2916666667vw);
+}
+.waveObjectArea__item--start:nth-child(11) .waveObject {
+  background-position: 0 -42.1875vw;
+}
+.waveObjectArea__item--down {
+  transition-duration: 2s;
+}
+.waveObjectArea__item--down .waveObject {
+  transition-duration: 2s;
+}
+.waveObjectArea__item--up {
+  transition-duration: 3s;
+}
+.waveObjectArea__item--up .waveObject {
+  transition-duration: 3s;
+}
+.waveObjectArea__item--down:nth-child(1) {
+  height: 19.3229166667vw;
+  transform: translateY(3.6458333333vw);
+}
+.waveObjectArea__item--down:nth-child(1) .waveObject {
+  background-position: 0 -41.6666666667vw;
+}
+.waveObjectArea__item--down:nth-child(2) {
+  height: 19.4270833333vw;
+  transform: translateY(-1.71875vw);
+}
+.waveObjectArea__item--down:nth-child(2) .waveObject {
+  background-position: 0 -36.3020833333vw;
+}
+.waveObjectArea__item--down:nth-child(3) {
+  height: 20.3645833333vw;
+  transform: translateY(3.6458333333vw);
+}
+.waveObjectArea__item--down:nth-child(3) .waveObject {
+  background-position: 0 -41.6666666667vw;
+}
+.waveObjectArea__item--down:nth-child(4) {
+  height: 14.3229166667vw;
+  transform: translateY(8.59375vw);
+}
+.waveObjectArea__item--down:nth-child(4) .waveObject {
+  background-position: 0 -46.6145833333vw;
+}
+.waveObjectArea__item--down:nth-child(5) {
+  height: 14.3229166667vw;
+  transform: translateY(3.6979166667vw);
+}
+.waveObjectArea__item--down:nth-child(5) .waveObject {
+  background-position: 0 -41.71875vw;
+}
+.waveObjectArea__item--down:nth-child(6) {
+  height: 31.3020833333vw;
+  transform: translateY(-0.2604166667vw);
+}
+.waveObjectArea__item--down:nth-child(6) .waveObject {
+  background-position: 0 -32.8125vw;
+}
+.waveObjectArea__item--down:nth-child(7) {
+  height: 22.4479166667vw;
+  transform: translateY(3.6979166667vw);
+}
+.waveObjectArea__item--down:nth-child(7) .waveObject {
+  background-position: 0 -41.71875vw;
+}
+.waveObjectArea__item--down:nth-child(8) {
+  height: 16.40625vw;
+  transform: translateY(8.59375vw);
+}
+.waveObjectArea__item--down:nth-child(8) .waveObject {
+  background-position: 0 -46.6145833333vw;
+}
+.waveObjectArea__item--down:nth-child(9) {
+  height: 23.4895833333vw;
+  transform: translateY(3.6458333333vw);
+}
+.waveObjectArea__item--down:nth-child(9) .waveObject {
+  background-position: 0 -41.6666666667vw;
+}
+.waveObjectArea__item--down:nth-child(10) {
+  height: 23.59375vw;
+  transform: translateY(-1.71875vw);
+}
+.waveObjectArea__item--down:nth-child(10) .waveObject {
+  background-position: 0 -36.3020833333vw;
+}
+.waveObjectArea__item--down:nth-child(11) {
+  height: 24.53125vw;
+  transform: translateY(3.6458333333vw);
+}
+.waveObjectArea__item--down:nth-child(11) .waveObject {
+  background-position: 0 -41.6666666667vw;
+}
+.waveObjectArea__item--up:nth-child(1) {
+  transform: translateY(-4.5833333333vw);
+}
+.waveObjectArea__item--up:nth-child(1) .waveObject {
+  background-position: 0 -25.625vw;
+}
+.waveObjectArea__item--up:nth-child(2) {
+  transform: translateY(-0.9895833333vw);
+}
+.waveObjectArea__item--up:nth-child(2) .waveObject {
+  background-position: 0 -29.21875vw;
+}
+.waveObjectArea__item--up:nth-child(3) {
+  transform: translateY(-2.2916666667vw);
+}
+.waveObjectArea__item--up:nth-child(3) .waveObject {
+  background-position: 0 -27.9166666667vw;
+}
+.waveObjectArea__item--up:nth-child(4) {
+  transform: translateY(-8.59375vw);
+}
+.waveObjectArea__item--up:nth-child(4) .waveObject {
+  background-position: 0 -21.6145833333vw;
+}
+.waveObjectArea__item--up:nth-child(5) {
+  transform: translateY(-2.2916666667vw);
+}
+.waveObjectArea__item--up:nth-child(5) .waveObject {
+  background-position: 0 -27.9166666667vw;
+}
+.waveObjectArea__item--up:nth-child(6) {
+  transform: translateY(-0.2604166667vw);
+}
+.waveObjectArea__item--up:nth-child(6) .waveObject {
+  background-position: 0 -25vw;
+}
+.waveObjectArea__item--up:nth-child(7) {
+  transform: translateY(-2.2916666667vw);
+}
+.waveObjectArea__item--up:nth-child(7) .waveObject {
+  background-position: 0 -27.9166666667vw;
+}
+.waveObjectArea__item--up:nth-child(8) {
+  transform: translateY(-8.59375vw);
+}
+.waveObjectArea__item--up:nth-child(8) .waveObject {
+  background-position: 0 -21.6145833333vw;
+}
+.waveObjectArea__item--up:nth-child(9) {
+  transform: translateY(-2.2916666667vw);
+}
+.waveObjectArea__item--up:nth-child(9) .waveObject {
+  background-position: 0 -27.9166666667vw;
+}
+.waveObjectArea__item--up:nth-child(10) {
+  transform: translateY(-0.9895833333vw);
+}
+.waveObjectArea__item--up:nth-child(10) .waveObject {
+  background-position: 0 -29.21875vw;
+}
+.waveObjectArea__item--up:nth-child(11) {
+  transform: translateY(-4.5833333333vw);
+}
+.waveObjectArea__item--up:nth-child(11) .waveObject {
+  background-position: 0 -25.625vw;
+}
+.waveObjectArea--phase0 .waveObjectArea__item .waveObject--0,
+.waveObjectArea--phase1 .waveObjectArea__item .waveObject--1,
+.waveObjectArea--phase2 .waveObjectArea__item .waveObject--2,
+.waveObjectArea--phase3 .waveObjectArea__item .waveObject--3,
+.waveObjectArea--phase4 .waveObjectArea__item .waveObject--4 {
+  opacity: 1;
+}
+
+@media screen and (max-width: 640px) {
+  .mainVisual {
+    height: 90vh;
+    position: relative;
+  }
+  .mainVisual__ttl {
+    font-size: 13.3333333333vw;
+    position: absolute;
+    top: 46.1333333333vw;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: calc(100% - 50px);
+  }
+  .mvTtl__item + .mvTtl__item {
+    margin-top: 0.5333333333vw;
+  }
+  .mvTtl__item:nth-child(1) {
+    text-align: center;
+    transform: translateX(0em);
+  }
+  .mvTtl__item:nth-child(2) {
+    text-align: left;
+  }
+  .mvTtl__item:nth-child(3) {
+    text-align: left;
+    transform: translateX(0em);
+  }
+  .mvTtl__item:nth-child(4) {
+    text-align: right;
+    transform: translateX(0em);
+  }
+  .mainVisual__txt {
+    font-size: 3.4666666667vw;
+    top: 101.8666666667vw;
+    left: calc(50% - 13.3333333333vw);
+  }
+  .mainVisual__tmb {
+    width: 43.2vw;
+    height: 14vh;
+    top: 78.4vw;
+    left: calc(50% - 33.0666666667vw);
+    bottom: auto;
+  }
+  @keyframes areaMoving {
+    0% {
+      transform: translateY(9.6vw);
+    }
+    25% {
+      transform: translateY(4.2666666667vw);
+    }
+    50% {
+      transform: translateY(9.6vw);
+    }
+    75% {
+      transform: translateY(14.9333333333vw);
+    }
+    100% {
+      transform: translateY(9.6vw);
+    }
+  }
+  .waveObjectArea {
+    width: 132.8vw;
+    height: 90vh;
+    margin-left: -16.5333333333vw;
+  }
+  .waveObjectArea__item {
+    width: 8.5333333333vw;
+    border-radius: 4.2666666667vw;
+  }
+  .waveObjectArea__item > .waveObject {
+    background-size: 8.5333333333vw 170.6666666667vw;
+    background-position: 0 -64vw;
+  }
+  .waveObjectArea__item:nth-child(2) {
+    height: 40.5405405405vw;
+  }
+  .waveObjectArea__item:nth-child(3) {
+    height: 40.5405405405vw;
+  }
+  .waveObjectArea__item:nth-child(4) {
+    height: 30.2702702703vw;
+  }
+  .waveObjectArea__item:nth-child(5) {
+    height: 40.5405405405vw;
+  }
+  .waveObjectArea__item:nth-child(6) {
+    height: 55.9459459459vw;
+  }
+  .waveObjectArea__item:nth-child(7) {
+    height: 40.5405405405vw;
+  }
+  .waveObjectArea__item:nth-child(8) {
+    height: 30.2702702703vw;
+  }
+  .waveObjectArea__item:nth-child(9) {
+    height: 40.5405405405vw;
+  }
+  .waveObjectArea__item:nth-child(10) {
+    height: 40.5405405405vw;
+  }
+  .waveObjectArea__item--set:nth-child(2),
+  .waveObjectArea__item--set:nth-child(3),
+  .waveObjectArea__item--set:nth-child(4),
+  .waveObjectArea__item--set:nth-child(5),
+  .waveObjectArea__item--set:nth-child(6),
+  .waveObjectArea__item--set:nth-child(7),
+  .waveObjectArea__item--set:nth-child(8),
+  .waveObjectArea__item--set:nth-child(9),
+  .waveObjectArea__item--set:nth-child(10) {
+    height: 8.5333333333vw;
+  }
+  .waveObjectArea__item--ball:nth-child(2),
+  .waveObjectArea__item--ball:nth-child(3),
+  .waveObjectArea__item--ball:nth-child(4),
+  .waveObjectArea__item--ball:nth-child(5),
+  .waveObjectArea__item--ball:nth-child(6),
+  .waveObjectArea__item--ball:nth-child(7),
+  .waveObjectArea__item--ball:nth-child(8),
+  .waveObjectArea__item--ball:nth-child(9),
+  .waveObjectArea__item--ball:nth-child(10),
+  .waveObjectArea__item--ballStart:nth-child(2),
+  .waveObjectArea__item--ballStart:nth-child(3),
+  .waveObjectArea__item--ballStart:nth-child(4),
+  .waveObjectArea__item--ballStart:nth-child(5),
+  .waveObjectArea__item--ballStart:nth-child(6),
+  .waveObjectArea__item--ballStart:nth-child(7),
+  .waveObjectArea__item--ballStart:nth-child(8),
+  .waveObjectArea__item--ballStart:nth-child(9),
+  .waveObjectArea__item--ballStart:nth-child(10) {
+    height: 8.5333333333vw;
+  }
+  .waveObjectArea__item--start:nth-child(2) {
+    transform: translateY(-2.4vw);
+  }
+  .waveObjectArea__item--start:nth-child(2) .waveObject {
+    background-position: 0 -61.6vw;
+  }
+  .waveObjectArea__item--start:nth-child(3) {
+    transform: translateY(-10.6666666667vw);
+  }
+  .waveObjectArea__item--start:nth-child(3) .waveObject {
+    background-position: 0 -53.3333333333vw;
+  }
+  .waveObjectArea__item--start:nth-child(4) {
+    transform: translateY(-21.8666666667vw);
+  }
+  .waveObjectArea__item--start:nth-child(4) .waveObject {
+    background-position: 0 -42.1333333333vw;
+  }
+  .waveObjectArea__item--start:nth-child(5) {
+    transform: translateY(-10.9333333333vw);
+  }
+  .waveObjectArea__item--start:nth-child(5) .waveObject {
+    background-position: 0 -53.0666666667vw;
+  }
+  .waveObjectArea__item--start:nth-child(6) {
+    transform: translateY(-1.3333333333vw);
+  }
+  .waveObjectArea__item--start:nth-child(6) .waveObject {
+    background-position: 0 -62.6666666667vw;
+  }
+  .waveObjectArea__item--start:nth-child(7) {
+    transform: translateY(9.3333333333vw);
+  }
+  .waveObjectArea__item--start:nth-child(7) .waveObject {
+    background-position: 0 -73.3333333333vw;
+  }
+  .waveObjectArea__item--start:nth-child(8) {
+    transform: translateY(21.8666666667vw);
+  }
+  .waveObjectArea__item--start:nth-child(8) .waveObject {
+    background-position: 0 -85.8666666667vw;
+  }
+  .waveObjectArea__item--start:nth-child(9) {
+    transform: translateY(9.3333333333vw);
+  }
+  .waveObjectArea__item--start:nth-child(9) .waveObject {
+    background-position: 0 -73.3333333333vw;
+  }
+  .waveObjectArea__item--start:nth-child(10) {
+    transform: translateY(-4.2666666667vw);
+  }
+  .waveObjectArea__item--start:nth-child(10) .waveObject {
+    background-position: 0 -59.7333333333vw;
+  }
+  .waveObjectArea__item--down {
+    transition-duration: 2s;
+  }
+  .waveObjectArea__item--down .waveObject {
+    transition-duration: 2s;
+  }
+  .waveObjectArea__item--up {
+    transition-duration: 3s;
+  }
+  .waveObjectArea__item--up .waveObject {
+    transition-duration: 3s;
+  }
+  .waveObjectArea__item--down:nth-child(2) {
+    height: 26.6666666667vw;
+    transform: translateY(-4.2666666667vw);
+  }
+  .waveObjectArea__item--down:nth-child(2) .waveObject {
+    background-position: 0 -67.7333333333vw;
+  }
+  .waveObjectArea__item--down:nth-child(3) {
+    height: 28vw;
+    transform: translateY(9.3333333333vw);
+  }
+  .waveObjectArea__item--down:nth-child(3) .waveObject {
+    background-position: 0 -81.3333333333vw;
+  }
+  .waveObjectArea__item--down:nth-child(4) {
+    height: 24.5333333333vw;
+    transform: translateY(16vw);
+  }
+  .waveObjectArea__item--down:nth-child(4) .waveObject {
+    background-position: 0 -88vw;
+  }
+  .waveObjectArea__item--down:nth-child(5) {
+    height: 29.3333333333vw;
+    transform: translateY(9.3333333333vw);
+  }
+  .waveObjectArea__item--down:nth-child(5) .waveObject {
+    background-position: 0 -81.3333333333vw;
+  }
+  .waveObjectArea__item--down:nth-child(6) {
+    height: 47.2vw;
+    transform: translateY(-0.5333333333vw);
+  }
+  .waveObjectArea__item--down:nth-child(6) .waveObject {
+    background-position: 0 -58.6666666667vw;
+  }
+  .waveObjectArea__item--down:nth-child(7) {
+    height: 33.3333333333vw;
+    transform: translateY(9.6vw);
+  }
+  .waveObjectArea__item--down:nth-child(7) .waveObject {
+    background-position: 0 -81.6vw;
+  }
+  .waveObjectArea__item--down:nth-child(8) {
+    height: 23.2vw;
+    transform: translateY(16vw);
+  }
+  .waveObjectArea__item--down:nth-child(8) .waveObject {
+    background-position: 0 -88vw;
+  }
+  .waveObjectArea__item--down:nth-child(9) {
+    height: 36vw;
+    transform: translateY(9.3333333333vw);
+  }
+  .waveObjectArea__item--down:nth-child(9) .waveObject {
+    background-position: 0 -81.3333333333vw;
+  }
+  .waveObjectArea__item--down:nth-child(10) {
+    height: 37.3333333333vw;
+    transform: translateY(-4.2666666667vw);
+  }
+  .waveObjectArea__item--down:nth-child(10) .waveObject {
+    background-position: 0 -67.7333333333vw;
+  }
+  .waveObjectArea__item--up:nth-child(2) {
+    transform: translateY(-2.6666666667vw);
+  }
+  .waveObjectArea__item--up:nth-child(2) .waveObject {
+    background-position: 0 -49.3333333333vw;
+  }
+  .waveObjectArea__item--up:nth-child(3) {
+    transform: translateY(-5.8666666667vw);
+  }
+  .waveObjectArea__item--up:nth-child(3) .waveObject {
+    background-position: 0 -46.1333333333vw;
+  }
+  .waveObjectArea__item--up:nth-child(4) {
+    transform: translateY(-21.8666666667vw);
+  }
+  .waveObjectArea__item--up:nth-child(4) .waveObject {
+    background-position: 0 -30.1333333333vw;
+  }
+  .waveObjectArea__item--up:nth-child(5) {
+    transform: translateY(-5.8666666667vw);
+  }
+  .waveObjectArea__item--up:nth-child(5) .waveObject {
+    background-position: 0 -46.1333333333vw;
+  }
+  .waveObjectArea__item--up:nth-child(6) {
+    transform: translateY(-0.5333333333vw);
+  }
+  .waveObjectArea__item--up:nth-child(6) .waveObject {
+    background-position: 0 -38.6666666667vw;
+  }
+  .waveObjectArea__item--up:nth-child(7) {
+    transform: translateY(-5.8666666667vw);
+  }
+  .waveObjectArea__item--up:nth-child(7) .waveObject {
+    background-position: 0 -46.1333333333vw;
+  }
+  .waveObjectArea__item--up:nth-child(8) {
+    transform: translateY(-21.8666666667vw);
+  }
+  .waveObjectArea__item--up:nth-child(8) .waveObject {
+    background-position: 0 -30.1333333333vw;
+  }
+  .waveObjectArea__item--up:nth-child(9) {
+    transform: translateY(-5.8666666667vw);
+  }
+  .waveObjectArea__item--up:nth-child(9) .waveObject {
+    background-position: 0 -46.1333333333vw;
+  }
+  .waveObjectArea__item--up:nth-child(10) {
+    transform: translateY(-2.6666666667vw);
+  }
+  .waveObjectArea__item--up:nth-child(10) .waveObject {
+    background-position: 0 -49.3333333333vw;
+  }
+  .waveObjectArea--phase0 .waveObjectArea__item .waveObject--0,
+  .waveObjectArea--phase1 .waveObjectArea__item .waveObject--1,
+  .waveObjectArea--phase2 .waveObjectArea__item .waveObject--2,
+  .waveObjectArea--phase3 .waveObjectArea__item .waveObject--3,
+  .waveObjectArea--phase4 .waveObjectArea__item .waveObject--4 {
+    opacity: 1;
+  }
+}
+/*
+.outlineArea {
+  position: relative;
+}
+.outlineArea__box {
+  padding: 3600px 0 400px;
+  position: relative;
+  z-index: 1;
+}
+.outlineArea__boxInner {
+  position: relative;
+}
+@keyframes movin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.playMovie {
+  width: 137px;
+  height: 137px;
+  position: absolute;
+  right: 80px;
+  bottom: 0;
+  cursor: pointer;
+  transition-property: opacity;
+  transition-timing-function: ease;
+  transition-duration: 0.3s;
+}
+.playMovie:hover {
+  opacity: 0.8;
+}
+.playMovie img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.playMovie img:nth-child(1) {
+  width: 100px;
+  height: 100px;
+}
+.playMovie img:nth-child(2) {
+  animation-name: movin;
+  animation-timing-function: linear;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+.outlineArea__ttl {
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1.66;
+  color: #fff;
+  margin-bottom: 66px;
+}
+.outlineArea__txt {
+  font-size: 17px;
+  line-height: 2.23;
+  color: #fff;
+}
+.outlineArea__txt + .outlineArea__txt {
+  margin-top: 28px;
+}
+.c-transitionBtn--outline {
+  margin-top: 45px;
+}
+@media screen and (max-width: 1024px) {
+  .playMovie {
+    right: 60px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .outlineArea__box {
+    padding: 1350px 0 300px;
+  }
+  .playMovie {
+    width: 80px;
+    height: 80px;
+    right: 25px;
+  }
+  .playMovie img:nth-child(1) {
+    width: 60px;
+    height: 60px;
+  }
+  .outlineArea__ttl {
+    font-size: 27px;
+    line-height: 1.48;
+    margin-bottom: 37px;
+  }
+  .outlineArea__txt {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+  .outlineArea__txt + .outlineArea__txt {
+    margin-top: 24px;
+  }
+  .c-transitionBtn--outline {
+    margin-top: 36px;
+  }
+}
+*/

@@ -1,0 +1,342 @@
+@import "_config";
+
+//banner背景複寫
+.waveObjectArea__item {
+  .waveObject {
+    background-image: url(../img/png/common/banner-about--phase--1.png);
+  }
+  > .waveObject--0 {
+    background-image: url(/img/png/common/banner-about--phase--1.png);
+  }
+  > .waveObject--1 {
+    background-image: url(../img/png/common/banner-about--phase--2.png);
+  }
+  > .waveObject--2 {
+    background-image: url(../img/png/common/banner-about--phase--3.png);
+  }
+  > .waveObject--3 {
+    background-image: url(../img/png/common/banner-about--phase--4.png);
+  }
+  > .waveObject--4 {
+    background-image: url(../img/png/common/banner-about--phase--5.png);
+  }
+}
+
+.container {
+  width: 30vw;
+  overflow: hidden;
+  transition: 0.3s ease;
+  font-size: 15px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.checkbox {
+  height: 50px;
+  width: 50px;
+  background-color: blueviolet;
+}
+
+body {
+  background-image: url("../img/jpg/recommend/mainBG.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.nav-3 {
+  position: relative;
+  z-index: 50;
+}
+
+.allianceImageNav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10vh auto;
+  gap: 1vw;
+  position: relative;
+
+  @include mobile {
+    gap: 3vw;
+    margin: 3vh auto;
+  }
+
+  li {
+    border: 1px solid #ccc;
+    border-bottom: unset;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    position: relative;
+
+    a {
+      display: block;
+      padding: 0.8em 3em 0.5em;
+      width: 100%;
+      height: 100%;
+
+      @include mobile {
+        padding: 0.4em 1.5em 0.25em;
+      }
+    }
+
+    &.active::after {
+      content: " ";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: #eee;
+    }
+
+    a.active {
+      color: $mainColor;
+      cursor: default;
+    }
+
+    a:hover {
+      color: $mainColor;
+    }
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 6%;
+    right: 6%;
+    height: 1px;
+    background-color: #dddddd;
+    z-index: -1;
+  }
+}
+
+.RecommendCard {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 8vh 17vw;
+  gap: 7%;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 17vw;
+    right: 17vw;
+    height: 1px;
+    background-color: #dddddd;
+    z-index: -1;
+  }
+
+  .articleDiv {
+    overflow: hidden;
+  }
+
+  .imgDiv {
+    width: 40%;
+  }
+
+  .infoDiv {
+    padding-top: 0.15vh;
+    width: 60%;
+  }
+
+  .innerText {
+    color: #3a3a3a;
+  }
+
+  .peopleTitle,
+  .peopleName {
+    color: $mainColor;
+    font-size: pxConvertor(20);
+    line-height: 1.5;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin: 0px 0px 2vh;
+
+    @include mobile {
+      font-size: pxConvertor2(24);
+      line-height: 1;
+      margin: 2vh 0px;
+    }
+  }
+
+  .peopleName {
+    display: flex;
+    flex-grow: 1;
+    gap: 0.5rem;
+    font-size: pxConvertor(30);
+    margin-bottom: 4vh;
+    position: relative;
+
+    .line {
+      margin: auto 0px;
+      position: relative;
+      height: 1px;
+      background-color: $mainColor;
+      max-width: 10vw;
+      flex-grow: 1;
+
+      @include mobile {
+        max-width: 50vw;
+      }
+    }
+
+    @include mobile {
+      flex-direction: row-reverse;
+      font-size: pxConvertor2(36);
+      margin-bottom: 2vh;
+    }
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .collapse.show {
+    & + a .line-2 {
+      transform: rotate(180deg);
+    }
+  }
+
+  .collapse:not(.show) {
+    display: block;
+    height: 7.2rem;
+    overflow: hidden;
+  }
+
+  .collapsing {
+    height: 7.2rem;
+    overflow: hidden;
+
+    .symbol .line-2 {
+      transform: rotate(180deg);
+    }
+  }
+
+  .toggleBtn {
+    position: relative;
+    z-index: 20;
+    font-size: 1rem;
+    margin-top: 2.5vh;
+    letter-spacing: 0.05em;
+    position: relative;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: 0.5s ease;
+    gap: 1em;
+    line-height: 1;
+
+    @include mobile {
+      font-size: pxConvertor2(20);
+    }
+
+    span {
+      display: block;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      color: $mainColor;
+      font-size: 1rem;
+    }
+
+    .symbol {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.5s ease;
+      width: 0.8rem;
+      height: 0.8rem;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      .symbol_svg {
+        fill: none;
+        stroke: #ae7f46;
+        stroke-miterlimit: 10;
+        stroke-width: 1.8px;
+        transition: 0.5s ease;
+      }
+    }
+
+    &:hover {
+      gap: 0.5em;
+      .symbol {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+
+.peopleInfoDiv {
+  @include mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+}
+
+.RecommendCard:nth-of-type(1) {
+  padding-top: 0px;
+}
+
+.RecommendCard:nth-of-type(even) {
+  flex-direction: row-reverse;
+  .infoDiv {
+    text-align: right;
+  }
+
+  .peopleName {
+    flex-direction: row-reverse;
+  }
+}
+
+.RecommendCard,
+.RecommendCard:nth-of-type(even) {
+  @include mobile {
+    flex-direction: column;
+    padding: 4vh 5vw;
+    gap: 5%;
+
+    .imgDiv {
+      width: 100%;
+    }
+
+    .infoDiv {
+      width: 100%;
+      text-align: left;
+    }
+
+    &::after {
+      left: 5vw;
+      right: 5vw;
+    }
+  }
+}
+
+/*動畫區*/
+.RecommendCard:nth-of-type(even) .peopleName .line,
+.peopleName .line {
+  opacity: 0;
+  animation: peopleNameDecLine 1s 2s ease-in-out forwards;
+}
+
+@keyframes peopleNameDecLine {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

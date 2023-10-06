@@ -1,0 +1,110 @@
+@use "sass:math";
+@import url("../scss/bannerAnimation.scss");
+
+$waveObjectNumber: 8;
+$baseNumber: 1%; //單位
+$baseVwNumber: 1vw; //單位
+$baseHeight: 2;
+$ballSize: 2.5vw;
+
+$baselist: (0.1, 0.4, 0.6, 0.9, 0.6, 0.7, 0.4, 0.25);
+
+@function transfer($min, $max) {
+  @return (calc(random() * calc($max - $min) * 100 / 100 + $min) * $baseNumber);
+}
+
+@function transfer2($min, $max, $selfBaseNumber) {
+  @return (
+    calc(random() * calc($max - $min) * 100 / 100 + $min) * $selfBaseNumber *
+      $baseNumber
+  );
+}
+
+@function transferToVw($min, $max) {
+  @return (
+    calc(random() * calc($max - $min) * 100 / 100 + $min) * $baseVwNumber
+  );
+}
+
+@function transferHeight($min, $max) {
+  @return (
+    calc(random() * calc($max - $min) * 100 / 100 + $min) * $baseVwNumber
+  );
+}
+
+.waveObjectArea__item--start {
+  transition-duration: 1.5s;
+}
+
+.waveObjectArea__item--down {
+  transition-duration: 2s;
+  .waveObject {
+    transition-duration: 2s;
+  }
+}
+.waveObjectArea__item--up {
+  transition: 3s;
+
+  .waveObject {
+    transition-duration: 3s;
+  }
+}
+
+@for $i from 1 through $waveObjectNumber {
+  $selfBaseNumber: nth($baselist, $i);
+
+  .waveObjectArea__item {
+    border-radius: $ballSize;
+    &:nth-child(#{$i}) {
+      height: $selfBaseNumber * $baseHeight * (transfer(15, 25));
+    }
+  }
+
+  .waveObjectArea__item--set {
+    border-radius: $ballSize;
+    &:nth-child(#{$i}) {
+      height: $selfBaseNumber * $baseHeight * (transfer(5, 30));
+    }
+  }
+
+  .waveObjectArea__item--ball,
+  .waveObjectArea__item--ballStart {
+    border-radius: $ballSize;
+    &:nth-child(#{$i}) {
+      height: $ballSize;
+      transform: scale(1);
+      background-position: 0 center;
+      transition-duration: 1.5s;
+    }
+  }
+
+  .waveObjectArea__item--start {
+    &:nth-child(#{$i}) {
+      transform: translateY((1 - $selfBaseNumber) * transferToVw(3, 5));
+
+      .waveObject {
+        background-position: 0 transfer(-10, 10);
+      }
+    }
+  }
+
+  .waveObjectArea__item--down {
+    &:nth-child(#{$i}) {
+      transform: translateY((1-($selfBaseNumber)) * transferToVw(-5, -3));
+
+      .waveObject {
+        background-position: 0 transfer(-10, 10);
+      }
+    }
+  }
+
+  .waveObjectArea__item--up {
+    &:nth-child(#{$i}) {
+      transform: translateY((1-($selfBaseNumber)) * transferToVw(3, 5));
+
+      .waveObject {
+        background-position: 0 transfer(-10, 10);
+      }
+    }
+  }
+}
