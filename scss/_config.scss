@@ -150,7 +150,7 @@ a {
   }
 
   @include mobile {
-    padding-top: 1%;
+    padding-top: 7vh;
     height: auto;
     margin-bottom: 0px;
 
@@ -161,7 +161,7 @@ a {
     }
 
     .bannerAnimationBox {
-      height: 20vh;
+      height: 22vh;
 
       #main-visual {
         width: 80%;
@@ -185,7 +185,7 @@ a {
 .breadcrumbNav {
   padding: 5vh 0px 5vh 10.5vw;
   position: relative;
-  z-index: 10;
+  z-index: 99;
   height: auto;
 
   @include mobile {
@@ -783,7 +783,7 @@ main {
 /* 動畫區 */
 .bannerBox .bannerText {
   opacity: 0;
-  transform: translateX(2vw);
+  //transform: translateX(2vw); //會造成contactPage的畫面異常，所以先註解
   animation: bannerTextAnimation 2s 1s forwards;
 }
 
@@ -970,7 +970,7 @@ main {
 
 .blurIn {
   opacity: 0;
-  animation: blurIn 1s 0.5s forwards;
+  // animation: blurIn 1s 0.5s forwards;
 }
 
 @keyframes blurIn {

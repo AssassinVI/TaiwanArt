@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.css"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./css/bannerAnimation.css" />
+    <link rel="stylesheet" href="./css/bannerAnimation-Animation.css" />
+    <link rel="stylesheet" href="./css/Contact.css" />
+    <title>聯絡我們</title>
+  </head>
+  <body>
+    <nav>
+      <div id="navDiv"></div>
+    </nav>
+    <main class="contactPage-main">
+      <section class="bannerBox">
+        <h2 class="bannerText wow">CONTACT　US</h2>
+        <div class="bannerAnimationBox wow fadeIn" data-wow-duration="3s">
+          <div class="animationBox" id="main-visual"></div>
+        </div>
+        <nav
+          class="breadcrumbNav wow fadeIn"
+          aria-label="breadcrumb"
+          data-wow-delay="1s"
+        >
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">首頁</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              <a href="javascript:;">聯絡我們</a>
+            </li>
+          </ol>
+        </nav>
+      </section>
+      <section class="contactPage-middle">
+        <div class="contactPage-middle-remind">
+          <p>歡迎提供您的寶貴意見，請務必留下正確資料，</p>
+          <p>我們將竭誠為您服務，謝謝！</p>
+        </div>
+        <div class="contactPage-middle-line"></div>
+        <div class="contactPage-middle-content">
+          <article class="contactPage-middle-content-article">
+            <p>台灣藝術教育高校聯盟</p>
+            <div>
+              <img src="./img/svg/contact-phone.svg" alt="" />
+              <p>(02)2358 7571</p>
+            </div>
+            <div>
+              <img src="./img/svg/contact-email.svg" alt="" />
+              <p>art.edu.assoc@gmail.com</p>
+            </div>
+            <div>
+              <img src="./img/svg/contact-phone.svg" alt="" />
+              <p>337桃園市大園區大成路二段100號</p>
+            </div>
+          </article>
+          <form class="contactPage-middle-content-form" action="">
+            <div class="contactPage-middle-content-form-item">
+              <div>
+                <p>聯</p>
+                <p>絡</p>
+                <p>人</p>
+                <p>姓</p>
+                <p>名</p>
+              </div>
+              <input type="text" />
+            </div>
+            <div class="contactPage-middle-content-form-item">
+              <div>
+                <p>聯</p>
+                <p>絡</p>
+                <p>人</p>
+                <p>信</p>
+                <p>箱</p>
+              </div>
+              <input type="email" />
+            </div>
+            <div class="contactPage-middle-content-form-item">
+              <div>
+                <p>信</p>
+                <p>件</p>
+                <p>主</p>
+                <p>旨</p>
+              </div>
+              <select name="purpose" id="purpose-select">
+                <option value="unit">異業合作</option>
+              </select>
+            </div>
+            <div class="contactPage-middle-content-form-item">
+              <div>
+                <p>信</p>
+                <p>件</p>
+                <p>內</p>
+                <p>容</p>
+              </div>
+              <div class="contactPage-middle-content-form-item-reason">
+                <textarea name="reason" id="contact-reason"></textarea>
+                <div class="contactPage-middle-content-form-button">
+                  <button>送出</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        ©2023 Taiwan Arts Education College Alliance.
+        <span class="ph"></span> All Rights Reserved.
+        <span class="ph"></span>Email: art.edu.assoc@gmail.com
+      </p>
+    </footer>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/wow.min.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/bannerAnimation.js"></script>
+    <script>
+      window.onload = () => {
+        let screenWidth = window.innerWidth;
+        let height = $("#navDiv").height();
+        $("main").css("marginTop", height);
+
+        if (screenWidth >= 500) {
+          wow = new WOW({
+            offset: 100,
+          });
+          wow.init();
+          console.log(wow.init());
+        } else {
+          wow = new WOW().init();
+        }
+      };
+      $(function () {
+        if (window.innerWidth <= 500) {
+          $(".bannerText").css("fontSize", "10vw");
+        }
+      });
+    </script>
+  </body>
+</html>

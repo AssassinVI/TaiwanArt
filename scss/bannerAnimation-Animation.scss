@@ -53,6 +53,7 @@ $baselist: (0.1, 0.4, 0.6, 0.9, 0.6, 0.7, 0.4, 0.25);
 @for $i from 1 through $waveObjectNumber {
   $selfBaseNumber: nth($baselist, $i);
 
+  //限制單項橢圓的高度
   .waveObjectArea__item {
     border-radius: $ballSize;
     &:nth-child(#{$i}) {

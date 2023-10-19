@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.css"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./css/bannerAnimation.css" />
+    <link rel="stylesheet" href="./css/bannerAnimation-Animation.css" />
+    <link rel="stylesheet" href="./css/Partners.css" />
+    <title>合作學校</title>
+  </head>
+  <body>
+    <nav>
+      <div id="navDiv"></div>
+    </nav>
+    <main class="partner-main">
+      <section class="bannerBox">
+        <h2 class="bannerText wow">PARTNERS</h2>
+        <div class="bannerAnimationBox wow fadeIn" data-wow-duration="3s">
+          <div class="animationBox" id="main-visual"></div>
+        </div>
+        <nav
+          class="breadcrumbNav wow fadeIn"
+          aria-label="breadcrumb"
+          data-wow-delay="1s"
+        >
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">首頁</a></li>
+            <li class="breadcrumb-item"><a href="#">聯盟夥伴</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              <a href="javascript:;">合作學校</a>
+            </li>
+          </ol>
+        </nav>
+      </section>
+      <section class="partner-middle">
+        <div class="partner-school" id="partner-school"></div>
+        <div class="partner-page">
+          <a class="partner-bottom-nav-active" href="#">1</a>
+          <a class="partner-bottom-nav" href="#">2</a>
+          <a class="partner-bottom-nav" href="#">3</a>
+        </div>
+      </section>
+    </main>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./js/wow.min.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/bannerAnimation.js"></script>
+    <script src="./js/partnersSchool.js"></script>
+    <script>
+      window.onload = () => {
+        var screenWidth = window.innerWidth;
+
+        var height = $("#navDiv").height();
+        $("main").css("marginTop", height);
+
+        if (screenWidth >= 500) {
+          wow = new WOW({
+            offset: 100,
+          });
+          wow.init();
+        } else {
+          wow = new WOW().init();
+        }
+      };
+
+      $(function () {
+        let tl;
+        if (window.innerWidth <= 500) {
+          $(".partner-school-hexagon").addClass("hexagon");
+          $(".partner-school-hexagon")
+            .children(
+              ".partner-school-hexagon-content , .partner-school-fb , .partner-school-ig"
+            )
+            .css({ display: "block" });
+          $(".partner-school-hexagon").children("p").css("color", "white");
+        } else {
+          $(".partner-school-hexagon").hover(
+            function () {
+              $(this).addClass("hexagon");
+              $(this)
+                .children(
+                  ".partner-school-hexagon-content , .partner-school-fb , .partner-school-ig"
+                )
+                .css({ display: "block" });
+              $(this).children("p").css("color", "white");
+              gsap.fromTo(
+                $(this).children(".partner-school-fb,.partner-school-ig"),
+                { top: "100%" },
+                { top: "60%", ease: "elastic.out(1,0.3)", duration: 1.5 }
+              );
+              tl = gsap.timeline({ repeat: -1 });
+              tl.fromTo(
+                $(this).children(".partner-school-hexagon-content"),
+                { transform: "scale(1.3)" },
+                { transform: "scale(1)", ease: "none", duration: 4 }
+              ).fromTo(
+                $(this).children(".partner-school-hexagon-content"),
+                { transform: "scale(1)" },
+                { transform: "scale(1.3)", ease: "none", duration: 4 }
+              );
+            },
+            function () {
+              $(this).removeClass("hexagon");
+              $(this)
+                .children(
+                  ".partner-school-hexagon-content , .partner-school-fb , .partner-school-ig"
+                )
+                .css("display", "none");
+              $(this).children("p").css("color", "black");
+              tl.clear();
+            }
+          );
+        }
+      });
+    </script>
+  </body>
+</html>

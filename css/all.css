@@ -113,7 +113,7 @@ a {
 }
 @media all and (max-width: 500px) {
   .bannerBox {
-    padding-top: 1%;
+    padding-top: 7vh;
     height: auto;
     margin-bottom: 0px;
   }
@@ -123,7 +123,7 @@ a {
     margin-bottom: 5vh;
   }
   .bannerBox .bannerAnimationBox {
-    height: 20vh;
+    height: 22vh;
   }
   .bannerBox .bannerAnimationBox #main-visual {
     width: 80%;
@@ -142,7 +142,7 @@ a {
 .breadcrumbNav {
   padding: 5vh 0px 5vh 10.5vw;
   position: relative;
-  z-index: 10;
+  z-index: 99;
   height: auto;
 }
 @media all and (max-width: 500px) {
@@ -710,7 +710,6 @@ main {
 /* 動畫區 */
 .bannerBox .bannerText {
   opacity: 0;
-  transform: translateX(2vw);
   animation: bannerTextAnimation 2s 1s forwards;
 }
 
@@ -881,7 +880,6 @@ main {
 }
 .blurIn {
   opacity: 0;
-  animation: blurIn 1s 0.5s forwards;
 }
 
 @keyframes blurIn {
@@ -1710,6 +1708,7 @@ main.index .fifth-page .fifth-page-para .donate p {
   font-family: "Noto Sans TC", sans-serif;
   color: #fff;
   letter-spacing: 0.1em;
+  padding: 0.4em 1.5em 0.4em 1.5em;
 }
 @media all and (max-width: 500px) {
   main.index .fifth-page .fifth-page-para .donate {

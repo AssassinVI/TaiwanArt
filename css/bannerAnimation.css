@@ -113,7 +113,7 @@ a {
 }
 @media all and (max-width: 500px) {
   .bannerBox {
-    padding-top: 1%;
+    padding-top: 7vh;
     height: auto;
     margin-bottom: 0px;
   }
@@ -123,7 +123,7 @@ a {
     margin-bottom: 5vh;
   }
   .bannerBox .bannerAnimationBox {
-    height: 20vh;
+    height: 22vh;
   }
   .bannerBox .bannerAnimationBox #main-visual {
     width: 80%;
@@ -142,7 +142,7 @@ a {
 .breadcrumbNav {
   padding: 5vh 0px 5vh 10.5vw;
   position: relative;
-  z-index: 10;
+  z-index: 99;
   height: auto;
 }
 @media all and (max-width: 500px) {
@@ -710,7 +710,6 @@ main {
 /* 動畫區 */
 .bannerBox .bannerText {
   opacity: 0;
-  transform: translateX(2vw);
   animation: bannerTextAnimation 2s 1s forwards;
 }
 
@@ -881,7 +880,6 @@ main {
 }
 .blurIn {
   opacity: 0;
-  animation: blurIn 1s 0.5s forwards;
 }
 
 @keyframes blurIn {
@@ -1067,9 +1065,9 @@ main {
   top: 0;
   left: 0;
   opacity: 0;
-  transition-property: background-position, opacity;
+  transition-property: background-position, opacity, background-image;
   transition-timing-function: cubic-bezier(0.49, 0.19, 0, 0.99);
-  transition-duration: 4s;
+  transition-duration: 2s;
 }
 .waveObjectArea__item > .waveObject--0 {
   background-image: url(/img/png/common/bg_mv-gradation--phase1.png);
@@ -1087,6 +1085,14 @@ main {
   background-image: url(../img/png/common/bg_mv-gradation--phase5.png);
 }
 
+@keyframes changeColor {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
 .waveObjectArea__item:nth-child(odd) .waveObject--0,
 .waveObjectArea__item:nth-child(odd) .waveObject--1,
 .waveObjectArea__item:nth-child(odd) .waveObject--2,

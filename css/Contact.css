@@ -992,318 +992,244 @@ main {
   }
 }
 .waveObjectArea__item .waveObject {
-  background-image: url(../img/png/common/banner-about--phase--1.png);
+  background-image: linear-gradient(to bottom, rgb(242, 196, 196) 0%, rgb(242, 196, 196) 100%);
 }
 .waveObjectArea__item > .waveObject--0 {
-  background-image: url(/img/png/common/banner-about--phase--1.png);
+  background-image: linear-gradient(to bottom, rgb(221, 181, 184) 1%, rgb(221, 181, 184) 100%);
 }
 .waveObjectArea__item > .waveObject--1 {
-  background-image: url(../img/png/common/banner-about--phase--2.png);
+  background-image: linear-gradient(to bottom, rgb(216, 173, 177) 0%, rgb(216, 173, 177) 100%);
 }
 .waveObjectArea__item > .waveObject--2 {
-  background-image: url(../img/png/common/banner-about--phase--3.png);
+  background-image: linear-gradient(to bottom, rgb(214, 175, 179) 1%, rgb(214, 175, 179) 100%);
 }
 .waveObjectArea__item > .waveObject--3 {
-  background-image: url(../img/png/common/banner-about--phase--4.png);
+  background-image: linear-gradient(to bottom, rgb(206, 169, 173) 0%, rgb(206, 169, 173) 100%);
 }
 .waveObjectArea__item > .waveObject--4 {
-  background-image: url(../img/png/common/banner-about--phase--5.png);
+  background-image: linear-gradient(to bottom, rgb(198, 161, 163) 0%, rgb(198, 161, 163) 100%);
 }
 
-.container {
-  width: 30vw;
-  overflow: hidden;
-  transition: 0.3s ease;
-  font-size: 15px;
-  margin: 0px;
-  padding: 0px;
+.bannerBox .bannerAnimationBox::before,
+.bannerBox .bannerAnimationBox::after {
+  background-color: #d8adb1;
 }
 
-.checkbox {
-  height: 50px;
-  width: 50px;
-  background-color: blueviolet;
+.bannerBox .bannerText {
+  color: #d8adb1;
 }
 
-body {
-  background-image: url("../img/jpg/recommend/mainBG.png");
+.contactPage-main {
+  background-image: url("../img/png/聯絡我們-底圖.png");
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
 }
 
-.nav-3 {
-  position: relative;
-  z-index: 50;
-}
-
-.allianceImageNav {
-  width: 100%;
+.contactPage-middle {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10vh auto;
-  gap: 1vw;
+  flex-direction: column;
   position: relative;
-}
-@media all and (max-width: 500px) {
-  .allianceImageNav {
-    gap: 3vw;
-    margin: 3vh auto;
-  }
-}
-.allianceImageNav li {
-  border: 1px solid #ccc;
-  border-bottom: unset;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  position: relative;
-}
-.allianceImageNav li a {
-  display: block;
-  padding: 0.8em 3em 0.5em;
-  width: 100%;
-  height: 100%;
-}
-@media all and (max-width: 500px) {
-  .allianceImageNav li a {
-    padding: 0.4em 1.5em 0.25em;
-  }
-}
-.allianceImageNav li.active::after {
-  content: " ";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: #eee;
-}
-.allianceImageNav li a.active {
-  color: #b28146;
-  cursor: default;
-}
-.allianceImageNav li a:hover {
-  color: #b28146;
-}
-.allianceImageNav::before {
-  content: " ";
-  position: absolute;
-  bottom: 0;
-  left: 6%;
-  right: 6%;
-  height: 1px;
-  background-color: #dddddd;
-  z-index: -1;
 }
 
-.RecommendCard {
-  position: relative;
+.contactPage-middle-remind {
+  width: 70%;
+}
+.contactPage-middle-remind > :nth-child(1) {
+  margin-bottom: 25px;
+}
+
+.contactPage-middle-remind {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  padding: 8vh 17vw;
-  gap: 7%;
-}
-.RecommendCard::after {
-  content: " ";
-  position: absolute;
-  bottom: 0;
-  left: 17vw;
-  right: 17vw;
-  height: 1px;
-  background-color: #dddddd;
-  z-index: -1;
-}
-.RecommendCard .articleDiv {
-  overflow: hidden;
-}
-.RecommendCard .imgDiv {
-  width: 40%;
-}
-.RecommendCard .infoDiv {
-  padding-top: 0.15vh;
-  width: 60%;
-}
-.RecommendCard .innerText {
-  color: #3a3a3a;
-}
-.RecommendCard .peopleTitle,
-.RecommendCard .peopleName {
-  color: #b28146;
-  font-size: 1.0416666667vw;
-  line-height: 1.5;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  margin: 0px 0px 2vh;
-}
-@media all and (max-width: 500px) {
-  .RecommendCard .peopleTitle,
-  .RecommendCard .peopleName {
-    font-size: 3.125vw;
-    line-height: 1;
-    margin: 2vh 0px;
-  }
-}
-.RecommendCard .peopleName {
-  display: flex;
-  flex-grow: 1;
-  gap: 0.5rem;
-  font-size: 1.5625vw;
-  margin-bottom: 4vh;
-  position: relative;
-}
-.RecommendCard .peopleName .line {
-  margin: auto 0px;
-  position: relative;
-  height: 1px;
-  background-color: #b28146;
-  max-width: 10vw;
-  flex-grow: 1;
-}
-@media all and (max-width: 500px) {
-  .RecommendCard .peopleName .line {
-    max-width: 50vw;
-  }
-}
-@media all and (max-width: 500px) {
-  .RecommendCard .peopleName {
-    flex-direction: row-reverse;
-    font-size: 4.6875vw;
-    margin-bottom: 2vh;
-  }
-}
-.RecommendCard .container {
-  width: 100%;
-  display: flex;
   flex-direction: column;
 }
-.RecommendCard .collapse.show + a .line-2 {
-  transform: rotate(180deg);
-}
-.RecommendCard .collapse:not(.show) {
+
+.contactPage-middle-line {
   display: block;
-  height: 7.2rem;
-  overflow: hidden;
-}
-.RecommendCard .collapsing {
-  height: 7.2rem;
-  overflow: hidden;
-}
-.RecommendCard .collapsing .symbol .line-2 {
-  transform: rotate(180deg);
-}
-.RecommendCard .toggleBtn {
-  position: relative;
-  z-index: 20;
-  font-size: 1rem;
-  margin-top: 2.5vh;
-  letter-spacing: 0.05em;
-  position: relative;
-  align-self: flex-end;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  transition: 0.5s ease;
-  gap: 1em;
-  line-height: 1;
-}
-@media all and (max-width: 500px) {
-  .RecommendCard .toggleBtn {
-    font-size: 2.6041666667vw;
-  }
-}
-.RecommendCard .toggleBtn span {
-  display: block;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  color: #b28146;
-  font-size: 1rem;
-}
-.RecommendCard .toggleBtn .symbol {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.5s ease;
-  width: 0.8rem;
-  height: 0.8rem;
-}
-.RecommendCard .toggleBtn .symbol svg {
-  width: 100%;
-  height: 100%;
-}
-.RecommendCard .toggleBtn .symbol .symbol_svg {
-  fill: none;
-  stroke: #ae7f46;
-  stroke-miterlimit: 10;
-  stroke-width: 1.8px;
-  transition: 0.5s ease;
-}
-.RecommendCard .toggleBtn:hover {
-  gap: 0.5em;
-}
-.RecommendCard .toggleBtn:hover .symbol {
-  transform: rotate(360deg);
+  height: 1px;
+  width: 70%;
+  margin-top: 5vh;
+  margin-bottom: 7vh;
+  background-color: #dddddd;
 }
 
-@media all and (max-width: 500px) {
-  .peopleInfoDiv {
+.contactPage-middle-content {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  flex-direction: row;
+  margin-top: 20px;
+  z-index: 20;
+}
+
+.contactPage-middle-content-article {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 40%;
+}
+.contactPage-middle-content-article > p {
+  margin-bottom: 40px;
+  font-weight: 800;
+}
+.contactPage-middle-content-article > div {
+  display: flex;
+  margin-bottom: 30px;
+}
+.contactPage-middle-content-article > div > img {
+  width: 1vw;
+  margin-right: 20px;
+}
+.contactPage-middle-content-article > div > p {
+  line-height: 20px;
+}
+
+.contactPage-middle-content-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.contactPage-middle-content-form-item {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  flex-direction: row;
+  margin-bottom: 23px;
+}
+.contactPage-middle-content-form-item > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 20%;
+}
+.contactPage-middle-content-form-item > input {
+  width: 60%;
+  height: 2.5vh;
+  font-size: 18px;
+  margin-left: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+.contactPage-middle-content-form-item > select {
+  width: 60%;
+  height: 2.5vh;
+  font-size: 18px;
+  margin-left: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+
+.contactPage-middle-content-form-item-reason {
+  flex-direction: column;
+  width: 60% !important;
+  margin-left: 50px !important;
+}
+.contactPage-middle-content-form-item-reason > textarea {
+  width: 100%;
+  height: 12vh;
+  font-size: 18px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  resize: none;
+}
+
+.contactPage-middle-content-form-button {
+  margin-top: 50px;
+}
+.contactPage-middle-content-form-button > button {
+  font-size: 20px;
+  color: #ffffff;
+  border: none;
+  background-color: #a94945;
+  border-radius: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.contactPage-bg {
+  position: absolute;
+}
+
+@media screen and (max-width: 500px) {
+  .contactPage-middle {
+    margin-bottom: 10vw;
+  }
+  .contactPage-middle-remind {
+    width: 90%;
+  }
+  .contactPage-middle-remind > p {
+    font-size: 3.8vw;
+  }
+  .contactPage-middle-line {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+  .contactPage-middle-line > div {
+    width: 90%;
+  }
+  .contactPage-middle-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-  }
-}
-
-.RecommendCard:nth-of-type(1) {
-  padding-top: 0px;
-}
-
-.RecommendCard:nth-of-type(even) {
-  flex-direction: row-reverse;
-}
-.RecommendCard:nth-of-type(even) .infoDiv {
-  text-align: right;
-}
-.RecommendCard:nth-of-type(even) .peopleName {
-  flex-direction: row-reverse;
-}
-
-@media all and (max-width: 500px) {
-  .RecommendCard,
-  .RecommendCard:nth-of-type(even) {
     flex-direction: column;
-    padding: 4vh 5vw;
-    gap: 5%;
+    width: 80%;
   }
-  .RecommendCard .imgDiv,
-  .RecommendCard:nth-of-type(even) .imgDiv {
+  .contactPage-middle-line {
+    width: 90%;
+  }
+  .contactPage-middle-content-article {
+    width: 100%;
+    padding: 18px;
+  }
+  .contactPage-middle-content-article > p {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .contactPage-middle-content-article > div {
+    align-items: center;
+  }
+  .contactPage-middle-content-article > div > img {
+    width: 5vw;
+    margin-right: 10px;
+  }
+  .contactPage-middle-content-form {
     width: 100%;
   }
-  .RecommendCard .infoDiv,
-  .RecommendCard:nth-of-type(even) .infoDiv {
+  .contactPage-middle-content-form-item {
+    flex-direction: column;
+  }
+  .contactPage-middle-content-form-item > input {
     width: 100%;
-    text-align: left;
+    margin-left: 0;
   }
-  .RecommendCard::after,
-  .RecommendCard:nth-of-type(even)::after {
-    left: 5vw;
-    right: 5vw;
+  .contactPage-middle-content-form-item > select {
+    width: 100%;
+    margin-left: 0;
   }
-}
-
-/*動畫區*/
-.RecommendCard:nth-of-type(even) .peopleName .line,
-.peopleName .line {
-  opacity: 0;
-  animation: peopleNameDecLine 1s 2s ease-in-out forwards;
-}
-
-@keyframes peopleNameDecLine {
-  0% {
-    opacity: 0;
+  #purpose-select {
+    font-size: 16px;
   }
-  100% {
-    opacity: 1;
+  .contactPage-middle-content-form-button {
+    margin-top: 25px;
   }
-}/*# sourceMappingURL=Recommend.css.map */
+  .contactPage-middle-content-form-item-reason {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+}/*# sourceMappingURL=Contact.css.map */
