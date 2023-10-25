@@ -11,7 +11,7 @@ let menuData = [
       {
         title: "聯盟故事",
         enTitle: "STORY",
-        link: "javascript:;",
+        link: "About.html",
         id: "menu14",
       },
       {
@@ -37,7 +37,7 @@ let menuData = [
       {
         title: "築底計畫",
         enTitle: "PLAN",
-        link: "javascript:;",
+        link: "Plan.html",
         id: "menu21",
       },
       {
