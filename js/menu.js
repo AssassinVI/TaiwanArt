@@ -15,7 +15,7 @@ let menuData = [
         id: "menu14",
       },
       {
-        title: "聯盟大事紀",
+        title: "聯盟大事記",
         enTitle: "HISTORY",
         link: "About_History.html",
         id: "menu13",
