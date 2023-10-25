@@ -599,7 +599,7 @@ footer p {
   transition: 0.3s;
   overflow: hidden;
   pointer-events: auto;
-  background-color: #fff;
+  background-color: #c79f62;
 }
 @media all and (max-width: 500px) {
   .community li a {
@@ -617,7 +617,7 @@ footer p {
     height: 7.1614583333vw;
   }
 }
-.community li a .white {
+.community li a .gold {
   position: absolute;
   left: 0;
   right: 0;
@@ -625,13 +625,13 @@ footer p {
   top: 100%;
 }
 .community li a:hover {
-  background-color: #c79f62;
+  background-color: #fff;
 }
-.community li a:hover .white {
+.community li a:hover .gold {
   top: 50%;
   transform: translateY(-50%);
 }
-.community li a:hover .gold {
+.community li a:hover .white {
   transform: translateY(-150%);
 }
 

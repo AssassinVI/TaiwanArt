@@ -11,6 +11,16 @@ $baseHeightInPhone: 1;
 $ballSize: 2.5vw;
 $ballSizeInPhone: 5vw;
 
+@mixin waveObjectAfter {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  background-color: black;
+  animation: changeColor 5s infinite;
+  transform-origin: 100% 100%;
+}
+
 #main-visual {
   position: relative;
 }
@@ -95,55 +105,32 @@ $ballSizeInPhone: 5vw;
     //   width: 20%;
     //   height: 20%;
     //   background-color: black;
-    //   animation: changeColor 5s;
+    //   animation: changeColor 5s infinite;
     //   transform-origin: 100% 100%;
     // }
   }
   > .waveObject--1 {
     background-image: url(../img/png/common/bg_mv-gradation--phase2.png);
     // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   width: 20%;
-    //   height: 20%;
-    //   background-color: black;
-    //   animation: changeColor 5s;
-    //   transform-origin: 100% 100%;
+    //   @include waveObjectAfter;
     // }
   }
   > .waveObject--2 {
     background-image: url(../img/png/common/bg_mv-gradation--phase3.png);
     // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   width: 20%;
-    //   height: 20%;
-    //   background-color: black;
-    //   animation: changeColor 5s;
-    //   transform-origin: 100% 100%;
+    //   @include waveObjectAfter;
     // }
   }
   > .waveObject--3 {
     background-image: url(../img/png/common/bg_mv-gradation--phase4.png);
     // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   width: 20%;
-    //   height: 20%;
-    //   background-color: black;
-    //   animation: changeColor 5s;
-    //   transform-origin: 100% 100%;
+    //   @include waveObjectAfter;
     // }
   }
   > .waveObject--4 {
     background-image: url(../img/png/common/bg_mv-gradation--phase5.png);
     // &::after {
-    //   position: absolute;
-    //   width: 20%;
-    //   height: 20%;
-    //   background-color: black;
-    //   animation: changeColor 5s;
-    //   transform-origin: 100% 100%;
+    //   @include waveObjectAfter;
     // }
   }
 }

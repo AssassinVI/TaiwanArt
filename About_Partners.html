@@ -41,11 +41,7 @@
       </section>
       <section class="partner-middle">
         <div class="partner-school" id="partner-school"></div>
-        <div class="partner-page">
-          <a class="partner-bottom-nav-active" href="#">1</a>
-          <a class="partner-bottom-nav" href="#">2</a>
-          <a class="partner-bottom-nav" href="#">3</a>
-        </div>
+        <div class="partner-page"></div>
       </section>
     </main>
     <script src="./js/jquery-3.5.1.min.js"></script>
@@ -53,6 +49,7 @@
     <script src="./js/bootstrap.bundle.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/CSSRulePlugin.min.js"></script>
     <script src="./js/wow.min.js"></script>
     <script src="./js/menu.js"></script>
     <script src="./js/bannerAnimation.js"></script>
@@ -73,31 +70,83 @@
           wow = new WOW().init();
         }
       };
+      function throttle(func, timeout = 250) {
+        let last;
+        let timer;
 
+        return function () {
+          const context = this;
+          const args = arguments;
+          const now = +new Date();
+
+          if (last && now < last + timeout) {
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+              last = now;
+              func.apply(context, args);
+            }, timeout);
+          } else {
+            last = now;
+            func.apply(context, args);
+          }
+        };
+      }
       $(function () {
         let tl;
+        let dis = true;
+
         if (window.innerWidth <= 500) {
-          $(".partner-school-hexagon").addClass("hexagon");
+          $(".hexagon").css({ opacity: 1 });
           $(".partner-school-hexagon")
             .children(
               ".partner-school-hexagon-content , .partner-school-fb , .partner-school-ig"
             )
-            .css({ display: "block" });
+            .css({ display: "block", opacity: 1 });
           $(".partner-school-hexagon").children("p").css("color", "white");
         } else {
+          //蜂巢動畫
+
           $(".partner-school-hexagon").hover(
+            //滑鼠移入
             function () {
-              $(this).addClass("hexagon");
-              $(this)
-                .children(
-                  ".partner-school-hexagon-content , .partner-school-fb , .partner-school-ig"
-                )
-                .css({ display: "block" });
-              $(this).children("p").css("color", "white");
               gsap.fromTo(
                 $(this).children(".partner-school-fb,.partner-school-ig"),
-                { top: "100%" },
-                { top: "60%", ease: "elastic.out(1,0.3)", duration: 1.5 }
+                { top: "100%", display: "block", opacity: 0 },
+                {
+                  top: "60%",
+                  ease: "elastic.out(1,0.3)",
+                  opacity: 1,
+                  duration: 1.5,
+                }
+              );
+              gsap.fromTo(
+                $(this).children(".partner-school-hexagon-content"),
+                {
+                  opacity: 0,
+                  display: "none",
+                },
+                {
+                  opacity: 1,
+                  display: "block",
+                  duration: 0.1,
+                }
+              );
+              gsap.fromTo(
+                $(this).children(".hexagon"),
+                {
+                  opacity: 0,
+                },
+                {
+                  opacity: 1,
+                  duration: 0.01,
+                }
+              );
+              gsap.fromTo(
+                $(this).children("p"),
+                {
+                  color: "black",
+                },
+                { color: "white", duration: 0.1 }
               );
               tl = gsap.timeline({ repeat: -1 });
               tl.fromTo(
@@ -107,18 +156,54 @@
               ).fromTo(
                 $(this).children(".partner-school-hexagon-content"),
                 { transform: "scale(1)" },
-                { transform: "scale(1.3)", ease: "none", duration: 4 }
+                {
+                  transform: "scale(1.3)",
+                  ease: "none",
+                  duration: 4,
+                }
               );
             },
             function () {
-              $(this).removeClass("hexagon");
-              $(this)
-                .children(
-                  ".partner-school-hexagon-content , .partner-school-fb , .partner-school-ig"
-                )
-                .css("display", "none");
-              $(this).children("p").css("color", "black");
-              tl.clear();
+              if (!!$(this).children(".hexagon")) {
+                //滑鼠移出
+                gsap.fromTo(
+                  $(this).children(".hexagon"),
+                  {
+                    opacity: 1,
+                  },
+                  {
+                    opacity: 0,
+                    duration: 0.01,
+                  }
+                );
+                gsap.fromTo(
+                  $(this).children("p"),
+                  {
+                    color: "white",
+                  },
+                  { color: "black", duration: 0.1 }
+                );
+                gsap.fromTo(
+                  [
+                    $(this).children(".partner-school-hexagon-content"),
+                    $(this).children(".partner-school-fb"),
+                    $(this).children(".partner-school-ig"),
+                  ],
+                  { display: "block", opacity: 1 },
+                  { display: "none", opacity: 0, duration: 0.1 }
+                );
+                gsap.fromTo(
+                  $(this).children(".partner-school-hexagon-content"),
+                  {
+                    opacity: 1,
+                  },
+                  {
+                    opacity: 0,
+                    duration: 0.2,
+                  }
+                );
+                tl.clear();
+              }
             }
           );
         }

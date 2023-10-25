@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 243.49 281.15">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #ddd;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="content">
+    <polygon class="cls-1" points="242.99 70.58 121.74 .58 .5 70.58 .5 210.58 121.74 280.58 242.99 210.58 242.99 70.58"/>
+  </g>
+</svg>

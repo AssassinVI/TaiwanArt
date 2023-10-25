@@ -138,7 +138,7 @@ const School = [
 
 $(function () {
   let src = "";
-
+  let page;
   if (window.innerWidth <= 500) {
     for (let i = 0; i < 10; i++) {
       console.log(School[i].name);
@@ -153,6 +153,7 @@ $(function () {
         src="./SVG/資產 2.svg"
         alt="邊框"
       />
+      <div class='hexagon'></div>
       <p>${School[i].name}</p>
       <img class="partner-school-fb" src="./SVG/fb.svg"/>
       <img class="partner-school-ig" src="./SVG/ig.svg" />
@@ -172,6 +173,7 @@ $(function () {
         src="./SVG/資產 2.svg"
         alt="邊框"
       />
+      <div class='hexagon'></div>
       <p>${item.name}</p>
       <img class="partner-school-fb" src="./SVG/fb.svg"/>
       <img class="partner-school-ig" src="./SVG/ig.svg" />
@@ -180,6 +182,11 @@ $(function () {
   }
 
   $("#partner-school").append(src);
+  $(
+    ".partner-page"
+  ).append(` <a class="partner-bottom-nav-active" href="#">1</a>
+  <a class="partner-bottom-nav" href="#">2</a>
+  <a class="partner-bottom-nav" href="#">3</a>`);
   $(".partner-main").after(` <footer>
   <p>
     ©2023 Taiwan Arts Education College Alliance.

@@ -29,7 +29,7 @@ let menuData = [
     ],
   },
   {
-    title: "築底計畫",
+    title: "新世代人才培育策略",
     enTitle: "CONTACT",
     link: "#",
     id: "menu20",
@@ -68,8 +68,8 @@ let menuData = [
       },
       {
         title: "聯盟活動學校",
-        enTitle: "",
-        link: "javascript:;",
+        enTitle: "SCHOOL",
+        link: "About_Partners.html",
         id: "menu32",
       },
       {
@@ -83,14 +83,14 @@ let menuData = [
   {
     title: "聯絡我們",
     enTitle: "CONTACT",
-    link: "javascript:;",
+    link: "About_Contact.html",
     id: "menu40",
     subMenu: [],
   },
   {
     title: "贊助",
-    enTitle: "CONTACT",
-    link: "javascript:;",
+    enTitle: "SPONSOR",
+    link: "About_Sponsor.html",
     id: "menu50",
     subMenu: [],
   },

@@ -7,7 +7,11 @@ if (mainVisual != null) {
   for (let i = 0; i < 8; i++) {
     content += `
     <div class="waveObjectArea__item waveObjectArea__item--set">
-            <span class="waveObject waveObject--0"></span>
+    <span class="waveObject waveObject--0"></span>
+    <span class="waveObject waveObject--1"></span>
+    <span class="waveObject waveObject--2"></span>
+    <span class="waveObject waveObject--3"></span>
+    <span class="waveObject waveObject--4"></span>
         </div>`;
   }
 
@@ -110,26 +114,26 @@ $(function () {
   function upDownLoop(item, delay, count) {
     animationCount++;
     const removePhase = changePhase(phase);
-    // $(".waveObjectArea")
-    //   .attr("class", "waveObjectArea")
-    //   .addClass("waveObjectArea--phase" + phase); //換色
-
     $(".waveObjectArea")
       .attr("class", "waveObjectArea")
-      .addClass("waveObjectArea--phase" + phase);
-    if ($(".waveObject--4").length > 0 && phase === 0) {
-      $(".waveObjectArea__item").append(
-        '<span class="waveObject waveObject--0"></span>'
-      );
-      $(".waveObject--4").remove();
-    } else if ($(".waveObject--4").length === 0 && phase === 0) {
-      console.log(0);
-    } else {
-      $(`.waveObject--${removePhase}`).remove();
-      $(".waveObjectArea__item").append(
-        `<span class="waveObject waveObject--${phase}"></span>`
-      );
-    }
+      .addClass("waveObjectArea--phase" + phase); //換色
+
+    // $(".waveObjectArea")
+    //   .attr("class", "waveObjectArea")
+    //   .addClass("waveObjectArea--phase" + phase);
+    // if ($(".waveObject--4").length > 0 && phase === 0) {
+    //   $(".waveObjectArea__item").append(
+    //     '<span class="waveObject waveObject--0"></span>'
+    //   );
+    //   $(".waveObject--4").remove();
+    // } else if ($(".waveObject--4").length === 0 && phase === 0) {
+    //   console.log(0);
+    // } else {
+    //   $(`.waveObject--${removePhase}`).remove();
+    //   $(".waveObjectArea__item").append(
+    //     `<span class="waveObject waveObject--${phase}"></span>`
+    //   );
+    // }
 
     upDownAnimation(item, delay);
 

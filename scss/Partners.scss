@@ -3,97 +3,97 @@
 
 .waveObjectArea__item {
   // background-position: 100%;
-  .waveObject {
-    // background-position: 100%;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(252, 227, 7, 1) 0%,
-      rgba(241, 218, 54, 1) 100%
-    );
-  }
-  > .waveObject--0 {
-    // background-position: 100%;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(169, 3, 41, 1) 0%,
-      rgba(143, 2, 34, 1) 44%,
-      rgba(109, 0, 25, 1) 100%
-    );
-  }
-  > .waveObject--1 {
-    // background-position: 100%;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(64, 150, 238, 1) 0%,
-      rgba(64, 150, 238, 1) 100%
-    );
-  }
-  > .waveObject--2 {
-    // background-position: 100%;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(255, 0, 132, 1) 0%,
-      rgba(255, 0, 132, 1) 100%
-    );
-  }
-  > .waveObject--3 {
-    // background-position: 100%;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(69, 72, 77, 1) 0%,
-      rgba(0, 0, 0, 1) 100%
-    );
-  }
-  > .waveObject--4 {
-    // background-position: 100%;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 110, 46, 1) 0%,
-      rgba(0, 110, 46, 1) 100%
-    );
-  }
   // .waveObject {
+  //   // background-position: 100%;
   //   background-image: linear-gradient(
   //     to bottom,
-  //     rgba(192, 188, 229, 1) 0%,
-  //     rgba(173, 167, 206, 1) 100%
+  //     rgba(252, 227, 7, 1) 0%,
+  //     rgba(241, 218, 54, 1) 100%
   //   );
   // }
   // > .waveObject--0 {
+  //   // background-position: 100%;
   //   background-image: linear-gradient(
   //     to bottom,
-  //     rgba(185, 181, 221, 1) 0%,
-  //     rgba(173, 167, 206, 1) 100%
+  //     rgba(169, 3, 41, 1) 0%,
+  //     rgba(143, 2, 34, 1) 44%,
+  //     rgba(109, 0, 25, 1) 100%
   //   );
   // }
   // > .waveObject--1 {
+  //   // background-position: 100%;
   //   background-image: linear-gradient(
   //     to bottom,
-  //     rgba(173, 167, 206, 1) 0%,
-  //     rgba(173, 167, 206, 1) 100%
+  //     rgba(64, 150, 238, 1) 0%,
+  //     rgba(64, 150, 238, 1) 100%
   //   );
   // }
   // > .waveObject--2 {
+  //   // background-position: 100%;
   //   background-image: linear-gradient(
   //     to bottom,
-  //     rgba(136, 133, 163, 1) 0%,
-  //     rgba(173, 167, 206, 1) 100%
+  //     rgba(255, 0, 132, 1) 0%,
+  //     rgba(255, 0, 132, 1) 100%
   //   );
   // }
   // > .waveObject--3 {
+  //   // background-position: 100%;
   //   background-image: linear-gradient(
   //     to bottom,
-  //     rgba(118, 117, 142, 1) 0%,
-  //     rgba(173, 167, 206, 1) 100%
+  //     rgba(69, 72, 77, 1) 0%,
+  //     rgba(0, 0, 0, 1) 100%
   //   );
   // }
   // > .waveObject--4 {
+  //   // background-position: 100%;
   //   background-image: linear-gradient(
   //     to bottom,
-  //     rgba(108, 107, 130, 1) 0%,
-  //     rgba(173, 167, 206, 1) 100%
+  //     rgba(0, 110, 46, 1) 0%,
+  //     rgba(0, 110, 46, 1) 100%
   //   );
   // }
+  .waveObject {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(192, 188, 229, 1) 0%,
+      rgba(173, 167, 206, 1) 100%
+    );
+  }
+  > .waveObject--0 {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(185, 181, 221, 1) 0%,
+      rgba(173, 167, 206, 1) 100%
+    );
+  }
+  > .waveObject--1 {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(173, 167, 206, 1) 0%,
+      rgba(173, 167, 206, 1) 100%
+    );
+  }
+  > .waveObject--2 {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(136, 133, 163, 1) 0%,
+      rgba(173, 167, 206, 1) 100%
+    );
+  }
+  > .waveObject--3 {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(118, 117, 142, 1) 0%,
+      rgba(173, 167, 206, 1) 100%
+    );
+  }
+  > .waveObject--4 {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(108, 107, 130, 1) 0%,
+      rgba(173, 167, 206, 1) 100%
+    );
+  }
 }
 
 .partner-middle {
@@ -180,6 +180,7 @@
   position: absolute;
   width: auto;
   height: 334px;
+  opacity: 0;
 }
 .partner-school-hexagon-border {
   position: absolute;
@@ -193,6 +194,7 @@
   width: 40px;
   height: 40px;
   z-index: 5;
+  opacity: 0;
 }
 
 .partner-school-fb {
@@ -201,12 +203,12 @@
 .partner-school-ig {
   right: 30%;
 }
-.hexagon::after {
-  content: "";
+.hexagon {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.25);
+  opacity: 0;
 }
 
 .partner-page {

@@ -666,8 +666,8 @@ footer {
       transition: 0.3s;
       overflow: hidden;
       pointer-events: auto;
-      background-color: #fff;
 
+      background-color: #c79f62;
       @include mobile {
         padding: pxConvertor2(15);
       }
@@ -683,7 +683,7 @@ footer {
         }
       }
 
-      .white {
+      .gold {
         position: absolute;
         left: 0;
         right: 0;
@@ -692,14 +692,14 @@ footer {
       }
 
       &:hover {
-        background-color: #c79f62;
+        background-color: #fff;
 
-        .white {
+        .gold {
           top: 50%;
           transform: translateY(-50%);
         }
 
-        .gold {
+        .white {
           transform: translateY(-150%);
         }
       }
