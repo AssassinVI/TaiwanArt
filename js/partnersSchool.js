@@ -160,12 +160,12 @@ $(function () {
         <p>${item.name}</p>
         <div class='partner-school-icon-container'>
         <li class='partner-school-fb'>
-        <img class='partner-school-fb-gold' src='../img/svg/index/facebook-gold.svg'/>
-        <img class='partner-school-fb-white' src='../img/svg/index/facebook-white.svg'/>
+        <img class='partner-school-fb-gold' src='img/svg/index/facebook-gold.svg'/>
+        <img class='partner-school-fb-white' src='img/svg/index/facebook-white.svg'/>
         </li>
         <li class='partner-school-ig'>
-        <img  class='partner-school-ig-gold' src='../img/svg/index/instagram-gold.svg'/>
-        <img class='partner-school-ig-white' src='../img/svg/index/instagram-white.svg'/>
+        <img  class='partner-school-ig-gold' src='img/svg/index/instagram-gold.svg'/>
+        <img class='partner-school-ig-white' src='img/svg/index/instagram-white.svg'/>
         </li>
         </div>
         </div>
@@ -216,12 +216,12 @@ $(function () {
       <p>${item.name}</p>
       <div class='partner-school-icon-container'>
       <li class='partner-school-fb'>
-      <img class='partner-school-fb-gold' src='../img/svg/index/facebook-gold.svg'/>
-      <img class='partner-school-fb-white' src='../img/svg/index/facebook-white.svg'/>
+      <img class='partner-school-fb-gold' src='img/svg/index/facebook-gold.svg'/>
+      <img class='partner-school-fb-white' src='img/svg/index/facebook-white.svg'/>
       </li>
       <li class='partner-school-ig'>
-      <img  class='partner-school-ig-gold' src='../img/svg/index/instagram-gold.svg'/>
-      <img class='partner-school-ig-white' src='../img/svg/index/instagram-white.svg'/>
+      <img  class='partner-school-ig-gold' src='img/svg/index/instagram-gold.svg'/>
+      <img class='partner-school-ig-white' src='img/svg/index/instagram-white.svg'/>
       </li>
     </div>
     </div>`;
