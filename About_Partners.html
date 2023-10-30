@@ -70,27 +70,7 @@
           wow = new WOW().init();
         }
       };
-      function throttle(func, timeout = 250) {
-        let last;
-        let timer;
 
-        return function () {
-          const context = this;
-          const args = arguments;
-          const now = +new Date();
-
-          if (last && now < last + timeout) {
-            clearTimeout(timer);
-            timer = setTimeout(function () {
-              last = now;
-              func.apply(context, args);
-            }, timeout);
-          } else {
-            last = now;
-            func.apply(context, args);
-          }
-        };
-      }
       $(function () {
         let tl;
         let dis = true;
@@ -99,111 +79,35 @@
           $(".hexagon").css({ opacity: 1 });
           $(".partner-school-hexagon")
             .children(
-              ".partner-school-hexagon-content , .partner-school-fb , .partner-school-ig"
+              ".partner-school-hexagon-content , .partner-school-icon-container"
             )
-            .css({ display: "block", opacity: 1 });
+            .css({ opacity: 1 });
           $(".partner-school-hexagon").children("p").css("color", "white");
         } else {
           //蜂巢動畫
 
           $(".partner-school-hexagon").hover(
-            //滑鼠移入
             function () {
-              gsap.fromTo(
-                $(this).children(".partner-school-fb,.partner-school-ig"),
-                { top: "100%", display: "block", opacity: 0 },
-                {
-                  top: "60%",
-                  ease: "elastic.out(1,0.3)",
-                  opacity: 1,
-                  duration: 1.5,
-                }
-              );
-              gsap.fromTo(
-                $(this).children(".partner-school-hexagon-content"),
-                {
-                  opacity: 0,
-                  display: "none",
-                },
-                {
-                  opacity: 1,
-                  display: "block",
-                  duration: 0.1,
-                }
-              );
-              gsap.fromTo(
-                $(this).children(".hexagon"),
-                {
-                  opacity: 0,
-                },
-                {
-                  opacity: 1,
-                  duration: 0.01,
-                }
-              );
-              gsap.fromTo(
-                $(this).children("p"),
-                {
-                  color: "black",
-                },
-                { color: "white", duration: 0.1 }
-              );
-              tl = gsap.timeline({ repeat: -1 });
-              tl.fromTo(
-                $(this).children(".partner-school-hexagon-content"),
-                { transform: "scale(1.3)" },
-                { transform: "scale(1)", ease: "none", duration: 4 }
-              ).fromTo(
-                $(this).children(".partner-school-hexagon-content"),
-                { transform: "scale(1)" },
-                {
-                  transform: "scale(1.3)",
-                  ease: "none",
-                  duration: 4,
-                }
-              );
+              //滑鼠移入
+              $(this)
+                .children(".partner-school-icon-container")
+                .addClass("partner-icon-animate");
+              $(this).children(".hexagon").addClass("hexagon-show");
+              $(this)
+                .children(".partner-school-hexagon-content")
+                .addClass("hexagon-show hexagon-content-running");
+              $(this).children("p").css("color", "white");
             },
             function () {
-              if (!!$(this).children(".hexagon")) {
-                //滑鼠移出
-                gsap.fromTo(
-                  $(this).children(".hexagon"),
-                  {
-                    opacity: 1,
-                  },
-                  {
-                    opacity: 0,
-                    duration: 0.01,
-                  }
-                );
-                gsap.fromTo(
-                  $(this).children("p"),
-                  {
-                    color: "white",
-                  },
-                  { color: "black", duration: 0.1 }
-                );
-                gsap.fromTo(
-                  [
-                    $(this).children(".partner-school-hexagon-content"),
-                    $(this).children(".partner-school-fb"),
-                    $(this).children(".partner-school-ig"),
-                  ],
-                  { display: "block", opacity: 1 },
-                  { display: "none", opacity: 0, duration: 0.1 }
-                );
-                gsap.fromTo(
-                  $(this).children(".partner-school-hexagon-content"),
-                  {
-                    opacity: 1,
-                  },
-                  {
-                    opacity: 0,
-                    duration: 0.2,
-                  }
-                );
-                tl.clear();
-              }
+              //滑鼠移出
+              $(this)
+                .children(".partner-school-icon-container")
+                .removeClass("partner-icon-animate");
+              $(this).children(".hexagon").removeClass("hexagon-show");
+              $(this)
+                .children(".partner-school-hexagon-content")
+                .removeClass("hexagon-show hexagon-content-running");
+              $(this).children("p").css("color", "black");
             }
           );
         }

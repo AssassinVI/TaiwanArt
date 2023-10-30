@@ -116,6 +116,7 @@
             </div>
           </div>
           <div class="second-page-para wow" data-wow-delay="0.5s">
+            <!-- data-wow-delay="0.5s" -->
             <div class="left">
               <h2
                 class="title wow fadeInLeft"
@@ -509,31 +510,33 @@
       });
       gsap.from(".content-bg", {
         scrollTrigger: {
-          trigger: ".content-bg",
+          trigger: ".second-page",
           toggleActions: "restart pause resume pause",
           start: "top bottom",
-          end: "+=400",
+          end: "center bottom",
           scrub: 3,
         },
-        x: () => {
-          return -2000;
+        y: () => {
+          return 200;
         },
-        duration: 1,
-        ease: "power3.inOut",
+        opacity: 0,
+        duration: 3,
+        ease: "none",
       });
       gsap.from(".second-page-para", {
         scrollTrigger: {
-          trigger: ".second-page-para",
+          trigger: ".second-page",
           toggleActions: "restart pause resume pause",
           start: "top bottom",
-          end: "+=200",
+          end: "center bottom",
           scrub: 3,
         },
-        x: () => {
-          return 1500;
+        y: () => {
+          return 200;
         },
-        duration: 1,
-        ease: "power3.inOut",
+        opacity: 0,
+        duration: 3,
+        ease: "none",
       });
       //get screen width，決定swiper的初始化
       var screenWidth = window.innerWidth;

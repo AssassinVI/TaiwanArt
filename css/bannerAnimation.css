@@ -202,10 +202,7 @@ a {
   color: #3a3a3a;
 }
 .breadcrumbNav li.active a::after {
-  left: 0%;
-  right: 0%;
-  height: 2px;
-  background-color: #3a3a3a;
+  background-color: transparent;
 }
 @media all and (max-width: 500px) {
   .breadcrumbNav li.active a {
@@ -379,7 +376,7 @@ nav .menu ul li .nav-link .menuTitle {
 nav .menu ul li .nav-link .menuTitle::after {
   content: " ";
   position: absolute;
-  height: 2px;
+  height: 1px;
   background-color: #b28146;
   bottom: 0;
   left: 50%;
@@ -867,12 +864,12 @@ main {
 }
 .zoomBig {
   animation: zoomBig 20s alternate linear infinite;
-  transform: scale(1.2);
+  transform: scale(1.27);
 }
 
 @keyframes zoomBig {
   0% {
-    transform: scale(1.2);
+    transform: scale(1.27);
   }
   100% {
     transform: scale(1);

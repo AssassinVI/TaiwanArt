@@ -14,7 +14,7 @@ const School = [
   },
   {
     name: "臺北市立南門國中音樂班",
-    image: "./img/jpg/partners/臺北市立南門國中.jpg",
+    image: "./img/jpg/partners/臺北市立復興高中.jpg",
   },
   {
     name: "臺北市立仁愛國中音樂班",
@@ -22,7 +22,7 @@ const School = [
   },
   {
     name: "臺北市立福星國小音樂班",
-    image: "./img/jpg/partners/臺北市立福星國小.jpg",
+    image: "./img/jpg/partners/臺北市立復興高中.jpg",
   },
   {
     name: "新北市立新店高中音樂班",
@@ -34,15 +34,15 @@ const School = [
   },
   {
     name: "新北市立新北高中音樂班",
-    image: "./img/jpg/partners/新北市立新北高中.jpg",
+    image: "./img/jpg/partners/新北高中.jpg",
   },
   {
     name: "國立基隆高中音樂班",
-    image: "./img/jpg/partners/臺北市立復興高中.jpg",
+    image: "./img/jpg/partners/基隆高中.jpg",
   },
   {
     name: "桃園市立武陵高中音樂班",
-    image: "./img/jpg/partners/臺北市立復興高中.jpg",
+    image: "./img/jpg/partners/武陵高中.jpg",
   },
   {
     name: "桃園市立南崁高中音樂班",
@@ -66,15 +66,15 @@ const School = [
   },
   {
     name: "國立新竹高中音樂班",
-    image: "./img/jpg/partners/臺北市立復興高中.jpg",
+    image: "./img/jpg/partners/新竹高中.jpg",
   },
   {
     name: "臺中市立台中二中音樂班",
-    image: "./img/jpg/partners/臺北市立復興高中.jpg",
+    image: "./img/jpg/partners/台中二中.jpg",
   },
   {
     name: "臺中市立清水高中音樂班",
-    image: "./img/jpg/partners/臺北市立復興高中.jpg",
+    image: "./img/jpg/partners/清水高中.jpg",
   },
   {
     name: "國立南投高中音樂班",
@@ -82,7 +82,7 @@ const School = [
   },
   {
     name: "高雄市立高雄中學音樂班",
-    image: "./img/jpg/partners/臺北市立復興高中.jpg",
+    image: "./img/jpg/partners/高雄中學.jpg",
   },
   {
     name: "國立鳳新高中音樂班",
@@ -98,7 +98,7 @@ const School = [
   },
   {
     name: "國立嘉義高中音樂班",
-    image: "./img/jpg/partners/臺北市立復興高中.jpg",
+    image: "./img/jpg/partners/嘉義高中.jpg",
   },
   {
     name: "嘉義縣立新港國中音樂班",
@@ -110,7 +110,7 @@ const School = [
   },
   {
     name: "國立屏東女中音樂班",
-    image: "./img/jpg/partners/臺北市立復興高中.jpg",
+    image: "./img/jpg/partners/屏東女中.jpg",
   },
   {
     name: "國立羅東高中音樂班",
@@ -138,28 +138,67 @@ const School = [
 
 $(function () {
   let src = "";
-  let page;
   if (window.innerWidth <= 500) {
-    for (let i = 0; i < 10; i++) {
-      console.log(School[i].name);
-      src += `<div class="partner-school-hexagon">
-      <img
+    let pageNumber = Math.ceil(School.length / 10);
+    let prevPage = 0;
+    let currentPage = 10;
+    function schoolRender(prev, current) {
+      src = ""; //換頁時初始化
+      School.slice(prev, current).forEach(function (item, index) {
+        src += `<div class="partner-school-hexagon">
+        <img
         class="partner-school-hexagon-content"
-        src=${School[i].image}
-        alt=${School[i].name}
-      />
-      <img
+        src=${item.image}
+        alt=${item.name}
+        />
+        <img
         class="partner-school-hexagon-border"
         src="./SVG/資產 2.svg"
         alt="邊框"
-      />
-      <div class='hexagon'></div>
-      <p>${School[i].name}</p>
-      <img class="partner-school-fb" src="./SVG/fb.svg"/>
-      <img class="partner-school-ig" src="./SVG/ig.svg" />
-    </div>
-      `;
+        />
+        <div class='hexagon'></div>
+        <p>${item.name}</p>
+        <div class='partner-school-icon-container'>
+        <li class='partner-school-fb'>
+        <img class='partner-school-fb-gold' src='../img/svg/index/facebook-gold.svg'/>
+        <img class='partner-school-fb-white' src='../img/svg/index/facebook-white.svg'/>
+        </li>
+        <li class='partner-school-ig'>
+        <img  class='partner-school-ig-gold' src='../img/svg/index/instagram-gold.svg'/>
+        <img class='partner-school-ig-white' src='../img/svg/index/instagram-white.svg'/>
+        </li>
+        </div>
+        </div>
+        `;
+      });
     }
+
+    let page = "";
+    for (let i = 1; i <= pageNumber; i++) {
+      page += `<a class="partner-bottom-nav"  data-number="${i}">${i}</a>`;
+    }
+    $(".partner-page").on("click", ".partner-bottom-nav", function (e) {
+      currentPage = $(e.target).data("number") * 10;
+      prevPage = currentPage - 10;
+      schoolRender(prevPage, currentPage); //點擊是異步事件 所以需要再執行一次
+      $(".partner-bottom-nav").removeClass("partner-bottom-nav-active"); //移除全部的active class
+      $(e.target).addClass("partner-bottom-nav-active"); //新增被點擊的active class
+      //一開始的jquery的css畫面事件
+      $("#partner-school").empty().append(src);
+      $(".hexagon").css({ opacity: 1 });
+      $(".partner-school-hexagon")
+        .children(
+          ".partner-school-hexagon-content , .partner-school-icon-container"
+        )
+        .css({ opacity: 1 });
+      $(".partner-school-hexagon").children("p").css("color", "white");
+    });
+    schoolRender(prevPage, currentPage);
+    $("#partner-school").append(src); //第一次的渲染
+    $(".partner-page").append(page);
+    $(".partner-bottom-nav[data-number='1']").addClass(
+      "partner-bottom-nav-active"
+    ); //第一次的addClass
   } else {
     School.forEach(function (item, index) {
       src += ` <div class="partner-school-hexagon">
@@ -175,18 +214,21 @@ $(function () {
       />
       <div class='hexagon'></div>
       <p>${item.name}</p>
-      <img class="partner-school-fb" src="./SVG/fb.svg"/>
-      <img class="partner-school-ig" src="./SVG/ig.svg" />
+      <div class='partner-school-icon-container'>
+      <li class='partner-school-fb'>
+      <img class='partner-school-fb-gold' src='../img/svg/index/facebook-gold.svg'/>
+      <img class='partner-school-fb-white' src='../img/svg/index/facebook-white.svg'/>
+      </li>
+      <li class='partner-school-ig'>
+      <img  class='partner-school-ig-gold' src='../img/svg/index/instagram-gold.svg'/>
+      <img class='partner-school-ig-white' src='../img/svg/index/instagram-white.svg'/>
+      </li>
+    </div>
     </div>`;
     });
+    $("#partner-school").append(src);
   }
 
-  $("#partner-school").append(src);
-  $(
-    ".partner-page"
-  ).append(` <a class="partner-bottom-nav-active" href="#">1</a>
-  <a class="partner-bottom-nav" href="#">2</a>
-  <a class="partner-bottom-nav" href="#">3</a>`);
   $(".partner-main").after(` <footer>
   <p>
     ©2023 Taiwan Arts Education College Alliance.

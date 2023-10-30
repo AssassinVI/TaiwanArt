@@ -145,7 +145,6 @@ $(function () {
       phase = 0;
     }
     setTimeout(function () {
-      console.log("restart");
       upDownLoop(item, delay, count);
     }, 7600);
   }
