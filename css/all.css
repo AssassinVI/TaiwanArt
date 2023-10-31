@@ -654,7 +654,7 @@ footer p {
 @media all and (max-width: 500px) {
   .card_pagination p {
     padding: 10px 2vw;
-    font-size: 3.125vw;
+    font-size: 24px;
   }
 }
 .card_pagination p::after {
@@ -1455,8 +1455,18 @@ main.index .forth-page .content ul li .paraBox .top > span::after, main.index .f
 main.index .forth-page .content ul li .paraBox .top > span::after {
   left: -1em;
 }
+@media all and (max-width: 500px) {
+  main.index .forth-page .content ul li .paraBox .top > span::after {
+    left: -0.7em;
+  }
+}
 main.index .forth-page .content ul li .paraBox .top > span::before {
   right: -1em;
+}
+@media all and (max-width: 500px) {
+  main.index .forth-page .content ul li .paraBox .top > span::before {
+    right: -0.7em;
+  }
 }
 main.index .forth-page .content ul li .paraBox .bottom {
   position: relative;
@@ -1563,11 +1573,26 @@ main.index .forth-page .content ul li .paraBox .bottom .melody .bar {
 main.index .forth-page .content ul li .paraBox .bottom .melody .bar1 {
   height: 3vw;
 }
+@media all and (max-width: 500px) {
+  main.index .forth-page .content ul li .paraBox .bottom .melody .bar1 {
+    height: 5vw;
+  }
+}
 main.index .forth-page .content ul li .paraBox .bottom .melody .bar2 {
   height: 2vw;
 }
+@media all and (max-width: 500px) {
+  main.index .forth-page .content ul li .paraBox .bottom .melody .bar2 {
+    height: 4vw;
+  }
+}
 main.index .forth-page .content ul li .paraBox .bottom .melody .bar3 {
   height: 1vw;
+}
+@media all and (max-width: 500px) {
+  main.index .forth-page .content ul li .paraBox .bottom .melody .bar3 {
+    height: 3vw;
+  }
 }
 main.index .forth-page .content ul li:hover .paraBox {
   background-color: #c19a6b;
@@ -1807,6 +1832,19 @@ main.index .seventh-page form > input::placeholder {
 }
 main.index .seventh-page form .agree {
   margin: 1.5vw 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main.index .seventh-page form .agree > input[type=checkbox] {
+  height: 0.5vw;
+  width: 0.5vw;
+}
+@media all and (max-width: 500px) {
+  main.index .seventh-page form .agree > input[type=checkbox] {
+    width: auto;
+    height: auto;
+  }
 }
 @media all and (max-width: 500px) {
   main.index .seventh-page form .agree {
@@ -1817,11 +1855,14 @@ main.index .seventh-page form .agree span {
   font-size: 0.7291666667vw;
   font-family: "Microsoft JhengHei,serif";
   color: #3a3a3a;
+  line-height: 1.5;
+  margin-left: 0.5vw;
 }
 @media all and (max-width: 500px) {
   main.index .seventh-page form .agree span {
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 0;
+    margin-left: 5px;
   }
 }
 main.index .seventh-page form button {

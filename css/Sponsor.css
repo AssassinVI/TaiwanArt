@@ -654,7 +654,7 @@ footer p {
 @media all and (max-width: 500px) {
   .card_pagination p {
     padding: 10px 2vw;
-    font-size: 3.125vw;
+    font-size: 24px;
   }
 }
 .card_pagination p::after {
@@ -1287,14 +1287,17 @@ main {
   .support-main-content-bottom-form-item > input {
     width: 70vw;
     margin-left: 0;
+    height: 35px;
   }
   .support-main-content-bottom-form-item > select {
     width: 70vw;
     margin-left: 0;
+    height: 35px;
   }
   .support-main-content-bottom-form-address > input {
     width: 70vw;
     margin-left: 0;
+    height: 35px;
   }
   #twzipcode {
     justify-content: flex-end;

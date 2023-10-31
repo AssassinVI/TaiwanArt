@@ -282,6 +282,7 @@
   transition: 0.2s ease-in-out;
   position: relative;
   cursor: pointer;
+  font-family: "Montserrat", sans-serif;
   &::after {
     content: "";
     position: absolute;
@@ -306,6 +307,7 @@
   color: #b28146;
   transition: 0.2s ease-in-out;
   position: relative;
+  font-family: "Montserrat", sans-serif;
   &::after {
     content: "";
     position: absolute;
@@ -476,7 +478,7 @@
   }
   .partner-school-hexagon {
     width: 80vw;
-    height: 12vh;
+    height: 30vw;
     overflow: hidden;
     object-fit: cover;
     clip-path: none;
@@ -499,5 +501,10 @@
       width: 5vw;
       height: 5vw;
     }
+  }
+  .partner-bottom-nav-active,
+  .partner-bottom-nav {
+    margin: 0;
+    padding: 10px 2vw;
   }
 }

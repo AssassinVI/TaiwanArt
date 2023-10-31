@@ -654,7 +654,7 @@ footer p {
 @media all and (max-width: 500px) {
   .card_pagination p {
     padding: 10px 2vw;
-    font-size: 3.125vw;
+    font-size: 24px;
   }
 }
 .card_pagination p::after {
@@ -1251,6 +1251,7 @@ main {
   transition: 0.2s ease-in-out;
   position: relative;
   cursor: pointer;
+  font-family: "Montserrat", sans-serif;
 }
 .partner-bottom-nav::after {
   content: "";
@@ -1276,6 +1277,7 @@ main {
   color: #b28146;
   transition: 0.2s ease-in-out;
   position: relative;
+  font-family: "Montserrat", sans-serif;
 }
 .partner-bottom-nav-active::after {
   content: "";
@@ -1423,7 +1425,7 @@ main {
   }
   .partner-school-hexagon {
     width: 80vw;
-    height: 12vh;
+    height: 30vw;
     overflow: hidden;
     -o-object-fit: cover;
        object-fit: cover;
@@ -1448,5 +1450,10 @@ main {
   .partner-school-ig > img {
     width: 5vw;
     height: 5vw;
+  }
+  .partner-bottom-nav-active,
+  .partner-bottom-nav {
+    margin: 0;
+    padding: 10px 2vw;
   }
 }/*# sourceMappingURL=Partners.css.map */

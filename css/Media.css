@@ -654,7 +654,7 @@ footer p {
 @media all and (max-width: 500px) {
   .card_pagination p {
     padding: 10px 2vw;
-    font-size: 3.125vw;
+    font-size: 24px;
   }
 }
 .card_pagination p::after {

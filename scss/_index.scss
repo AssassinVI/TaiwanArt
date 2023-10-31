@@ -497,10 +497,16 @@ main.index {
 
                 &::after {
                   left: -1em;
+                  @include mobile {
+                    left: -0.7em;
+                  }
                 }
 
                 &::before {
                   right: -1em;
+                  @include mobile {
+                    right: -0.7em;
+                  }
                 }
               }
             }
@@ -611,14 +617,23 @@ main.index {
 
                 .bar1 {
                   height: 3vw;
+                  @include mobile {
+                    height: 5vw;
+                  }
                 }
 
                 .bar2 {
                   height: 2vw;
+                  @include mobile {
+                    height: 4vw;
+                  }
                 }
 
                 .bar3 {
                   height: 1vw;
+                  @include mobile {
+                    height: 3vw;
+                  }
                 }
               }
             }
@@ -893,7 +908,17 @@ main.index {
 
       .agree {
         margin: 1.5vw 0;
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > input[type="checkbox"] {
+          height: 0.5vw;
+          width: 0.5vw;
+          @include mobile {
+            width: auto;
+            height: auto;
+          }
+        }
         @include mobile {
           margin: 3vw 0;
         }
@@ -902,10 +927,12 @@ main.index {
           font-size: pxConvertor(14);
           font-family: "Microsoft JhengHei,serif";
           color: #3a3a3a;
-
+          line-height: 1.5;
+          margin-left: 0.5vw;
           @include mobile {
-            font-size: 10px;
+            font-size: 12px;
             letter-spacing: 0;
+            margin-left: 5px;
           }
         }
       }
