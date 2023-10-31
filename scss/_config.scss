@@ -207,7 +207,7 @@ a {
       padding: 0px 0.25em 0.25em;
       transition: 0.5s ease-in-out;
       position: relative;
-
+      pointer-events: none;
       &::after {
         content: " ";
         position: absolute;
@@ -219,14 +219,14 @@ a {
         transition: 0.3s ease-in-out;
       }
 
-      &:hover {
-        color: $mainColor;
+      // &:hover {
+      //   color: $mainColor;
 
-        &::after {
-          left: 0%;
-          right: 0%;
-        }
-      }
+      //   &::after {
+      //     left: 0%;
+      //     right: 0%;
+      //   }
+      // }
 
       @include mobile {
         font-size: 3vw;
@@ -241,10 +241,10 @@ a {
     a {
       font-size: pxConvertor(24);
       text-decoration: 1px solid #3a3a3a;
-
-      &:hover {
-        color: #3a3a3a;
-      }
+      pointer-events: none;
+      // &:hover {
+      //   color: #3a3a3a;
+      // }
 
       &::after {
         background-color: transparent;
@@ -264,7 +264,6 @@ a {
   justify-content: center;
   gap: 8px;
   cursor: pointer;
-
   align-self: flex-end;
   letter-spacing: 5em;
 
