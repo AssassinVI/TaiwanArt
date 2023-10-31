@@ -1034,6 +1034,10 @@ body {
   z-index: 50;
 }
 
+.tempOpacity {
+  opacity: 1;
+}
+
 .allianceImageNav {
   width: 100%;
   display: flex;
