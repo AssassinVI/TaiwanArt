@@ -229,7 +229,7 @@ a {
 }
 @media all and (max-width: 500px) {
   .more span {
-    font-size: 1.953125vw;
+    font-size: 1rem;
   }
 }
 .more .moreArrow {

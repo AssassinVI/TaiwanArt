@@ -229,7 +229,7 @@ a {
 }
 @media all and (max-width: 500px) {
   .more span {
-    font-size: 1.953125vw;
+    font-size: 1rem;
   }
 }
 .more .moreArrow {
@@ -1378,10 +1378,9 @@ main.index .forth-page .content ul li .imgBox img {
      object-fit: cover;
 }
 main.index .forth-page .content ul li .paraBox {
-  padding-top: 1.4vw;
   background-color: #fff;
   transition: 0.7s;
-  padding: 1.4vw 0.8vw 0;
+  padding: 1.4vw;
 }
 main.index .forth-page .content ul li .paraBox .top {
   display: flex;
@@ -1400,7 +1399,7 @@ main.index .forth-page .content ul li .paraBox .top .date img {
 }
 @media all and (max-width: 500px) {
   main.index .forth-page .content ul li .paraBox .top .date img {
-    width: 2.6041666667vw;
+    width: 4vw;
   }
 }
 main.index .forth-page .content ul li .paraBox .top .date p {
@@ -1413,7 +1412,7 @@ main.index .forth-page .content ul li .paraBox .top .date p {
 }
 @media all and (max-width: 500px) {
   main.index .forth-page .content ul li .paraBox .top .date p {
-    font-size: 3.125vw;
+    font-size: 4vw;
   }
 }
 main.index .forth-page .content ul li .paraBox .top .date p::before {
@@ -1439,7 +1438,7 @@ main.index .forth-page .content ul li .paraBox .top > span {
 }
 @media all and (max-width: 500px) {
   main.index .forth-page .content ul li .paraBox .top > span {
-    font-size: 2.6041666667vw;
+    font-size: 4vw;
   }
 }
 main.index .forth-page .content ul li .paraBox .top > span::after, main.index .forth-page .content ul li .paraBox .top > span::before {
@@ -1531,6 +1530,7 @@ main.index .forth-page .content ul li .paraBox .bottom .more span {
 @media all and (max-width: 500px) {
   main.index .forth-page .content ul li .paraBox .bottom .more span {
     margin-right: 2vw;
+    font-size: 1rem;
   }
 }
 main.index .forth-page .content ul li .paraBox .bottom .more svg {
@@ -1607,6 +1607,9 @@ main.index .fifth-page {
     justify-content: center;
     padding: 18vw 10vw;
   }
+}
+main.index .fifth-page .opacityDisplay {
+  opacity: 1;
 }
 main.index .fifth-page .fifth-page-bg {
   position: absolute;

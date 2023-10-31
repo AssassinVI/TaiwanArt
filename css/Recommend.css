@@ -229,7 +229,7 @@ a {
 }
 @media all and (max-width: 500px) {
   .more span {
-    font-size: 1.953125vw;
+    font-size: 1rem;
   }
 }
 .more .moreArrow {
@@ -1137,7 +1137,7 @@ body {
 @media all and (max-width: 500px) {
   .RecommendCard .peopleTitle,
   .RecommendCard .peopleName {
-    font-size: 3.125vw;
+    font-size: 4vw;
     line-height: 1;
     margin: 2vh 0px;
   }

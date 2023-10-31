@@ -418,11 +418,9 @@ main.index {
           }
 
           .paraBox {
-            padding-top: 1.4vw;
-
             background-color: #fff;
             transition: $forthHoverTransition;
-            padding: 1.4vw 0.8vw 0;
+            padding: 1.4vw;
 
             .top {
               display: flex;
@@ -440,7 +438,7 @@ main.index {
                   height: auto;
 
                   @include mobile {
-                    width: pxConvertor2(20);
+                    width: 4vw;
                   }
                 }
 
@@ -453,7 +451,7 @@ main.index {
                   margin-left: 2em;
 
                   @include mobile {
-                    font-size: pxConvertor2(24);
+                    font-size: 4vw;
                   }
 
                   &::before {
@@ -481,7 +479,7 @@ main.index {
                 transition: $forthHoverTransition;
 
                 @include mobile {
-                  font-size: pxConvertor2(20);
+                  font-size: 4vw;
                 }
 
                 &::after,
@@ -578,6 +576,7 @@ main.index {
                   font-weight: 600;
                   @include mobile {
                     margin-right: 2vw;
+                    font-size: 1rem;
                   }
                 }
 
@@ -688,7 +687,9 @@ main.index {
       justify-content: center;
       padding: 18vw 10vw;
     }
-
+    .opacityDisplay {
+      opacity: 1;
+    }
     .fifth-page-bg {
       position: absolute;
       left: 0;

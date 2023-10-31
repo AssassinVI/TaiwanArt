@@ -229,7 +229,7 @@ a {
 }
 @media all and (max-width: 500px) {
   .more span {
-    font-size: 1.953125vw;
+    font-size: 1rem;
   }
 }
 .more .moreArrow {
@@ -1315,5 +1315,8 @@ main {
   #twzipcode > div > input {
     width: 100%;
     margin-left: 0;
+  }
+  .support-main-content-bottom-form-button > button {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=Sponsor.css.map */

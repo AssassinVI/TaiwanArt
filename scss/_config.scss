@@ -276,7 +276,8 @@ a {
     letter-spacing: 0.1em;
 
     @include mobile {
-      font-size: pxConvertor2(15);
+      // font-size: pxConvertor2(15);
+      font-size: 1rem;
     }
   }
 
