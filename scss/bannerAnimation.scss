@@ -82,7 +82,12 @@ $ballSizeInPhone: 5vw;
     display: block;
     width: 100%;
     height: 100%;
-    background-image: url(../img/png/common/bg_mv-gradation--phase1.png);
+    // background-image: url(../img/png/common/bg_mv-gradation--phase1.png);
+    background-image: linear-gradient(
+      to bottom,
+      rgba(124, 95, 60, 1) 0%,
+      rgba(114, 84, 56, 1) 100%
+    );
     background-position: 0 100;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -98,40 +103,44 @@ $ballSizeInPhone: 5vw;
   }
 
   > .waveObject--0 {
-    background-image: url(/img/png/common/bg_mv-gradation--phase1.png);
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   width: 20%;
-    //   height: 20%;
-    //   background-color: black;
-    //   animation: changeColor 5s infinite;
-    //   transform-origin: 100% 100%;
-    // }
+    // background-image: url(/img/png/common/bg_mv-gradation--phase1.png);
+    background-image: linear-gradient(
+      to bottom,
+      rgba(124, 95, 60, 1) 0%,
+      rgba(132, 99, 66, 1) 100%
+    );
   }
   > .waveObject--1 {
-    background-image: url(../img/png/common/bg_mv-gradation--phase2.png);
-    // &::after {
-    //   @include waveObjectAfter;
-    // }
+    // background-image: url(../img/png/common/bg_mv-gradation--phase2.png);
+    background-image: linear-gradient(
+      to bottom,
+      rgba(124, 95, 60, 1) 0%,
+      rgba(124, 95, 60, 1) 100%
+    );
   }
   > .waveObject--2 {
-    background-image: url(../img/png/common/bg_mv-gradation--phase3.png);
-    // &::after {
-    //   @include waveObjectAfter;
-    // }
+    // background-image: url(../img/png/common/bg_mv-gradation--phase3.png);
+    background-image: linear-gradient(
+      to bottom,
+      rgba(124, 95, 60, 1) 0%,
+      rgba(145, 107, 72, 1) 100%
+    );
   }
   > .waveObject--3 {
-    background-image: url(../img/png/common/bg_mv-gradation--phase4.png);
-    // &::after {
-    //   @include waveObjectAfter;
-    // }
+    // background-image: url(../img/png/common/bg_mv-gradation--phase4.png);
+    background-image: linear-gradient(
+      to bottom,
+      rgba(124, 95, 60, 1) 0%,
+      rgba(155, 116, 77, 1) 100%
+    );
   }
   > .waveObject--4 {
-    background-image: url(../img/png/common/bg_mv-gradation--phase5.png);
-    // &::after {
-    //   @include waveObjectAfter;
-    // }
+    // background-image: url(../img/png/common/bg_mv-gradation--phase5.png);
+    background-image: linear-gradient(
+      to bottom,
+      rgba(124, 95, 60, 1) 0%,
+      rgba(165, 132, 82, 1) 100%
+    );
   }
 }
 @keyframes changeColor {
