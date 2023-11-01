@@ -206,12 +206,3 @@ $(function () {
     start();
   }, 1000);
 });
-
-// `
-//     <div class="waveObjectArea__item waveObjectArea__item--set">
-//             <span class="waveObject waveObject--0"></span>
-//             <span class="waveObject waveObject--1"></span>
-//             <span class="waveObject waveObject--2"></span>
-//             <span class="waveObject waveObject--3"></span>
-//             <span class="waveObject waveObject--4"></span>
-//         </div>`
