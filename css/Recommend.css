@@ -981,22 +981,22 @@ main {
   }
 }
 .waveObjectArea__item .waveObject {
-  background-image: url(../img/png/common/banner-about--phase--1.png);
+  background-image: linear-gradient(to bottom, rgb(124, 95, 60) 0%, rgb(114, 84, 56) 100%);
 }
 .waveObjectArea__item > .waveObject--0 {
-  background-image: url(/img/png/common/banner-about--phase--1.png);
+  background-image: linear-gradient(to bottom, rgb(124, 95, 60) 0%, rgb(132, 99, 66) 100%);
 }
 .waveObjectArea__item > .waveObject--1 {
-  background-image: url(../img/png/common/banner-about--phase--2.png);
+  background-image: linear-gradient(to bottom, rgb(124, 95, 60) 0%, rgb(124, 95, 60) 100%);
 }
 .waveObjectArea__item > .waveObject--2 {
-  background-image: url(../img/png/common/banner-about--phase--3.png);
+  background-image: linear-gradient(to bottom, rgb(124, 95, 60) 0%, rgb(145, 107, 72) 100%);
 }
 .waveObjectArea__item > .waveObject--3 {
-  background-image: url(../img/png/common/banner-about--phase--4.png);
+  background-image: linear-gradient(to bottom, rgb(124, 95, 60) 0%, rgb(155, 116, 77) 100%);
 }
 .waveObjectArea__item > .waveObject--4 {
-  background-image: url(../img/png/common/banner-about--phase--5.png);
+  background-image: linear-gradient(to bottom, rgb(124, 95, 60) 0%, rgb(165, 132, 82) 100%);
 }
 
 .container {
