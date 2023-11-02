@@ -986,6 +986,7 @@ main {
   justify-content: center;
   height: 100vh;
   margin-top: 10%;
+  overflow: hidden;
   background-color: #f0f0f0;
 }
 
