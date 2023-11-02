@@ -43,13 +43,13 @@ let menuData = [
       {
         title: "高校音樂節",
         enTitle: "",
-        link: "javascript:;",
+        link: "About_Concert.html",
         id: "menu22",
       },
       {
         title: "名家系列",
         enTitle: "",
-        link: "javascript:;",
+        link: "About_Famous.html",
         id: "menu23",
       },
     ],
@@ -63,7 +63,7 @@ let menuData = [
       {
         title: "聯盟音樂家",
         enTitle: "",
-        link: "javascript:;",
+        link: "About_Musician.html",
         id: "menu31",
       },
       {
