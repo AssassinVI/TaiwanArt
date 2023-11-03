@@ -15,7 +15,6 @@
   justify-content: center;
   height: 100vh;
   margin-top: 10%;
-  overflow: hidden;
   background-color: #f0f0f0;
 }
 
@@ -193,6 +192,9 @@
 }
 
 @media screen and (max-width: 500px) {
+  .support-main {
+    overflow: hidden;
+  }
   .support-header {
     position: relative;
     margin-top: 5%;

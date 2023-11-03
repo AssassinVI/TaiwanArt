@@ -5,7 +5,7 @@ const School = [
   },
   { name: "臺北市立中正高中音樂班", image: "./img/jpg/partners/中正高中.jpg" },
   {
-    name: "國立台灣師大附中音樂班",
+    name: "國立臺灣師大附中音樂班",
     image: "./img/jpg/partners/台灣師大附中.jpg",
   },
   {
@@ -231,7 +231,7 @@ $(function () {
 
   $(".partner-main").after(` <footer>
   <p>
-    ©2023 Taiwan Arts Education College Alliance.
+  ©2023 Taiwan Arts Education Senior High School Alliance.
     <span class="ph"></span> All Rights Reserved.
     <span class="ph"></span>Email: art.edu.assoc@gmail.com
   </p>
