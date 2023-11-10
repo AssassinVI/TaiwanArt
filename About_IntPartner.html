@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/bannerAnimation.css" />
     <link rel="stylesheet" href="./css/bannerAnimation-Animation.css" />
-    <link rel="stylesheet" href="./css/Concert.css" />
-    <title>高校音樂節</title>
+    <link rel="stylesheet" href="./css/IntPartner.css" />
+    <title>聯盟國際合作</title>
   </head>
   <body>
     <nav>
       <div id="navDiv"></div>
     </nav>
-    <main class="concertPage-main">
+    <main class="IntPage-main">
       <img
         class="page"
-        src="img/page/web_(2)新世代人才培育策略_高校音樂節_音樂會緣起_v2-resize.jpg"
+        src="img/page/web_(3)聯盟夥伴_聯盟國際合作_v2-resize.jpg"
         alt=""
       />
     </main>
@@ -39,16 +39,14 @@
       window.onload = () => {
         let i = 1;
         const page_arr = [
-          "img/page/web_(2)新世代人才培育策略_高校音樂節_音樂會緣起_v2-resize.jpg",
-          "img/page/Concert_02.jpg",
-          "img/page/Concert_03.jpg",
-          "img/page/Concert_04.jpg",
+          "img/page/web_(3)聯盟夥伴_聯盟國際合作_v2-resize.jpg",
+          "img/page/web_(3)聯盟夥伴_聯盟國際合作(內容頁).jpg",
         ];
         $(".page").click(function (e) {
           console.log(i);
           e.preventDefault();
           $(this).attr("src", page_arr[i]);
-          if (i == 3) {
+          if (i == 1) {
             i = 0;
           } else {
             i++;

@@ -75,7 +75,7 @@ let menuData = [
       {
         title: "聯盟國際合作",
         enTitle: "",
-        link: "javascript:;",
+        link: "About_IntPartner.html",
         id: "menu33",
       },
     ],
