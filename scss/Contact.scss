@@ -156,7 +156,16 @@
     background-color: #f0f0f0;
   }
 }
-
+@media screen and (max-width: 1920px) {
+  .contactPage-middle-content-form-item {
+    > input {
+      height: 3.5vh;
+    }
+    > select {
+      height: 3.5vh;
+    }
+  }
+}
 .contactPage-middle-content-form-item-reason {
   flex-direction: column;
   width: 60% !important;
