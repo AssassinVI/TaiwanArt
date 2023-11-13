@@ -21,14 +21,14 @@
   border-radius: 2.5vw;
 }
 .waveObjectArea__item:nth-child(1) {
-  height: 3.3192297779%;
+  height: 4.7164339585%;
 }
 
 .waveObjectArea__item--set {
   border-radius: 2.5vw;
 }
 .waveObjectArea__item--set:nth-child(1) {
-  height: 2.2136920323%;
+  height: 3.9558719122%;
 }
 
 .waveObjectArea__item--ball,
@@ -44,38 +44,38 @@
 }
 
 .waveObjectArea__item--start:nth-child(1) {
-  transform: translateY(4.1606572872vw);
+  transform: translateY(3.544217144vw);
 }
 .waveObjectArea__item--start:nth-child(1) .waveObject {
-  background-position: 0 -1.699568617%;
+  background-position: 0 -2.4114168526%;
 }
 
 .waveObjectArea__item--down:nth-child(1) {
-  transform: translateY(-3.8454979785vw);
+  transform: translateY(-3.6961561837vw);
 }
 .waveObjectArea__item--down:nth-child(1) .waveObject {
-  background-position: 0 -8.9988224775%;
+  background-position: 0 4.6120695362%;
 }
 
 .waveObjectArea__item--up:nth-child(1) {
-  transform: translateY(3.0999707852vw);
+  transform: translateY(3.1459118496vw);
 }
 .waveObjectArea__item--up:nth-child(1) .waveObject {
-  background-position: 0 -1.9560050149%;
+  background-position: 0 -3.193525349%;
 }
 
 .waveObjectArea__item {
   border-radius: 2.5vw;
 }
 .waveObjectArea__item:nth-child(2) {
-  height: 13.5622277793%;
+  height: 17.39399972%;
 }
 
 .waveObjectArea__item--set {
   border-radius: 2.5vw;
 }
 .waveObjectArea__item--set:nth-child(2) {
-  height: 18.6755427369%;
+  height: 5.0156617765%;
 }
 
 .waveObjectArea__item--ball,
@@ -91,38 +91,38 @@
 }
 
 .waveObjectArea__item--start:nth-child(2) {
-  transform: translateY(2.4764475409vw);
+  transform: translateY(2.4925463392vw);
 }
 .waveObjectArea__item--start:nth-child(2) .waveObject {
-  background-position: 0 1.2815919908%;
+  background-position: 0 6.7800910632%;
 }
 
 .waveObjectArea__item--down:nth-child(2) {
-  transform: translateY(-2.884537217vw);
+  transform: translateY(-2.2128911486vw);
 }
 .waveObjectArea__item--down:nth-child(2) .waveObject {
-  background-position: 0 0.358939939%;
+  background-position: 0 5.2311699172%;
 }
 
 .waveObjectArea__item--up:nth-child(2) {
-  transform: translateY(2.879623823vw);
+  transform: translateY(2.4594663689vw);
 }
 .waveObjectArea__item--up:nth-child(2) .waveObject {
-  background-position: 0 5.0057769825%;
+  background-position: 0 4.1527924885%;
 }
 
 .waveObjectArea__item {
   border-radius: 2.5vw;
 }
 .waveObjectArea__item:nth-child(3) {
-  height: 20.8403999371%;
+  height: 18.0534060985%;
 }
 
 .waveObjectArea__item--set {
   border-radius: 2.5vw;
 }
 .waveObjectArea__item--set:nth-child(3) {
-  height: 23.2445222639%;
+  height: 27.523911153%;
 }
 
 .waveObjectArea__item--ball,
@@ -138,38 +138,38 @@
 }
 
 .waveObjectArea__item--start:nth-child(3) {
-  transform: translateY(1.6978965761vw);
+  transform: translateY(1.4756669086vw);
 }
 .waveObjectArea__item--start:nth-child(3) .waveObject {
-  background-position: 0 7.9000285072%;
+  background-position: 0 -6.6618921163%;
 }
 
 .waveObjectArea__item--down:nth-child(3) {
-  transform: translateY(-1.6728531252vw);
+  transform: translateY(-1.4501483505vw);
 }
 .waveObjectArea__item--down:nth-child(3) .waveObject {
-  background-position: 0 3.8666172594%;
+  background-position: 0 4.8233589883%;
 }
 
 .waveObjectArea__item--up:nth-child(3) {
-  transform: translateY(1.2926723492vw);
+  transform: translateY(1.5111061144vw);
 }
 .waveObjectArea__item--up:nth-child(3) .waveObject {
-  background-position: 0 9.2393357387%;
+  background-position: 0 4.0755925528%;
 }
 
 .waveObjectArea__item {
   border-radius: 2.5vw;
 }
 .waveObjectArea__item:nth-child(4) {
-  height: 42.1868323692%;
+  height: 29.4124036198%;
 }
 
 .waveObjectArea__item--set {
   border-radius: 2.5vw;
 }
 .waveObjectArea__item--set:nth-child(4) {
-  height: 23.7766217702%;
+  height: 12.7774270643%;
 }
 
 .waveObjectArea__item--ball,
@@ -185,38 +185,38 @@
 }
 
 .waveObjectArea__item--start:nth-child(4) {
-  transform: translateY(0.3403408985vw);
+  transform: translateY(0.4018006802vw);
 }
 .waveObjectArea__item--start:nth-child(4) .waveObject {
-  background-position: 0 -4.8049282459%;
+  background-position: 0 2.2290652618%;
 }
 
 .waveObjectArea__item--down:nth-child(4) {
-  transform: translateY(-0.4575046888vw);
+  transform: translateY(-0.4499516704vw);
 }
 .waveObjectArea__item--down:nth-child(4) .waveObject {
-  background-position: 0 -6.8420549793%;
+  background-position: 0 9.3674885838%;
 }
 
 .waveObjectArea__item--up:nth-child(4) {
-  transform: translateY(0.4386800993vw);
+  transform: translateY(0.3063646442vw);
 }
 .waveObjectArea__item--up:nth-child(4) .waveObject {
-  background-position: 0 -0.6641144404%;
+  background-position: 0 7.4016169154%;
 }
 
 .waveObjectArea__item {
   border-radius: 2.5vw;
 }
 .waveObjectArea__item:nth-child(5) {
-  height: 29.884654697%;
+  height: 27.7628074118%;
 }
 
 .waveObjectArea__item--set {
   border-radius: 2.5vw;
 }
 .waveObjectArea__item--set:nth-child(5) {
-  height: 9.5085376763%;
+  height: 6.8272373719%;
 }
 
 .waveObjectArea__item--ball,
@@ -232,38 +232,38 @@
 }
 
 .waveObjectArea__item--start:nth-child(5) {
-  transform: translateY(1.2181524466vw);
+  transform: translateY(1.2575789812vw);
 }
 .waveObjectArea__item--start:nth-child(5) .waveObject {
-  background-position: 0 8.5586882858%;
+  background-position: 0 9.5985521944%;
 }
 
 .waveObjectArea__item--down:nth-child(5) {
-  transform: translateY(-1.7585698969vw);
+  transform: translateY(-1.5785434096vw);
 }
 .waveObjectArea__item--down:nth-child(5) .waveObject {
-  background-position: 0 -0.7085590222%;
+  background-position: 0 -9.7934586835%;
 }
 
 .waveObjectArea__item--up:nth-child(5) {
-  transform: translateY(1.4917161769vw);
+  transform: translateY(1.3708229025vw);
 }
 .waveObjectArea__item--up:nth-child(5) .waveObject {
-  background-position: 0 4.9988039368%;
+  background-position: 0 5.8074717848%;
 }
 
 .waveObjectArea__item {
   border-radius: 2.5vw;
 }
 .waveObjectArea__item:nth-child(6) {
-  height: 21.3051509418%;
+  height: 25.2763727175%;
 }
 
 .waveObjectArea__item--set {
   border-radius: 2.5vw;
 }
 .waveObjectArea__item--set:nth-child(6) {
-  height: 24.7453924465%;
+  height: 7.454348002%;
 }
 
 .waveObjectArea__item--ball,
@@ -279,38 +279,38 @@
 }
 
 .waveObjectArea__item--start:nth-child(6) {
-  transform: translateY(1.3787580974vw);
+  transform: translateY(1.4382615894vw);
 }
 .waveObjectArea__item--start:nth-child(6) .waveObject {
-  background-position: 0 -1.8457893914%;
+  background-position: 0 4.4039466785%;
 }
 
 .waveObjectArea__item--down:nth-child(6) {
-  transform: translateY(-0.9337950769vw);
+  transform: translateY(-1.1379076838vw);
 }
 .waveObjectArea__item--down:nth-child(6) .waveObject {
-  background-position: 0 -8.020300376%;
+  background-position: 0 -2.4706025556%;
 }
 
 .waveObjectArea__item--up:nth-child(6) {
-  transform: translateY(1.3478539084vw);
+  transform: translateY(1.1988225994vw);
 }
 .waveObjectArea__item--up:nth-child(6) .waveObject {
-  background-position: 0 -8.4219499776%;
+  background-position: 0 -5.5011490246%;
 }
 
 .waveObjectArea__item {
   border-radius: 2.5vw;
 }
 .waveObjectArea__item:nth-child(7) {
-  height: 13.3326337647%;
+  height: 15.3485277692%;
 }
 
 .waveObjectArea__item--set {
   border-radius: 2.5vw;
 }
 .waveObjectArea__item--set:nth-child(7) {
-  height: 12.1222051095%;
+  height: 4.2407845725%;
 }
 
 .waveObjectArea__item--ball,
@@ -326,38 +326,38 @@
 }
 
 .waveObjectArea__item--start:nth-child(7) {
-  transform: translateY(1.9125094756vw);
+  transform: translateY(2.4676348851vw);
 }
 .waveObjectArea__item--start:nth-child(7) .waveObject {
-  background-position: 0 1.531351076%;
+  background-position: 0 7.2083224951%;
 }
 
 .waveObjectArea__item--down:nth-child(7) {
-  transform: translateY(-2.8042470359vw);
+  transform: translateY(-2.6877685967vw);
 }
 .waveObjectArea__item--down:nth-child(7) .waveObject {
-  background-position: 0 -7.6704938115%;
+  background-position: 0 -0.5572969664%;
 }
 
 .waveObjectArea__item--up:nth-child(7) {
-  transform: translateY(2.0563376422vw);
+  transform: translateY(2.9230490847vw);
 }
 .waveObjectArea__item--up:nth-child(7) .waveObject {
-  background-position: 0 5.1965460496%;
+  background-position: 0 7.6161630542%;
 }
 
 .waveObjectArea__item {
   border-radius: 2.5vw;
 }
 .waveObjectArea__item:nth-child(8) {
-  height: 10.2103232037%;
+  height: 10.8036162695%;
 }
 
 .waveObjectArea__item--set {
   border-radius: 2.5vw;
 }
 .waveObjectArea__item--set:nth-child(8) {
-  height: 9.0623185048%;
+  height: 10.0678588479%;
 }
 
 .waveObjectArea__item--ball,
@@ -373,22 +373,22 @@
 }
 
 .waveObjectArea__item--start:nth-child(8) {
-  transform: translateY(3.6591361828vw);
+  transform: translateY(3.527856313vw);
 }
 .waveObjectArea__item--start:nth-child(8) .waveObject {
-  background-position: 0 -2.9364175287%;
+  background-position: 0 7.8338829072%;
 }
 
 .waveObjectArea__item--down:nth-child(8) {
-  transform: translateY(-3.265563443vw);
+  transform: translateY(-3.6500258883vw);
 }
 .waveObjectArea__item--down:nth-child(8) .waveObject {
-  background-position: 0 7.496612554%;
+  background-position: 0 9.4527823819%;
 }
 
 .waveObjectArea__item--up:nth-child(8) {
-  transform: translateY(3.4875465001vw);
+  transform: translateY(2.7579342479vw);
 }
 .waveObjectArea__item--up:nth-child(8) .waveObject {
-  background-position: 0 -6.8380373359%;
+  background-position: 0 0.4972746788%;
 }/*# sourceMappingURL=bannerAnimation-Animation.css.map */

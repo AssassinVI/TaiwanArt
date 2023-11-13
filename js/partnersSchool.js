@@ -135,7 +135,13 @@ const School = [
   { name: "明義國小音樂班", image: "./img/jpg/partners/臺北市立復興高中.jpg" },
   { name: "馬公國小音樂班", image: "./img/jpg/partners/臺北市立復興高中.jpg" },
 ];
-
+{
+  /* <img
+class="partner-school-hexagon-content"
+src=${item.image}
+alt=${item.name}
+/> */
+}
 $(function () {
   let src = "";
   if (window.innerWidth <= 500) {
@@ -150,7 +156,7 @@ $(function () {
         class="partner-school-hexagon-content"
         src=${item.image}
         alt=${item.name}
-        />
+        /> 
         <img
         class="partner-school-hexagon-border"
         src="./SVG/資產 2.svg"
@@ -200,13 +206,13 @@ $(function () {
       "partner-bottom-nav-active"
     ); //第一次的addClass
   } else {
+    // <img
+    // class="partner-school-hexagon-content"
+    // src='./img/svg/school-icon/復興icon.svg'
+    // alt="學校icon"
+    // />
     School.forEach(function (item, index) {
       src += ` <div class="partner-school-hexagon">
-      <img
-        class="partner-school-hexagon-content"
-        src=${item.image}
-        alt=${item.name}
-      />
       <img
         class="partner-school-hexagon-border"
         src="./SVG/資產 2.svg"

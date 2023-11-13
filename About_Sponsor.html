@@ -167,17 +167,17 @@
                 <p>位</p>
               </div>
               <select name="sponsorship-group" id="sponsorship-group" value="1">
-                <option value="1">1</option>
+                <option value="1">臺灣藝術教育高校聯盟</option>
               </select>
             </div>
             <div class="support-main-content-bottom-form-item">
-              <div class="support-main-content-bottom-form-title">
-                <p>代</p>
-                <p>表</p>
-                <p>機</p>
-                <p>構</p>
-                <p>名</p>
-                <p>稱</p>
+              <div
+                class="support-main-content-bottom-form-title support-optional"
+              >
+                <p>捐</p>
+                <p>款</p>
+                <p>單</p>
+                <p>位</p>
               </div>
               <input type="text" />
             </div>
@@ -185,6 +185,27 @@
               <div class="support-main-content-bottom-form-title">
                 <p>姓</p>
                 <p>名</p>
+              </div>
+              <input type="text" name="support-name" />
+              <div class="support-main-content-bottom-form-title-anonymous">
+                <input type="checkbox" id="support-anonymous" />
+                <!-- <label
+                  class="support-anonymous-check"
+                  for="support-anonymous"
+                ></label> -->
+                <label for="support-anonymous" name="support-name">匿名</label>
+              </div>
+            </div>
+            <div class="support-main-content-bottom-form-item">
+              <div class="support-main-content-bottom-form-title">
+                <p>身</p>
+                <p>分</p>
+                <p>證</p>
+                <p>/</p>
+                <p>統</p>
+                <p>一</p>
+                <p>編</p>
+                <p>碼</p>
               </div>
               <input type="text" />
             </div>
@@ -201,15 +222,21 @@
               </div>
               <div class="support-main-content-bottom-form-address">
                 <div id="twzipcode">
-                  <div
-                    data-role="county"
-                    data-name="county"
-                    readonly="true"
-                  ></div>
+                  <div data-role="county" data-name="county"></div>
                   <div data-role="district" data-name="district"></div>
-                  <div data-role="zipcode" data-name="zipcode"></div>
+                  <div
+                    data-role="zipcode"
+                    data-name="zipcode"
+                    readonly="false"
+                  ></div>
                 </div>
-                <input type="text" />
+                <input type="text" name="support-none-prove" />
+                <div class="support-main-content-bottom-form-title-none-prove">
+                  <input type="checkbox" id="support-none-prove" />
+                  <label for="support-none-prove" name="support-none-prove"
+                    >不需寄贊助證明</label
+                  >
+                </div>
               </div>
             </div>
             <div
@@ -240,10 +267,10 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-twzipcode@1.7.15-rc1/jquery.twzipcode.min.js"></script>
     <script>
       $(function () {
-        $("#twzipcode").twzipcode();
+        $("#twzipcode").twzipcode({ readonly: true });
       });
-      //贊助金額點擊判斷
       $(function () {
+        //贊助金額點擊判斷
         let sponsorshipRadio = 'input[type="radio"][name="sponsorship"]';
         let sponsorshipNumber = 'input[type="number"][name="sponsorship"]';
         $(sponsorshipRadio).click(function (e) {
@@ -263,6 +290,36 @@
           $(".label-sponsorship").addClass("sponsorship-unchecked");
           $(".label-sponsorship").removeClass("sponsorship-checked");
           $(sponsorshipRadio).prop("checked", false);
+        });
+
+        //姓名匿名判斷
+        let sponsorshipNameCheckbox =
+          'input[type="checkbox"][id="support-anonymous"]';
+        let sponsorshipNameText = 'input[type="text"][name="support-name"]';
+        $(sponsorshipNameCheckbox).click(function (e) {
+          $(sponsorshipNameText).val("");
+          console.log($(sponsorshipNameCheckbox).prop("checked"));
+        });
+        $(sponsorshipNameText).on("change input", function (e) {
+          $(sponsorshipNameCheckbox).prop("checked", false);
+        });
+
+        //地址匿名判斷
+        let sponsorshipAdressCheckbox =
+          'input[type="checkbox"][id="support-none-prove"]';
+        let sponsorshipAdressText =
+          'input[type="text"][name="support-none-prove"]';
+        let sponsorshipCounty = "select[name=county]";
+        console.log($(sponsorshipCounty).val());
+        $(sponsorshipAdressCheckbox).click(function (e) {
+          $(sponsorshipAdressText).val("");
+          $("#twzipcode").twzipcode("reset");
+        });
+        $(sponsorshipAdressText).on("input", function (e) {
+          $(sponsorshipAdressCheckbox).prop("checked", false);
+        });
+        $(sponsorshipCounty).change(function () {
+          $(sponsorshipAdressCheckbox).prop("checked", false);
         });
       });
       $(function () {

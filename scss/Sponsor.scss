@@ -13,7 +13,6 @@
   position: relative;
   display: flex;
   justify-content: center;
-  height: 100vh;
   margin-top: 10%;
   background-color: #f0f0f0;
 }
@@ -71,9 +70,24 @@
   display: flex;
   justify-content: space-between;
   width: 15%;
+  position: relative;
+  &::after {
+    content: "*";
+    color: red;
+    font-size: 0.7vw;
+    font-weight: bold;
+    position: absolute;
+    right: -10px;
+    line-height: 1.3;
+  }
   p {
     font-size: 18px;
     font-weight: 600;
+  }
+}
+.support-optional {
+  &::after {
+    display: none;
   }
 }
 .support-main-content-bottom-form-sponsorship {
@@ -156,7 +170,44 @@
   color: #000000;
   cursor: pointer;
 }
-
+.support-main-content-bottom-form-title-anonymous {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  position: relative;
+  > label {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-left: 5px;
+    user-select: none; /* standard syntax */
+    -webkit-user-select: none; /* for Chrome、Safari */
+    -moz-user-select: none; /* for Mozilla、Firefox */
+    cursor: pointer;
+  }
+  > input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0.6vw;
+    height: 0.6vw;
+    border-radius: 50%;
+    border: 0.5px solid black;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+  }
+  > input[type="checkbox"]::before {
+    content: "";
+    width: 0.3vw;
+    height: 0.3vw;
+    border-radius: 50%;
+    transform: scale(0);
+    box-shadow: inset 1rem 1rem black;
+  }
+  > input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+}
 .support-main-content-bottom-form-item {
   margin-top: 23px;
   margin-right: 20px;
@@ -188,6 +239,44 @@
     > input {
       @include sponsorship-input(150px, 20px);
     }
+  }
+}
+
+.support-main-content-bottom-form-title-none-prove {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  > label {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-left: 5px;
+    cursor: pointer;
+    user-select: none; /* standard syntax */
+    -webkit-user-select: none; /* for Chrome、Safari */
+    -moz-user-select: none; /* for Mozilla、Firefox */
+  }
+  > input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0.6vw;
+    height: 0.6vw;
+    border-radius: 50%;
+    border: 0.5px solid black;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+  }
+  > input[type="checkbox"]::before {
+    content: "";
+    width: 0.3vw;
+    height: 0.3vw;
+    border-radius: 50%;
+    transform: scale(0);
+    box-shadow: inset 1rem 1rem black;
+  }
+  > input[type="checkbox"]:checked::before {
+    transform: scale(1);
   }
 }
 
@@ -310,6 +399,32 @@
   .support-main-content-bottom-form-button {
     > button {
       font-size: 20px;
+    }
+  }
+  .support-main-content-bottom-form-title-anonymous {
+    margin-top: 2vw;
+    margin-left: 0;
+    > input[type="checkbox"] {
+      width: 3vw;
+      height: 3vw;
+    }
+    > input[type="checkbox"]::before {
+      content: "";
+      width: 1.5vw;
+      height: 1.4vw;
+    }
+  }
+  .support-main-content-bottom-form-title-none-prove {
+    margin-top: 2vw;
+    margin-left: 0;
+    > input[type="checkbox"] {
+      width: 3vw;
+      height: 3vw;
+    }
+    > input[type="checkbox"]::before {
+      content: "";
+      width: 1.5vw;
+      height: 1.4vw;
     }
   }
 }

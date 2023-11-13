@@ -96,6 +96,9 @@
               $(this)
                 .children(".partner-school-hexagon-content")
                 .addClass("hexagon-show hexagon-content-running");
+              $(this).children("p")
+                .before(`<img class='partner-school-icon' src='./img/png/學校icon/復興icon.png'
+       alt="學校icon"/>`);
               $(this).children("p").css("color", "white");
             },
             function () {
@@ -107,6 +110,7 @@
               $(this)
                 .children(".partner-school-hexagon-content")
                 .removeClass("hexagon-show hexagon-content-running");
+              $(this).children(".partner-school-icon").remove();
               $(this).children("p").css("color", "black");
             }
           );

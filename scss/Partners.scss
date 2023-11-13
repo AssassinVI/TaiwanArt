@@ -140,6 +140,12 @@
   animation: hexagon-scale 8s linear infinite;
   animation-play-state: paused;
 }
+.partner-school-icon {
+  position: absolute;
+  top: 20%;
+  width: 2vw;
+  z-index: 15;
+}
 .hexagon-content-running {
   animation-play-state: running;
 }
