@@ -148,21 +148,23 @@ $(function () {
     let pageNumber = Math.ceil(School.length / 10);
     let prevPage = 0;
     let currentPage = 10;
+    // <img
+    // class="partner-school-hexagon-content"
+    // src=${item.image}
+    // alt=${item.name}
+    // />
     function schoolRender(prev, current) {
       src = ""; //換頁時初始化
       School.slice(prev, current).forEach(function (item, index) {
         src += `<div class="partner-school-hexagon">
-        <img
-        class="partner-school-hexagon-content"
-        src=${item.image}
-        alt=${item.name}
-        /> 
         <img
         class="partner-school-hexagon-border"
         src="./SVG/資產 2.svg"
         alt="邊框"
         />
         <div class='hexagon'></div>
+        <img class='partner-school-icon' src='./img/png/學校icon/復興icon.png'
+       alt="學校icon"/>
         <p>${item.name}</p>
         <div class='partner-school-icon-container'>
         <li class='partner-school-fb'>

@@ -74,13 +74,11 @@
       $(function () {
         let tl;
         let dis = true;
-
+        // .partner-school-hexagon-content ,
         if (window.innerWidth <= 500) {
           $(".hexagon").css({ opacity: 1 });
           $(".partner-school-hexagon")
-            .children(
-              ".partner-school-hexagon-content , .partner-school-icon-container"
-            )
+            .children(" .partner-school-icon-container,.partner-school-icon")
             .css({ opacity: 1 });
           $(".partner-school-hexagon").children("p").css("color", "white");
         } else {
