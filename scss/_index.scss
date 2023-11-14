@@ -392,7 +392,9 @@ main.index {
         display: flex;
         justify-content: space-between;
         width: 100%;
-
+        @include mobile {
+          flex-direction: column;
+        }
         li {
           width: pxConvertor(385);
           cursor: pointer;

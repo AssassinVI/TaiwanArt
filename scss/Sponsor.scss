@@ -427,4 +427,16 @@
       height: 1.4vw;
     }
   }
+  .support-main-content-bottom-form-title {
+    &::after {
+      font-size: 4vw;
+      position: relative;
+      font-weight: bold;
+      line-height: 1.3;
+    }
+    p {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
 }

@@ -1344,6 +1344,11 @@ main.index .forth-page .content ul {
   justify-content: space-between;
   width: 100%;
 }
+@media all and (max-width: 500px) {
+  main.index .forth-page .content ul {
+    flex-direction: column;
+  }
+}
 main.index .forth-page .content ul li {
   width: 20.0520833333vw;
   cursor: pointer;
