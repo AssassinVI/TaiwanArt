@@ -131,7 +131,7 @@
               <p>
                 臺灣藝術教育高校聯盟，為學習演奏的青少年提供長期培育計畫，匯集國內外音樂家共同打造演奏舞台，推動臺灣藝術人才的永續發展......
               </p>
-              <a class="more">
+              <a class="more" href="./About.html">
                 <span>MORE</span>
                 <div class="moreArrow">
                   <img src="./img/svg/more-arrow.svg" />
@@ -391,7 +391,7 @@
             >歡迎您加入支持我們的行列！
           </p>
           <div class="donate wow fadeIn" data-wow-delay="2s">
-            <p>贊助支持</p>
+            <a class="nav-to-donate" href="./About_Sponsor.html">贊助支持</a>
           </div>
         </div>
       </section>
@@ -472,6 +472,7 @@
     <script src="./js/menu.js"></script>
 
     <script>
+      $(".nav-to-donate").on("click", function () {});
       gsap.registerPlugin(ScrollTrigger);
 
       gsap.to(".text1", {

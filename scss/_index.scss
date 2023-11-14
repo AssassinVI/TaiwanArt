@@ -803,7 +803,7 @@ main.index {
         border-radius: 30px;
         cursor: pointer;
 
-        p {
+        a {
           font-size: pxConvertor(14);
           font-family: "Noto Sans TC", sans-serif;
           color: #fff;
@@ -816,7 +816,7 @@ main.index {
           height: auto;
           padding: 0.2em 0;
 
-          p {
+          a {
             font-size: pxConvertor2(24);
           }
         }

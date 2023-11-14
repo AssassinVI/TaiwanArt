@@ -1726,7 +1726,7 @@ main.index .fifth-page .fifth-page-para .donate {
   border-radius: 30px;
   cursor: pointer;
 }
-main.index .fifth-page .fifth-page-para .donate p {
+main.index .fifth-page .fifth-page-para .donate a {
   font-size: 0.7291666667vw;
   font-family: "Noto Sans TC", sans-serif;
   color: #fff;
@@ -1739,7 +1739,7 @@ main.index .fifth-page .fifth-page-para .donate p {
     height: auto;
     padding: 0.2em 0;
   }
-  main.index .fifth-page .fifth-page-para .donate p {
+  main.index .fifth-page .fifth-page-para .donate a {
     font-size: 3.125vw;
   }
 }
