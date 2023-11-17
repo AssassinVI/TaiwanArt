@@ -81,7 +81,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10vh auto;
+  margin: 0vh auto;
   gap: 1vw;
   position: relative;
 
@@ -314,9 +314,9 @@ body {
   }
 }
 
-.RecommendCard:nth-of-type(1) {
-  padding-top: 0px;
-}
+// .RecommendCard:nth-of-type(1) {
+//   padding-top: 0px;
+// }
 
 .RecommendCard:nth-of-type(even) {
   flex-direction: row-reverse;

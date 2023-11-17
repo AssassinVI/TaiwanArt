@@ -1,0 +1,413 @@
+@import "_config";
+
+section {
+  margin-bottom: 0;
+}
+
+//大橢圓動畫
+.waveObjectArea__item {
+  .waveObject {
+    background-image: linear-gradient(
+      to right,
+      rgba(213, 222, 239, 1) 0%,
+      rgba(197, 212, 226, 1) 100%
+    );
+  }
+  > .waveObject--0 {
+    background-image: linear-gradient(
+      to right,
+      rgba(206, 216, 234, 1) 0%,
+      rgba(197, 212, 226, 1) 100%
+    );
+  }
+  > .waveObject--1 {
+    background-image: linear-gradient(
+      to right,
+      rgba(197, 212, 226, 1) 0%,
+      rgba(197, 212, 226, 1) 100%
+    );
+  }
+  > .waveObject--2 {
+    background-image: linear-gradient(
+      to right,
+      rgba(188, 201, 214, 1) 0%,
+      rgba(197, 212, 226, 1) 100%
+    );
+  }
+  > .waveObject--3 {
+    background-image: linear-gradient(
+      to right,
+      rgba(175, 185, 198, 1) 0%,
+      rgba(197, 212, 226, 1) 100%
+    );
+  }
+  > .waveObject--4 {
+    background-image: linear-gradient(
+      to right,
+      rgba(167, 177, 188, 1) 0%,
+      rgba(197, 212, 226, 1) 100%
+    );
+  }
+}
+.bannerBox .bannerAnimationBox::before,
+.bannerBox .bannerAnimationBox::after {
+  background-color: #91a5c1;
+}
+.bannerBox .bannerText {
+  color: #91a5c1;
+  font-size: 5vw;
+}
+//左邊導覽列
+.nav-3 {
+  position: relative;
+  z-index: 50;
+}
+.allianceImageNav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0vh auto;
+  gap: 1vw;
+  position: relative;
+
+  @include mobile {
+    gap: 3vw;
+    margin: 3vh auto;
+  }
+
+  li {
+    border: 1px solid #ccc;
+    border-bottom: unset;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    position: relative;
+
+    a {
+      display: block;
+      padding: 0.8em 3em 0.5em;
+      width: 100%;
+      height: 100%;
+
+      @include mobile {
+        padding: 0.4em 1.5em 0.25em;
+      }
+    }
+
+    &.active::after {
+      content: " ";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: #eee;
+    }
+
+    a.active {
+      color: $mainColor;
+      cursor: default;
+    }
+
+    a:hover {
+      color: $mainColor;
+    }
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 6%;
+    right: 6%;
+    height: 1px;
+    background-color: #dddddd;
+    z-index: -1;
+  }
+}
+.FamousPage-main {
+  background-image: url("../img/jpg/famous/名家背景.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: $mainFontFamily;
+}
+.FamousPage-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 10vw;
+  margin-top: 3%;
+}
+.FamousPage-card-container,
+.FamousPage-card-container-second {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+.FamousPage-card-container-second {
+  margin-top: 5%;
+}
+.FamousPage-card {
+  position: relative;
+  margin-right: 3%;
+  margin-left: 3%;
+  cursor: pointer;
+}
+.FamousPage-card-img {
+  position: relative;
+  width: 14vw;
+  z-index: 1;
+}
+.FamousPage-card-bg {
+  position: absolute;
+  top: 1vw;
+  left: 1vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  width: 14vw;
+  height: 23vw;
+  background-color: #b2c7d8;
+  padding-bottom: 0.5vw;
+  padding-right: 1vw;
+  > p {
+    font-size: 0.8vw;
+    color: white;
+    > span {
+      font-size: 1vw;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .bannerBox {
+    .bannerText {
+      font-size: 8vw !important;
+    }
+  }
+
+  .FamousPage-card-container,
+  .FamousPage-card-container-second {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+  }
+  .FamousPage-card-container-second {
+    margin-top: 0px;
+  }
+  .FamousPage-card {
+    margin-bottom: 10vw;
+  }
+  .FamousPage-card-img {
+    width: 39vw;
+  }
+  .FamousPage-card-bg {
+    top: 2vw;
+    left: 2vw;
+    width: 40vw;
+    height: 63vw;
+    > p {
+      font-size: 2.2vw;
+      > span {
+        font-size: 3vw;
+      }
+    }
+  }
+}
+
+//famous-detail css 詳細內容
+.FamousPage-detail {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 4%;
+  padding-bottom: 10%;
+}
+.FamousPage-detail-container {
+  width: 70%;
+  position: relative;
+}
+.FamousPage-detail-des {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 20%;
+  right: 0;
+  width: 45%;
+  padding-right: 8%;
+}
+.FamousPage-detail-des-title {
+  > h5 {
+    font-size: 1vw;
+    color: #ab8350;
+  }
+}
+.FamousPage-detail-des-name {
+  margin-top: 1%;
+  > h1 {
+    font-size: 1.5vw;
+    color: #ab8350;
+  }
+}
+.FamousPage-detail-des-para-first,
+.FamousPage-detail-des-para-second {
+  > p {
+    font-size: 0.8vw;
+  }
+}
+.FamousPage-detail-des-para-first {
+  margin-top: 6%;
+}
+.FamousPage-detail-des-para-second {
+  margin-top: 5%;
+}
+.FamousPage-detail-des-back {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 5%;
+  > svg {
+    transform: rotateY(180deg);
+    fill: #b28146;
+    width: 0.5vw;
+  }
+  > a {
+    font-family: "Montserrat", sans-serif;
+    color: #b28146;
+    margin-right: 0.4vw;
+    font-weight: 600;
+    font-size: 0.8vw;
+    margin-left: 2%;
+  }
+}
+//輪播
+.FamousPage-detail-carousel {
+  position: relative;
+  margin-top: 25%;
+}
+.FamousPage-detail-carousel-container {
+  cursor: pointer;
+  overflow: hidden;
+}
+.FamousPage-detail-carousel-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  > h1 {
+    margin-top: 0.2vw;
+    font-size: 0.8vw;
+    color: #ab8350;
+  }
+  > h3 {
+    margin-top: 0.4vw;
+    font-size: 0.6vw;
+    color: #ab8350;
+  }
+}
+.swiper-button-prev,
+.swiper-button-next {
+  top: 40%;
+  color: #ab8350;
+  &::after {
+    font-size: 1.2vw;
+    font-weight: 600;
+  }
+}
+.swiper-button-prev {
+  left: -12%;
+}
+.swiper-button-next {
+  right: -12%;
+}
+
+@media screen and (max-width: 1920px) {
+  .FamousPage-detail-carousel {
+    margin-top: 12%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .FamousPage-detail-container {
+    width: 90%;
+  }
+  .FamousPage-detail-des {
+    position: relative;
+    width: 100%;
+    padding-right: 0;
+  }
+  .FamousPage-detail-des-title {
+    > h5 {
+      margin-top: 8%;
+      font-size: 4vw;
+      color: #ab8350;
+    }
+  }
+  .FamousPage-detail-des-name {
+    margin-top: 1%;
+    > h1 {
+      font-size: 6.5vw;
+      color: #ab8350;
+    }
+  }
+  .swiper-button-prev {
+    left: 0%;
+  }
+  .swiper-button-next {
+    right: 0%;
+  }
+  .FamousPage-detail-des-para-first,
+  .FamousPage-detail-des-para-second {
+    > p {
+      font-size: 4vw;
+    }
+  }
+  .FamousPage-detail-des-back {
+    > svg {
+      transform: rotateY(180deg);
+      fill: #b28146;
+      width: 3.2vw;
+    }
+    > a {
+      font-size: 4vw;
+    }
+  }
+  //輪播
+  .FamousPage-detail-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -13%;
+    order: -1;
+  }
+  .FamousPage-detail-carousel-container {
+    width: 90%;
+  }
+  .FamousPage-detail-carousel-card {
+    > h1 {
+      margin-top: 0.2vw;
+      font-size: 4vw;
+      color: #ab8350;
+    }
+    > h3 {
+      margin-top: 0.4vw;
+      font-size: 3.2vw;
+      color: #ab8350;
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    &::after {
+      font-size: 5vw;
+    }
+  }
+  .swiper-button-prev {
+    left: -3%;
+  }
+  .swiper-button-next {
+    right: -3%;
+  }
+}

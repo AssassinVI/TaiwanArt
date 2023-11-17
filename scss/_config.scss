@@ -99,7 +99,6 @@ a {
   position: relative;
   padding-top: 15vh;
   height: 55vh;
-
   .bannerText {
     font-family: "Cormorant Garamond", serif;
     font-size: pxConvertor(110);
@@ -1081,5 +1080,84 @@ main {
   }
   100% {
     transform: scaleX(1) scaleY(1);
+  }
+}
+
+//fancybox
+#modal-first,
+#modal-second,
+#modal-third,
+#modal-fourth {
+  width: 70%;
+  height: 85%;
+  font-family: $mainFontFamily;
+}
+.modal-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.modal-content-left {
+  display: flex;
+  flex-direction: column;
+}
+.modal-content-left-url {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 5%;
+  line-height: 1.8;
+  h4 {
+    font-size: 0.8vw;
+    font-weight: 600;
+    color: #ab8350;
+  }
+  > p,
+  a {
+    font-size: 0.8vw;
+  }
+}
+.modal-content-line {
+  width: 1px;
+  height: 100%;
+  margin-left: 3%;
+  margin-right: 5%;
+  background-color: #ab8350;
+}
+.modal-content-right {
+  display: flex;
+  align-items: center;
+  overflow-y: scroll;
+  flex-direction: column;
+  padding-right: 3%;
+}
+.modal-content-right-cotent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  > p {
+    font-size: 0.8vw;
+    line-height: 1.8;
+    margin-bottom: 8%;
+  }
+}
+.modal-content-right-img {
+  width: 100%;
+  margin-bottom: 4%;
+}
+.modal-content-right-title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 3%;
+  > h5 {
+    color: #ab8350;
+  }
+  > :nth-child(1) {
+    font-size: 1vw;
+    font-weight: 600;
+  }
+  > :nth-child(2) {
+    font-size: 0.8vw;
   }
 }

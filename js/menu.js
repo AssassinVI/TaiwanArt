@@ -37,18 +37,18 @@ let menuData = [
       {
         title: "築底計畫",
         enTitle: "PLAN",
-        link: "Plan.html",
+        link: "About_Plan.html",
         id: "menu21",
       },
       {
         title: "高校音樂節",
-        enTitle: "",
+        enTitle: "CONCERT",
         link: "About_Concert.html",
         id: "menu22",
       },
       {
         title: "名家系列",
-        enTitle: "",
+        enTitle: "FAMOUS",
         link: "About_Famous.html",
         id: "menu23",
       },
@@ -56,13 +56,13 @@ let menuData = [
   },
   {
     title: "聯盟夥伴",
-    enTitle: "CONTACT",
+    enTitle: "PARTNER",
     link: "#",
     id: "menu30",
     subMenu: [
       {
         title: "聯盟音樂家",
-        enTitle: "",
+        enTitle: "MUSICIAN",
         link: "About_Musician.html",
         id: "menu31",
       },
@@ -74,7 +74,7 @@ let menuData = [
       },
       {
         title: "聯盟國際合作",
-        enTitle: "",
+        enTitle: "INTPARTNER",
         link: "About_IntPartner.html",
         id: "menu33",
       },
@@ -131,6 +131,6 @@ $(document).ready(function () {
   });
 
   src += `</ul></div></nav></div>`;
-
+  console.log("test");
   $("#navDiv").html(src);
 });

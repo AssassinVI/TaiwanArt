@@ -980,6 +980,92 @@ main {
     transform: scaleX(1) scaleY(1);
   }
 }
+#modal-first,
+#modal-second,
+#modal-third,
+#modal-fourth {
+  width: 70%;
+  height: 85%;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.modal-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.modal-content-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content-left-url {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 5%;
+  line-height: 1.8;
+}
+.modal-content-left-url h4 {
+  font-size: 0.8vw;
+  font-weight: 600;
+  color: #ab8350;
+}
+.modal-content-left-url > p,
+.modal-content-left-url a {
+  font-size: 0.8vw;
+}
+
+.modal-content-line {
+  width: 1px;
+  height: 100%;
+  margin-left: 3%;
+  margin-right: 5%;
+  background-color: #ab8350;
+}
+
+.modal-content-right {
+  display: flex;
+  align-items: center;
+  overflow-y: scroll;
+  flex-direction: column;
+  padding-right: 3%;
+}
+
+.modal-content-right-cotent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.modal-content-right-cotent > p {
+  font-size: 0.8vw;
+  line-height: 1.8;
+  margin-bottom: 8%;
+}
+
+.modal-content-right-img {
+  width: 100%;
+  margin-bottom: 4%;
+}
+
+.modal-content-right-title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 3%;
+}
+.modal-content-right-title > h5 {
+  color: #ab8350;
+}
+.modal-content-right-title > :nth-child(1) {
+  font-size: 1vw;
+  font-weight: 600;
+}
+.modal-content-right-title > :nth-child(2) {
+  font-size: 0.8vw;
+}
+
 .waveObjectArea__item .waveObject {
   background-image: linear-gradient(to bottom, rgb(124, 95, 60) 0%, rgb(114, 84, 56) 100%);
 }

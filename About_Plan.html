@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.css"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./css/bannerAnimation.css" />
+    <link rel="stylesheet" href="./css/bannerAnimation-Animation.css" />
+    <link rel="stylesheet" href="./css/Plan.css" />
+    <title>築底願景</title>
+  </head>
+  <body>
+    <nav>
+      <div id="navDiv"></div>
+    </nav>
+    <main class="PlanPage-main">
+      <section class="bannerBox">
+        <h2 class="bannerText wow">CULTIVATE TALENTS</h2>
+        <div class="bannerAnimationBox wow fadeIn" data-wow-duration="3s">
+          <div class="animationBox" id="main-visual"></div>
+        </div>
+        <nav
+          class="breadcrumbNav wow fadeIn"
+          aria-label="breadcrumb"
+          data-wow-delay="1s"
+        >
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">首頁</a></li>
+            <li class="breadcrumb-item"><a href="#">新時代人才培育策略</a></li>
+            <li class="breadcrumb-item"><a href="#">築底計畫</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              <a href="javascript:;">築底願景</a>
+            </li>
+          </ol>
+        </nav>
+      </section>
+      <section class="section nav-3">
+        <ul class="allianceImageNav">
+          <li class="active">
+            <a class="active" href="javascript:;">築底願景</a>
+          </li>
+          <li>
+            <a href="javascript:;">築底成員</a>
+          </li>
+          <li>
+            <a href="./About_Plan_Master.html">築底大師</a>
+          </li>
+          <li>
+            <a href="javascript:;">築底甄選</a>
+          </li>
+        </ul>
+      </section>
+      <section class="PlanPage-banner">
+        <div class="PlanPage-banner-content">
+          <picture>
+            <source
+              srcset="./img/jpg/plan/築底願景-phone-1.jpg"
+              media="(max-width:500px)" />
+            <img src="./img/jpg/plan/築底願景-1.jpg" alt=""
+          /></picture>
+        </div>
+      </section>
+      <section class="PlanPage-content">
+        <!-- <div class="PlanPage-content-img">
+          <img src="./img/jpg/plan/築底計畫-bg.jpg" alt="" />
+        </div> -->
+        <div class="PlanPage-content-para">
+          <div class="PlanPage-content-para-img">
+            <img src="./img/jpg/plan/築底計畫-人.jpg" alt="" />
+          </div>
+          <div class="PlanPage-content-para-text">
+            <p>
+              臺灣人文藝術人才薈萃，為呼應聯合國永續目標『優質教育』以及響應『在地人才培育及教育永續行動』臺灣藝術教育高校聯盟將以『臺灣新世代國際音樂人才築底計畫
+              -
+              音樂匯』進行音樂人才的培力計畫。為臺灣在地極具潛力的音樂學子及人才培育環境盡一份心力，以深耕永續之精神，讓臺灣青少年演奏家得以看見他們的未來。
+            </p>
+            <p>
+              高校聯盟將與國內外音樂家們聯手打造環境，投身台灣新世代音樂人才教育永續行列，我們將與聯盟的國際夥伴合作，讓具音樂天賦的學子們擁有能帶著走的國際競爭力。
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- <img class="page" src="img/page/Plan_Hope.jpg" alt="" /> -->
+    </main>
+    <footer>
+      <p>
+        ©2023 Taiwan Arts Education Senior High School Alliance.
+        <span class="ph"></span> All Rights Reserved.
+        <span class="ph"></span>Email: art.edu.assoc@gmail.com
+      </p>
+    </footer>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/wow.min.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/bannerAnimation.js"></script>
+    <script>
+      window.onload = () => {
+        // let i = 1;
+        // const page_arr = [
+        //   "img/page/Plan_Hope.jpg",
+        //   "img/page/web_(2)新世代人才培育策略_築底計劃_築底成員_v3-resize.jpg",
+        //   "img/page/web_(2)新世代人才培育策略_築底計劃_築底大師_v2-resize.jpg",
+        //   "img/page/Plan_Selection.jpg",
+        //   "img/page/Plan_SelectionInner.jpg",
+        // ];
+        // $(".page").click(function (e) {
+        //   console.log(i);
+        //   e.preventDefault();
+        //   $(this).attr("src", page_arr[i]);
+        //   if (i == 4) {
+        //     i = 0;
+        //   } else {
+        //     i++;
+        //   }
+        // });
+
+        let screenWidth = window.innerWidth;
+        let height = $("#navDiv").height();
+        $("main").css("marginTop", height);
+
+        if (screenWidth >= 500) {
+          wow = new WOW({
+            offset: 100,
+          });
+          wow.init();
+          console.log(wow.init());
+        } else {
+          wow = new WOW().init();
+        }
+      };
+      $(function () {
+        if (window.innerWidth <= 500) {
+          $(".bannerText").css("fontSize", "8vw");
+        }
+      });
+    </script>
+  </body>
+</html>
