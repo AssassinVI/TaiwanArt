@@ -988,16 +988,36 @@ main {
   height: 85%;
   font-family: "Noto Sans TC", sans-serif;
 }
+@media all and (max-width: 500px) {
+  #modal-first,
+  #modal-second,
+  #modal-third,
+  #modal-fourth {
+    width: 90%;
+    height: auto;
+  }
+}
 
 .modal-container {
   display: flex;
   justify-content: center;
   height: 100%;
 }
+@media all and (max-width: 500px) {
+  .modal-container {
+    flex-direction: column;
+    height: auto;
+  }
+}
 
 .modal-content-left {
   display: flex;
   flex-direction: column;
+}
+@media all and (max-width: 500px) {
+  .modal-content-left {
+    order: 2;
+  }
 }
 
 .modal-content-left-url {
@@ -1016,6 +1036,15 @@ main {
 .modal-content-left-url a {
   font-size: 0.8vw;
 }
+@media all and (max-width: 500px) {
+  .modal-content-left-url h4 {
+    font-size: 4vw;
+  }
+  .modal-content-left-url > p,
+  .modal-content-left-url a {
+    font-size: 3.2vw;
+  }
+}
 
 .modal-content-line {
   width: 1px;
@@ -1024,6 +1053,17 @@ main {
   margin-right: 5%;
   background-color: #ab8350;
 }
+@media all and (max-width: 500px) {
+  .modal-content-line {
+    height: 1px;
+    width: 100%;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left: 0;
+    margin-right: 0;
+    order: 1;
+  }
+}
 
 .modal-content-right {
   display: flex;
@@ -1031,6 +1071,13 @@ main {
   overflow-y: scroll;
   flex-direction: column;
   padding-right: 3%;
+}
+@media all and (max-width: 500px) {
+  .modal-content-right {
+    padding-right: 1vw;
+    padding-left: 1vw;
+    overflow-y: initial;
+  }
 }
 
 .modal-content-right-cotent {
@@ -1042,6 +1089,11 @@ main {
   font-size: 0.8vw;
   line-height: 1.8;
   margin-bottom: 8%;
+}
+@media all and (max-width: 500px) {
+  .modal-content-right-cotent > p {
+    font-size: 3.2vw;
+  }
 }
 
 .modal-content-right-img {
@@ -1064,6 +1116,21 @@ main {
 }
 .modal-content-right-title > :nth-child(2) {
   font-size: 0.8vw;
+}
+@media all and (max-width: 500px) {
+  .modal-content-right-title {
+    align-items: flex-end;
+    flex-direction: column;
+    margin-bottom: 5%;
+  }
+  .modal-content-right-title > :nth-child(1) {
+    width: 100%;
+    font-size: 4vw;
+  }
+  .modal-content-right-title > :nth-child(2) {
+    font-size: 3.2vw;
+    margin-top: 2vw;
+  }
 }
 
 main.index {

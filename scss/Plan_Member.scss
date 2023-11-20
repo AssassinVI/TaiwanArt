@@ -129,27 +129,11 @@
 
 section {
   font-family: $mainFontFamily;
-}
-
-//主要內容開始
-.MasterPage-main {
-  position: relative;
-  background-image: url("../img/jpg/plan-master/master-bg.jpg");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.MasterPage-main-content {
-  display: flex;
-  justify-content: center;
-  margin-top: 3vw;
   @include mobile {
     margin-bottom: 0;
-    align-items: center;
-    flex-direction: column;
   }
 }
-
+//主要內容開始
 .timeline__nav {
   position: sticky;
   z-index: 99;
@@ -238,110 +222,96 @@ section {
   color: #ffffff;
   background-color: $mainColor;
 }
-.MasterPage-main-content {
-  position: relative;
-}
-.MasterPage-main-content-right {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 70%;
-  position: relative;
-  @include mobile {
-    width: 100%;
-    margin-bottom: 10vw;
-  }
-}
 
-.MasterPage-main-content-right-top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  @include mobile {
-    width: 90%;
-  }
+.MemberPage-main {
+  position: relative;
 }
-.MasterPage-main-content-right-top-container {
+.MemberPage-bg {
+  position: absolute;
+  bottom: 0;
+}
+.MasterPage-main-content {
   display: flex;
   justify-content: center;
-  width: 100%;
+  margin-top: 3vw;
   @include mobile {
+    margin-bottom: 0;
+    align-items: center;
     flex-direction: column;
   }
 }
 
-.MasterPage-main-content-right-top-img {
-  width: 40%;
-  @include mobile {
-    width: 100%;
-  }
-}
-.MasterPage-main-content-right-top-para {
+.MemberPage-main-content {
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 40%;
+  justify-content: center;
+  margin-top: 3vw;
+  padding-bottom: 5vw;
   @include mobile {
-    width: 100%;
-    margin-top: -12vw;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 12vw;
   }
 }
-.MasterPage-main-content-right-top-p {
-  line-height: 1.5;
-  margin-top: 1vw;
-  font-size: 0.8vw;
+.MemberPage-main-content-right {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2vw 2.5vw;
+  width: 70%;
+  margin-left: 3vw;
   @include mobile {
-    font-size: 4vw;
-    margin-top: 4vw;
-  }
-}
-.MasterPage-main-content-right-line {
-  position: relative;
-  width: 100%;
-  height: 3px;
-  background-color: #ae7f46;
-  @include mobile {
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 0vw;
+    margin-top: 6vw;
     width: 90%;
+    gap: 5vw 5.5vw;
   }
 }
-.line-active {
+.MemberPage-main-card {
+  position: relative;
+}
+.MemberPage-card-date {
   position: absolute;
-  width: 0.8vw;
-  height: 0.8vw;
-  clip-path: polygon(50% 100%, 0 0, 100% 0);
-  background-color: #ae7f46;
-  transform: translate(-50%, 0%);
-  transition: left 0.3s ease-out;
-  @include mobile {
-    width: 3vw;
-    height: 3vw;
-    transform: translate(-15%, 0%);
-  }
-}
-
-.MasterPage-main-content-right-bottom {
+  top: 0;
+  left: 0;
+  width: 3vw;
+  height: 3vw;
+  font-size: 1vw;
   display: flex;
   align-items: center;
-  margin-top: 1vw;
-  margin-bottom: 3vw;
+  justify-content: center;
+  flex-direction: column;
+  word-wrap: normal;
+  background-color: #b28146;
+  color: #ffffff;
+  white-space: nowrap;
   @include mobile {
-    margin-top: 3vw;
+    line-height: 1;
+    width: 10vw;
+    height: 10vw;
+    font-size: 4vw;
   }
-  > .Master-name {
-    font-size: 1vw;
-    cursor: pointer;
-    @include mobile {
+}
+.MemberPage-main-card-name {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 0.5vw;
+  padding-right: 0.8vw;
+  color: white;
+  > :nth-child(1) {
+    margin-right: 0.3vw;
+    font-size: 0.7vw;
+  }
+  > :nth-child(2) {
+    font-size: 0.9vw;
+  }
+  @include mobile {
+    > :nth-child(1) {
+      margin-right: 2vw;
+      font-size: 3vw;
+    }
+    > :nth-child(2) {
       font-size: 4vw;
     }
-  }
-  > .line {
-    display: inline-block;
-    width: 1px;
-    height: 100%;
-    background-color: black;
-    margin: 0 2vw;
   }
 }

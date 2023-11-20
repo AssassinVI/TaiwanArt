@@ -1091,15 +1091,26 @@ main {
   width: 70%;
   height: 85%;
   font-family: $mainFontFamily;
+  @include mobile {
+    width: 90%;
+    height: auto;
+  }
 }
 .modal-container {
   display: flex;
   justify-content: center;
   height: 100%;
+  @include mobile {
+    flex-direction: column;
+    height: auto;
+  }
 }
 .modal-content-left {
   display: flex;
   flex-direction: column;
+  @include mobile {
+    order: 2;
+  }
 }
 .modal-content-left-url {
   display: flex;
@@ -1116,6 +1127,15 @@ main {
   a {
     font-size: 0.8vw;
   }
+  @include mobile {
+    h4 {
+      font-size: 4vw;
+    }
+    > p,
+    a {
+      font-size: 3.2vw;
+    }
+  }
 }
 .modal-content-line {
   width: 1px;
@@ -1123,6 +1143,15 @@ main {
   margin-left: 3%;
   margin-right: 5%;
   background-color: #ab8350;
+  @include mobile {
+    height: 1px;
+    width: 100%;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left: 0;
+    margin-right: 0;
+    order: 1;
+  }
 }
 .modal-content-right {
   display: flex;
@@ -1130,6 +1159,11 @@ main {
   overflow-y: scroll;
   flex-direction: column;
   padding-right: 3%;
+  @include mobile {
+    padding-right: 1vw;
+    padding-left: 1vw;
+    overflow-y: initial;
+  }
 }
 .modal-content-right-cotent {
   display: flex;
@@ -1139,6 +1173,11 @@ main {
     font-size: 0.8vw;
     line-height: 1.8;
     margin-bottom: 8%;
+  }
+  @include mobile {
+    > p {
+      font-size: 3.2vw;
+    }
   }
 }
 .modal-content-right-img {
@@ -1160,4 +1199,22 @@ main {
   > :nth-child(2) {
     font-size: 0.8vw;
   }
+  @include mobile {
+    align-items: flex-end;
+    flex-direction: column;
+    margin-bottom: 5%;
+    > :nth-child(1) {
+      width: 100%;
+      font-size: 4vw;
+    }
+    > :nth-child(2) {
+      font-size: 3.2vw;
+      margin-top: 2vw;
+    }
+  }
 }
+// .fancybox-slide {
+//   @include mobile {
+//     overflow-y: scroll;
+//   }
+// }
