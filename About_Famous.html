@@ -46,7 +46,7 @@
           </li>
         </ul>
       </section>
-      <section class="FamousPage-content">
+      <section class="FamousPage-content fadeIn">
         <div class="FamousPage-card-container">
           <div class="FamousPage-card">
             <div class="FamousPage-card-img">
@@ -80,8 +80,7 @@
               <p>小提琴家 <span>林品任</span></p>
             </div>
           </div>
-        </div>
-        <div class="FamousPage-card-container-second">
+
           <div class="FamousPage-card">
             <div class="FamousPage-card-img">
               <img src="./img/jpg/famous/林品任-5.jpg" alt="" />
@@ -119,46 +118,30 @@
     </footer>
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/animsition.min.js"></script>
     <script src="./js/wow.min.js"></script>
     <script src="./js/menu.js"></script>
     <script src="./js/bannerAnimation.js"></script>
     <script>
       window.onload = () => {
-        if (window.innerWidth <= 500) {
-          $(".bannerText").css("fontSize", "10vw");
+        let screenWidth = window.innerWidth;
+        // let height = $("#navDiv").height();
+        // $("main").css("marginTop", height);
+        if (screenWidth <= 500) {
+          $(".bannerText.wow").css("fontSize", "8vw");
+        }
+        if (screenWidth > 500) {
+          wow = new WOW({
+            offset: 100,
+          });
+          wow.init();
+          // console.log(wow.init());
+        } else {
+          wow = new WOW().init();
         }
         $(".FamousPage-card").click(function () {
           window.location.href = "./About_Famous_Detail.html";
         });
-        // let i = 1;
-        // const page_arr = [
-        //   "img/page/Famous_01.jpg",
-        //   "img/page/Famous_02.jpg",
-        //   "img/page/Famous_03.jpg",
-        // ];
-        // $(".page").click(function (e) {
-        //   console.log(i);
-        //   e.preventDefault();
-        //   $(this).attr("src", page_arr[i]);
-        //   if (i == 2) {
-        //     i = 0;
-        //   } else {
-        //     i++;
-        //   }
-        // });
-        // let screenWidth = window.innerWidth;
-        // let height = $("#navDiv").height();
-        // $("main").css("marginTop", height);
-
-        // if (screenWidth >= 500) {
-        //   wow = new WOW({
-        //     offset: 100,
-        //   });
-        //   wow.init();
-        //   console.log(wow.init());
-        // } else {
-        //   wow = new WOW().init();
-        // }
       };
     </script>
   </body>

@@ -70,7 +70,7 @@
             </ul>
           </div>
         </div>
-        <div class="MemberPage-main-content-right">
+        <div class="MemberPage-main-content-right fadeIn">
           <div class="MemberPage-main-card">
             <img src="./img/jpg/plan-member/plan-member-1.jpg" alt="" />
             <div class="MemberPage-main-card-para">
@@ -177,15 +177,14 @@
     <script>
       window.onload = () => {
         let screenWidth = window.innerWidth;
-        let height = $("#navDiv").height();
-        $("main").css("marginTop", height);
+        // let height = $("#navDiv").height();
+        // $("main").css("marginTop", height);
 
         if (screenWidth >= 500) {
           wow = new WOW({
             offset: 100,
           });
           wow.init();
-          //   console.log(wow.init());
         } else {
           wow = new WOW().init();
         }
@@ -195,8 +194,8 @@
         });
       };
       $(function () {
-        if (window.innerWidth <= 500) {
-          $(".bannerText").css("fontSize", "8vw");
+        if (screenWidth <= 500) {
+          $(".bannerText.wow").css("fontSize", "8vw");
         }
       });
     </script>

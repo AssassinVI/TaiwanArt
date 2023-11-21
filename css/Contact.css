@@ -743,7 +743,7 @@ main {
 }
 .fadeIn {
   opacity: 0;
-  animation: fadeIn 1.5s forwards ease-in;
+  animation: fadeIn 1.2s forwards ease-in;
 }
 
 @keyframes fadeIn {
@@ -757,7 +757,7 @@ main {
 .fadeInDown {
   opacity: 0;
   transform: translateY(-2em);
-  animation: fadeInDown 1.5s forwards ease-in;
+  animation: fadeInDown 1.2s forwards ease-in;
 }
 
 @keyframes fadeInDown {
@@ -773,7 +773,7 @@ main {
 .fadeInRight {
   opacity: 0;
   transform: translateX(50px);
-  animation: fadeInRight 1.5s forwards ease-in;
+  animation: fadeInRight 1.2s forwards ease-in;
 }
 
 @keyframes fadeInRight {
@@ -789,7 +789,7 @@ main {
 .fadeInLeft {
   opacity: 0;
   transform: translateX(-50px);
-  animation: fadeInLeft 1.5s forwards ease-in;
+  animation: fadeInLeft 1.2s forwards ease-in;
 }
 
 @keyframes fadeInLeft {
@@ -805,7 +805,7 @@ main {
 .fadeInUp {
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 1.5s forwards ease-in-out;
+  animation: fadeInUp 1.2s forwards ease-in-out;
 }
 
 @keyframes fadeInUp {
@@ -882,7 +882,7 @@ main {
   }
 }
 .title {
-  animation: titleAnimation 1.5s forwards;
+  animation: titleAnimation 1.2s forwards;
 }
 
 @keyframes titleAnimation {

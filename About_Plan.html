@@ -102,42 +102,22 @@
     <script src="./js/bannerAnimation.js"></script>
     <script>
       window.onload = () => {
-        // let i = 1;
-        // const page_arr = [
-        //   "img/page/Plan_Hope.jpg",
-        //   "img/page/web_(2)新世代人才培育策略_築底計劃_築底成員_v3-resize.jpg",
-        //   "img/page/web_(2)新世代人才培育策略_築底計劃_築底大師_v2-resize.jpg",
-        //   "img/page/Plan_Selection.jpg",
-        //   "img/page/Plan_SelectionInner.jpg",
-        // ];
-        // $(".page").click(function (e) {
-        //   console.log(i);
-        //   e.preventDefault();
-        //   $(this).attr("src", page_arr[i]);
-        //   if (i == 4) {
-        //     i = 0;
-        //   } else {
-        //     i++;
-        //   }
-        // });
-
         let screenWidth = window.innerWidth;
-        let height = $("#navDiv").height();
-        $("main").css("marginTop", height);
+        // let height = $("#navDiv").height();
+        // $("main").css("marginTop", height);
 
-        if (screenWidth >= 500) {
+        if (screenWidth > 500) {
           wow = new WOW({
             offset: 100,
           });
           wow.init();
-          console.log(wow.init());
         } else {
           wow = new WOW().init();
         }
       };
       $(function () {
-        if (window.innerWidth <= 500) {
-          $(".bannerText").css("fontSize", "8vw");
+        if (screenWidth <= 500) {
+          $(".bannerText.wow").css("fontSize", "8vw");
         }
       });
     </script>

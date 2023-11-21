@@ -743,7 +743,7 @@ main {
 }
 .fadeIn {
   opacity: 0;
-  animation: fadeIn 1.5s forwards ease-in;
+  animation: fadeIn 1.2s forwards ease-in;
 }
 
 @keyframes fadeIn {
@@ -757,7 +757,7 @@ main {
 .fadeInDown {
   opacity: 0;
   transform: translateY(-2em);
-  animation: fadeInDown 1.5s forwards ease-in;
+  animation: fadeInDown 1.2s forwards ease-in;
 }
 
 @keyframes fadeInDown {
@@ -773,7 +773,7 @@ main {
 .fadeInRight {
   opacity: 0;
   transform: translateX(50px);
-  animation: fadeInRight 1.5s forwards ease-in;
+  animation: fadeInRight 1.2s forwards ease-in;
 }
 
 @keyframes fadeInRight {
@@ -789,7 +789,7 @@ main {
 .fadeInLeft {
   opacity: 0;
   transform: translateX(-50px);
-  animation: fadeInLeft 1.5s forwards ease-in;
+  animation: fadeInLeft 1.2s forwards ease-in;
 }
 
 @keyframes fadeInLeft {
@@ -805,7 +805,7 @@ main {
 .fadeInUp {
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 1.5s forwards ease-in-out;
+  animation: fadeInUp 1.2s forwards ease-in-out;
 }
 
 @keyframes fadeInUp {
@@ -882,7 +882,7 @@ main {
   }
 }
 .title {
-  animation: titleAnimation 1.5s forwards;
+  animation: titleAnimation 1.2s forwards;
 }
 
 @keyframes titleAnimation {
@@ -1163,7 +1163,6 @@ section {
 
 .bannerBox .bannerText {
   color: #91a5c1;
-  font-size: 5vw;
 }
 
 .nav-3 {
@@ -1242,16 +1241,23 @@ section {
 .FamousPage-content {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
+  width: 100%;
   padding-bottom: 10vw;
   margin-top: 3%;
 }
 
-.FamousPage-card-container,
-.FamousPage-card-container-second {
-  display: flex;
-  align-items: center;
+.FamousPage-card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5vw 4vw;
   width: 80%;
+}
+@media all and (max-width: 500px) {
+  .FamousPage-card-container {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+  }
 }
 
 .FamousPage-card-container-second {
@@ -1264,11 +1270,21 @@ section {
   margin-left: 3%;
   cursor: pointer;
 }
+@media all and (max-width: 500px) {
+  .FamousPage-card {
+    margin-bottom: 10vw;
+  }
+}
 
 .FamousPage-card-img {
   position: relative;
   width: 14vw;
   z-index: 1;
+}
+@media all and (max-width: 500px) {
+  .FamousPage-card-img {
+    width: 39vw;
+  }
 }
 
 .FamousPage-card-bg {
@@ -1291,26 +1307,7 @@ section {
 .FamousPage-card-bg > p > span {
   font-size: 1vw;
 }
-
-@media screen and (max-width: 500px) {
-  .bannerBox .bannerText {
-    font-size: 8vw !important;
-  }
-  .FamousPage-card-container,
-  .FamousPage-card-container-second {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    width: 90%;
-  }
-  .FamousPage-card-container-second {
-    margin-top: 0px;
-  }
-  .FamousPage-card {
-    margin-bottom: 10vw;
-  }
-  .FamousPage-card-img {
-    width: 39vw;
-  }
+@media all and (max-width: 500px) {
   .FamousPage-card-bg {
     top: 2vw;
     left: 2vw;
@@ -1324,6 +1321,7 @@ section {
     font-size: 3vw;
   }
 }
+
 .FamousPage-detail {
   position: relative;
   display: flex;
@@ -1338,6 +1336,11 @@ section {
   width: 70%;
   position: relative;
 }
+@media all and (max-width: 500px) {
+  .FamousPage-detail-container {
+    width: 90%;
+  }
+}
 
 .FamousPage-detail-des {
   position: absolute;
@@ -1348,10 +1351,24 @@ section {
   width: 45%;
   padding-right: 8%;
 }
+@media all and (max-width: 500px) {
+  .FamousPage-detail-des {
+    position: relative;
+    width: 100%;
+    padding-right: 0;
+  }
+}
 
 .FamousPage-detail-des-title > h5 {
   font-size: 1vw;
   color: #ab8350;
+}
+@media all and (max-width: 500px) {
+  .FamousPage-detail-des-title > h5 {
+    margin-top: 8%;
+    font-size: 4vw;
+    color: #ab8350;
+  }
 }
 
 .FamousPage-detail-des-name {
@@ -1361,10 +1378,25 @@ section {
   font-size: 1.5vw;
   color: #ab8350;
 }
+@media all and (max-width: 500px) {
+  .FamousPage-detail-des-name {
+    margin-top: 1%;
+  }
+  .FamousPage-detail-des-name > h1 {
+    font-size: 6.5vw;
+    color: #ab8350;
+  }
+}
 
 .FamousPage-detail-des-para-first > p,
 .FamousPage-detail-des-para-second > p {
   font-size: 0.8vw;
+}
+@media all and (max-width: 500px) {
+  .FamousPage-detail-des-para-first > p,
+  .FamousPage-detail-des-para-second > p {
+    font-size: 4vw;
+  }
 }
 
 .FamousPage-detail-des-para-first {
@@ -1394,15 +1426,39 @@ section {
   font-size: 0.8vw;
   margin-left: 2%;
 }
+@media all and (max-width: 500px) {
+  .FamousPage-detail-des-back > svg {
+    transform: rotateY(180deg);
+    fill: #b28146;
+    width: 3.2vw;
+  }
+  .FamousPage-detail-des-back > a {
+    font-size: 4vw;
+  }
+}
 
 .FamousPage-detail-carousel {
   position: relative;
   margin-top: 25%;
 }
+@media all and (max-width: 500px) {
+  .FamousPage-detail-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -13%;
+    order: -1;
+  }
+}
 
 .FamousPage-detail-carousel-container {
   cursor: pointer;
   overflow: hidden;
+}
+@media all and (max-width: 500px) {
+  .FamousPage-detail-carousel-container {
+    width: 90%;
+  }
 }
 
 .FamousPage-detail-carousel-card {
@@ -1421,6 +1477,18 @@ section {
   font-size: 0.6vw;
   color: #ab8350;
 }
+@media all and (max-width: 500px) {
+  .FamousPage-detail-carousel-card > h1 {
+    margin-top: 0.2vw;
+    font-size: 4vw;
+    color: #ab8350;
+  }
+  .FamousPage-detail-carousel-card > h3 {
+    margin-top: 0.4vw;
+    font-size: 3.2vw;
+    color: #ab8350;
+  }
+}
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -1432,87 +1500,33 @@ section {
   font-size: 1.2vw;
   font-weight: 600;
 }
+@media all and (max-width: 500px) {
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 5vw;
+  }
+}
 
 .swiper-button-prev {
   left: -12%;
+}
+@media all and (max-width: 500px) {
+  .swiper-button-prev {
+    left: -3%;
+  }
 }
 
 .swiper-button-next {
   right: -12%;
 }
+@media all and (max-width: 500px) {
+  .swiper-button-next {
+    right: -3%;
+  }
+}
 
 @media screen and (max-width: 1920px) {
   .FamousPage-detail-carousel {
     margin-top: 12%;
-  }
-}
-@media screen and (max-width: 500px) {
-  .FamousPage-detail-container {
-    width: 90%;
-  }
-  .FamousPage-detail-des {
-    position: relative;
-    width: 100%;
-    padding-right: 0;
-  }
-  .FamousPage-detail-des-title > h5 {
-    margin-top: 8%;
-    font-size: 4vw;
-    color: #ab8350;
-  }
-  .FamousPage-detail-des-name {
-    margin-top: 1%;
-  }
-  .FamousPage-detail-des-name > h1 {
-    font-size: 6.5vw;
-    color: #ab8350;
-  }
-  .swiper-button-prev {
-    left: 0%;
-  }
-  .swiper-button-next {
-    right: 0%;
-  }
-  .FamousPage-detail-des-para-first > p,
-  .FamousPage-detail-des-para-second > p {
-    font-size: 4vw;
-  }
-  .FamousPage-detail-des-back > svg {
-    transform: rotateY(180deg);
-    fill: #b28146;
-    width: 3.2vw;
-  }
-  .FamousPage-detail-des-back > a {
-    font-size: 4vw;
-  }
-  .FamousPage-detail-carousel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -13%;
-    order: -1;
-  }
-  .FamousPage-detail-carousel-container {
-    width: 90%;
-  }
-  .FamousPage-detail-carousel-card > h1 {
-    margin-top: 0.2vw;
-    font-size: 4vw;
-    color: #ab8350;
-  }
-  .FamousPage-detail-carousel-card > h3 {
-    margin-top: 0.4vw;
-    font-size: 3.2vw;
-    color: #ab8350;
-  }
-  .swiper-button-prev::after,
-  .swiper-button-next::after {
-    font-size: 5vw;
-  }
-  .swiper-button-prev {
-    left: -3%;
-  }
-  .swiper-button-next {
-    right: -3%;
   }
 }/*# sourceMappingURL=Famous.css.map */

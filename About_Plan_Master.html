@@ -125,68 +125,64 @@
     <script>
       window.onload = () => {
         let screenWidth = window.innerWidth;
-        let height = $("#navDiv").height();
-        $("main").css("marginTop", height);
+        // let height = $("#navDiv").height();
+        // $("main").css("marginTop", height);
 
-        if (screenWidth >= 500) {
+        if (screenWidth > 500) {
           wow = new WOW({
             offset: 100,
           });
           wow.init();
-          //   console.log(wow.init());
         } else {
           wow = new WOW().init();
         }
-        let masterPosition;
-        let masterWidth;
-        let finalPosition;
+        $(function () {
+          if (screenWidth <= 500) {
+            $(".bannerText.wow").css("fontSize", "8vw");
+          }
+        });
+        function handlePosition(name, line, device) {
+          const masterPosition = $(name).position().left;
+          const masterWidth = device === ".pc" ? $(name).width() / 2 : 0;
+          const finalPosition = masterPosition + masterWidth;
+
+          $(line).css("left", finalPosition);
+          $(".Master-name.pc").css("color", "black");
+          $(".Master-name.ph").css("color", "black");
+          $(name).css("color", "#ae7f46");
+        }
         //指針初始位置
-        if (window.innerWidth > 500) {
+        if (screenWidth > 500) {
           //電腦版
           $(".ph").css("display", "none");
-          masterPosition = $(".Master-name[data-number='1'].pc").position()
-            .left;
-          masterWidth = $(".Master-name[data-number='1'].pc").width() / 2;
-          $(".Master-name[data-number='1'].pc").css("color", "#ae7f46");
-          finalPosition = masterPosition + masterWidth;
-          $(".line-active.pc").css("left", finalPosition);
+          handlePosition(
+            ".Master-name[data-number='1'].pc",
+            ".line-active.pc",
+            ".pc"
+          );
         } else {
           //手機板
           $(".pc").css("display", "none");
-          $(".Master-name[data-number='1'].ph").css("color", "#ae7f46");
-          masterPosition = $(".Master-name[data-number='1'].ph").position()
-            .left;
-          finalPosition = masterPosition;
-          $(".line-active.ph").css("left", finalPosition);
+          handlePosition(
+            ".Master-name[data-number='1'].ph",
+            ".line-active.ph",
+            ".ph"
+          );
         }
         $(".Master-name.pc").on("click resize", function () {
           //電腦版
-          masterPosition = $(this).position().left;
-          masterWidth = $(this).width() / 2;
-          finalPosition = masterPosition + masterWidth;
-
-          $(".line-active.pc").css("left", finalPosition);
-          $(".Master-name.pc").css("color", "black");
-          $(this).css("color", "#ae7f46");
+          handlePosition(this, ".line-active.pc", ".pc");
         });
         $(".Master-name.ph").on("click resize", function () {
           //手機版
-          masterPosition = $(this).position().left;
-          finalPosition = masterPosition;
-          $(".line-active.ph").css("left", finalPosition);
-          $(".Master-name.ph").css("color", "black");
-          $(this).css("color", "#ae7f46");
+          handlePosition(this, ".line-active.ph", ".ph");
         });
+        //左側時間列
         $(".timeline__nav ul li").on("click", function () {
           $(".timeline__nav ul li").removeClass("active");
           $(this).addClass("active");
         });
       };
-      $(function () {
-        if (window.innerWidth <= 500) {
-          $(".bannerText").css("fontSize", "8vw");
-        }
-      });
     </script>
   </body>
 </html>

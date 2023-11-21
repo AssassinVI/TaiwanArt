@@ -147,5 +147,12 @@
     <script src="./js/wow.min.js"></script>
     <script src="./js/menu.js"></script>
     <script src="./js/bannerAnimation.js"></script>
+    <script>
+      $(function () {
+        if (window.innerWidth <= 500) {
+          $(".bannerText.wow").css("fontSize", "8vw");
+        }
+      });
+    </script>
   </body>
 </html>
