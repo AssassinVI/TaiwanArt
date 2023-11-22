@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/bannerAnimation.css" />
@@ -70,7 +71,90 @@
           </div>
           <div class="SelectionPage-card-content">
             <span>『 音樂匯 』 人才甄選計畫</span>
-            <div class="SelectionPage-card-content-more">
+            <div
+              class="SelectionPage-card-content-more"
+              data-fancybox
+              data-src="#studio-modal-first"
+              href="javascript:;"
+            >
+              <div style="display: none" id="studio-modal-first">
+                <div class="studio-modal-container">
+                  <div class="studio-modal-img">
+                    <img
+                      src="./img/jpg/plan-selection/Plan-Selection-item-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="studio-modal-para">
+                    <div class="studio-modal-para-left">
+                      <div class="studio-modal-para-left-time">
+                        <h5>報名時間</h5>
+                        <p>2023年3月14日-4月14日</p>
+                      </div>
+                      <div class="studio-modal-para-left-way">
+                        <h5>報名方式</h5>
+                        <p>
+                          請上傳欲甄選項目影片之連結<br />，不限風格時期之古典音樂作<br />品（創作組請上傳自創作品的<br />影音檔）
+                        </p>
+                      </div>
+                      <div class="studio-modal-para-left-instru">
+                        <h5>甄選樂器</h5>
+                        <p>鋼琴、弦樂、管樂、創作</p>
+                      </div>
+                      <div class="studio-modal-para-left-talent">
+                        <h5>甄選人才</h5>
+                        <p>室內樂、獨奏、創作</p>
+                      </div>
+                      <div class="studio-modal-para-left-who">
+                        <h5>甄選對象</h5>
+                        <p>具本國籍12-18歲音樂班學生</p>
+                      </div>
+                      <div class="studio-modal-para-left-price">
+                        <h5>一年期培訓費用</h5>
+                        <p>包含國際大師擔任Mentor指<br />導費用。</p>
+                      </div>
+                    </div>
+                    <div class="studio-modal-para-line"></div>
+                    <div class="studio-modal-para-right">
+                      <div class="studio-modal-para-right-title">
+                        <h2>「音樂匯 - 人才甄選計畫」</h2>
+                        <p>
+                          初審通過者，將由國際大師進行第二階段面試及培育策略討論
+                        </p>
+                        <p>
+                          通過複審後，擇優提供築底計畫優秀人才不同程度之獎學金
+                        </p>
+                      </div>
+                      <div class="studio-modal-para-right-content">
+                        <p class="studio-modal-para-right-content-time">
+                          『音樂匯』演出時間：2024年3月29日(暫定)
+                        </p>
+                        <p>
+                          2023年Mentors（會依照獲選者樂器類別聘請，完整名單請上聯盟官方網頁）
+                        </p>
+                        <p>
+                          • Yaron Kohlberg /
+                          Pianist（美國克理夫蘭國際鋼琴大賽主席）
+                        </p>
+                        <p>• 胡瀞云 / Pianist（魯賓斯坦斯坦大賽）</p>
+                        <p>• Andrew Tyson / Pianist（安達國際鋼琴大賽）</p>
+                        <p>
+                          • 曾耿元 / Violinist（伊莉莎白女王國際小提琴大賽）
+                        </p>
+                        <p>• 林品任 / Violinist（印第安納坡里斯小提琴大賽）</p>
+                        <p>• 魏靖儀 / Violinist（莉莎白女王國際小提琴大賽）</p>
+                        <p>
+                          • 賴俊諺 / Clarinetist（法國藍斯洛國際單簧管大賽）
+                        </p>
+                        <p>
+                          • 何國杰 /
+                          Composer（賽德克巴萊金馬獎、金曲獎電影配樂得主）
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div>MORE</div>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.88 11.88">
                 <g>
@@ -144,6 +228,7 @@
     </footer>
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/wow.min.js"></script>
     <script src="./js/menu.js"></script>
     <script src="./js/bannerAnimation.js"></script>
@@ -151,6 +236,11 @@
       $(function () {
         if (window.innerWidth <= 500) {
           $(".bannerText.wow").css("fontSize", "8vw");
+          $(".studio-modal-para-right-title>p").remove();
+          $(".studio-modal-para-left br").remove();
+          $(".studio-modal-para-right-title").append(
+            "<p>初審通過者，將由國際大師進行第二階段面試及培育策略討論通過複審後，擇優提供築底計畫優秀人才不同程度之獎學金</p>"
+          );
         }
       });
     </script>
