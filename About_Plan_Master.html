@@ -123,34 +123,22 @@
     <script src="./js/menu.js"></script>
     <script src="./js/bannerAnimation.js"></script>
     <script>
+      function handlePosition(name, line, device) {
+        const masterPosition = $(name).position().left;
+        const masterWidth = device === ".pc" ? $(name).width() / 2 : 0;
+        const finalPosition = masterPosition + masterWidth;
+
+        $(line).css("left", finalPosition);
+        $(".Master-name.pc").css("color", "black");
+        $(".Master-name.ph").css("color", "black");
+        $(name).css("color", "#ae7f46");
+      }
       window.onload = () => {
         let screenWidth = window.innerWidth;
         // let height = $("#navDiv").height();
         // $("main").css("marginTop", height);
-
-        if (screenWidth > 500) {
-          wow = new WOW({
-            offset: 100,
-          });
-          wow.init();
-        } else {
-          wow = new WOW().init();
-        }
-        $(function () {
-          if (screenWidth <= 500) {
-            $(".bannerText.wow").css("fontSize", "8vw");
-          }
-        });
-        function handlePosition(name, line, device) {
-          const masterPosition = $(name).position().left;
-          const masterWidth = device === ".pc" ? $(name).width() / 2 : 0;
-          const finalPosition = masterPosition + masterWidth;
-
-          $(line).css("left", finalPosition);
-          $(".Master-name.pc").css("color", "black");
-          $(".Master-name.ph").css("color", "black");
-          $(name).css("color", "#ae7f46");
-        }
+        let timeline = $(".MasterPage-main-content-left");
+        let navHeight = $("#navDiv").height();
         //指針初始位置
         if (screenWidth > 500) {
           //電腦版
@@ -160,6 +148,10 @@
             ".line-active.pc",
             ".pc"
           );
+          wow = new WOW({
+            offset: 100,
+          });
+          wow.init();
         } else {
           //手機板
           $(".pc").css("display", "none");
@@ -168,6 +160,9 @@
             ".line-active.ph",
             ".ph"
           );
+          $(".bannerText.wow").css("fontSize", "8vw");
+          timeline.css("top", navHeight - 5 + "px");
+          wow = new WOW().init();
         }
         $(".Master-name.pc").on("click resize", function () {
           //電腦版

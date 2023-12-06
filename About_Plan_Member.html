@@ -179,8 +179,13 @@
         let screenWidth = window.innerWidth;
         // let height = $("#navDiv").height();
         // $("main").css("marginTop", height);
-
-        if (screenWidth >= 500) {
+        let navHeight = $("#navDiv").height();
+        let timeline = $(".MemberPage-main-content-left");
+        if (screenWidth <= 500) {
+          $(".bannerText.wow").css("fontSize", "8vw");
+          timeline.css("top", navHeight - 5 + "px");
+        }
+        if (screenWidth > 500) {
           wow = new WOW({
             offset: 100,
           });
@@ -192,12 +197,13 @@
           $(".timeline__nav ul li").removeClass("active");
           $(this).addClass("active");
         });
+
+        // $(window).scroll(function () {
+        //   let nav = $("#navDiv").offset();
+        //   let h = $(".timeline__nav")[0];
+        //   let he = h.clientHeight;
+        // });
       };
-      $(function () {
-        if (screenWidth <= 500) {
-          $(".bannerText.wow").css("fontSize", "8vw");
-        }
-      });
     </script>
   </body>
 </html>

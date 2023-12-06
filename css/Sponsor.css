@@ -995,6 +995,7 @@ main {
   #modal-fourth {
     width: 90%;
     height: auto;
+    padding: 0;
   }
 }
 
@@ -1017,6 +1018,9 @@ main {
 @media all and (max-width: 500px) {
   .modal-content-left {
     order: 2;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-bottom: 2vw;
   }
 }
 
@@ -1074,8 +1078,8 @@ main {
 }
 @media all and (max-width: 500px) {
   .modal-content-right {
-    padding-right: 1vw;
-    padding-left: 1vw;
+    padding-right: 0vw;
+    padding-left: 0vw;
     overflow-y: initial;
   }
 }
@@ -1093,6 +1097,8 @@ main {
 @media all and (max-width: 500px) {
   .modal-content-right-cotent > p {
     font-size: 3.2vw;
+    padding-left: 22px;
+    padding-right: 22px;
   }
 }
 
@@ -1122,6 +1128,8 @@ main {
     align-items: flex-end;
     flex-direction: column;
     margin-bottom: 5%;
+    padding-left: 22px;
+    padding-right: 22px;
   }
   .modal-content-right-title > :nth-child(1) {
     width: 100%;
@@ -1131,6 +1139,10 @@ main {
     font-size: 3.2vw;
     margin-top: 2vw;
   }
+}
+
+.fancybox-button > svg > path {
+  fill: white;
 }
 
 .support-main {
@@ -1228,6 +1240,7 @@ main {
 .support-main-content-bottom-form-sponsorship-radio {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 .support-main-content-bottom-form-sponsorship-radio > label {
   margin-right: 17px;
@@ -1238,6 +1251,11 @@ main {
   -moz-appearance: none;
   -o-appearance: none;
   appearance: none;
+}
+
+#sponsorship-amount-myself {
+  margin-right: 7px;
+  margin-bottom: 20px;
 }
 
 .support-main-content-bottom-form-sponsorship-number > input {
@@ -1446,6 +1464,11 @@ main {
 }
 .support-main-content-bottom-form-title-none-prove > input[type=checkbox]:checked::before {
   transform: scale(1);
+}
+
+.error {
+  color: red;
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 500px) {

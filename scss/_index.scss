@@ -231,8 +231,8 @@ main.index {
         color: #dfd0c3;
         letter-spacing: 0.05em;
         opacity: 0.3;
-        font-size: 4vw;
-        line-height: 4vw;
+        font-size: pxConvertor2(50);
+        line-height: pxConvertor2(50);
       }
 
       @include mobile {

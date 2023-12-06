@@ -134,6 +134,13 @@ section {
   }
 }
 //主要內容開始
+.MemberPage-main-content-left {
+  @include mobile {
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 10;
+  }
+}
 .timeline__nav {
   position: sticky;
   z-index: 99;
@@ -160,7 +167,7 @@ section {
   position: absolute;
   top: 0;
   right: 0.5vw;
-  width: 3px;
+  width: 0.5px;
   height: 60%;
   background-color: $mainColor;
   opacity: 0.3;

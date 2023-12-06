@@ -387,7 +387,7 @@
         var height = $("#navDiv").height();
         $("main").css("marginTop", height);
 
-        if (screenWidth >= 500) {
+        if (screenWidth > 500) {
           isPc = true;
         } else {
           wow = new WOW().init();
@@ -441,6 +441,7 @@
               timeline.removeClass("fixed");
               yearDiv.removeClass("fixed");
               stickyTop = timeline.offset().top - offsetTop;
+              console.log();
               $(window).trigger("scroll");
             })
             .trigger("resize");
@@ -487,7 +488,6 @@
             .scroll(function () {
               var viewLine = $(window).scrollTop() + $(window).height() / 3;
               var active = -1;
-
               if (scrollTarget === false) {
                 milestones.each(function () {
                   if ($(this).offset().top - viewLine > 0) {
@@ -554,8 +554,6 @@
 
       function YearAnimation(img, finalNum, nowNumber) {
         var marginTop = -1 * finalNum * baseMarginTop;
-
-        console.log("marginTop" + marginTop);
 
         img.css("margin-top", `${marginTop}px`);
         setTimeout(function () {}, 1000);

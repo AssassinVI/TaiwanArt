@@ -100,6 +100,7 @@
 .support-main-content-bottom-form-sponsorship-radio {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   > label {
     margin-right: 17px;
     margin-bottom: 20px;
@@ -112,6 +113,10 @@
     appearance: none;
   }
 }
+#sponsorship-amount-myself {
+  margin-right: 7px;
+  margin-bottom: 20px;
+}
 .support-main-content-bottom-form-sponsorship-number {
   > input {
     @include sponsorship-input(300px, 20px);
@@ -122,9 +127,6 @@
     -webkit-appearance: none;
     margin: 0;
   }
-  // > input[type="number"] {
-  //   -moz-appearance: textfield;
-  // }
   > input::placeholder {
     font-size: 18px;
     color: #cccccc;
@@ -279,7 +281,10 @@
     transform: scale(1);
   }
 }
-
+.error {
+  color: red;
+  margin-bottom: 0;
+}
 @media screen and (max-width: 500px) {
   .support-main {
     overflow: hidden;
